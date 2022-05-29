@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+  }
+/* .menu-navegacao ul li {
+    display: inline-block;
+    padding-right: 4px;
+} */
+
+.menu-navegacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 35%;
+    font-size: 1.4rem;
+}
+
