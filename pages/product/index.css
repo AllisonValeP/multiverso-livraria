@@ -5,7 +5,7 @@
   }
   
 main  {
-    height: 100vh;
+    height: calc(100vh - 200px - 130px);
     display: flex;
     flex-direction: row;
     padding-top: 50px;
