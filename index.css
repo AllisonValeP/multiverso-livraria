@@ -1,3 +1,4 @@
+/*inicio configurações gerais*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +10,12 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.mt-big {
+  margin-top: 32px;
+}
+/*final configurações gerais*/
+
 
 ul li {
   display: inline-block;
@@ -30,9 +37,12 @@ ul li {
    padding: 100px,
 }
 
+/*inicio botão de busca*/
+
 .search-button{
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .searching-content{
@@ -44,7 +54,7 @@ ul li {
   width: 80%;
   height: 80px;
   margin:0 auto;
-  background-color: pink;
+  background-color: white;
   display: none;
 
 }
@@ -53,6 +63,35 @@ ul li {
   align-items: center;
   justify-content: center;
 }
+
+.searching-elements{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-searching{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+
+  font-size: 30px;
+}
+
+.search-input{
+  height: 40px;
+  padding: 8px;
+
+}
+/*final botão de busca*/
+
 .nav-list li + li {
   padding-left: 20px;
 
@@ -88,9 +127,7 @@ main{
   justify-content: space-around;
   padding-top: 16px;
  }
- .mt-big {
-  margin-top: 32px;
-}
+
  .home-livros li {
   display: flex;
   flex-direction: column;
@@ -98,6 +135,17 @@ main{
   width: 100%;
   align-items: center;
  }
+
+ .book-image:hover {
+  width: 261px;
+  height: 366px;
+  cursor: pointer;
+  }
+  
+  .book-image{
+    width: 231px;
+    height: 336px;
+    }
 
  .home-livros li p {
    padding-top: 8px;
@@ -129,9 +177,17 @@ main{
   justify-content: space-between;
 }
 
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
 .about-us {
   display: flex;
   flex-direction: column;
+  
 }
 
 .newsletter {
@@ -154,37 +210,5 @@ main{
   flex-direction: column;
 }
 
-.book-image:hover {
-width: 261px;
-height: 366px;
-cursor: pointer;
-}
 
-.book-image{
-  width: 231px;
-  height: 336px;
-  }
 
-.searching-elements{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-searching{
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top:10px;
-  right: 10px;
-}
-
-.search-input{
-  height: 40px;
-  padding: 8px;
-
-}
