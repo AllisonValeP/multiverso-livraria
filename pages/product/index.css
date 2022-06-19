@@ -11,7 +11,7 @@ main  {
     padding-top: 50px;
     flex-wrap: wrap;
   }
-  .detalhes{
+  .detalhes {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -20,7 +20,7 @@ main  {
     max-width: 810px;
     }
 
-.detalhes h1{
+.detalhes h1 {
     padding-top: 8px;
     
     text-align: left;

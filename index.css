@@ -3,6 +3,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  
 }
 
 .grid {
@@ -33,8 +35,8 @@ ul li {
 }
 
 .header logo{
-    display: flex;
-   padding: 100px,
+   display: flex;
+   padding: 100px;
 }
 
 /*inicio botão de busca*/
@@ -81,7 +83,7 @@ ul li {
   top: 20px;
   right: 10px;
   cursor: pointer;
-
+  font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
 }
 
@@ -210,5 +212,28 @@ main{
   flex-direction: column;
 }
 
+.home-livros li p {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
 
 
+.responsive {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 960px) {
+    .responsive {
+        grid-template-columns: 1fr 1fr;
+        /*grid-template-columns: 1fr 1fr 1fr 1fr !important;*/
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive {
+        grid-template-columns: 1fr;
+        /*grid-template-columns: 1fr 1fr 1fr 1fr !important;*/
+    }
+}
