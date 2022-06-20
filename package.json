@@ -4,7 +4,7 @@
   "description": "Multiverso Livraria é um e-commerce dedicado àqueles apaixonados por leitura, com o maior catálogo em todos os universos, com certeza a algo para você.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
