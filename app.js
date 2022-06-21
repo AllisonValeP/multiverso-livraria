@@ -13,5 +13,5 @@ app.use('/',indexRoute)
 
 // Roda o express na porta definida
 app.listen(port, ()=>{
-    console.log(`Servidor rodando na porta: ${port}`);
+    console.log(`Servidor rodando na porta: ${port}. Acesse: http://localhost:3000/`);
 })
