@@ -1,0 +1,192 @@
+/*inicio configurações gerais*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    
+  }
+  
+  .grid {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .mt-big {
+    margin-top: 32px;
+  }
+  /*final configurações gerais*/
+  
+  /* começo header */
+  
+  ul li {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .header {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 130px;
+    align-items: center;
+  }
+  
+  .header logo{
+     display: flex;
+     padding: 100px;
+  }
+
+  .nav-list li + li {
+    padding-left: 20px;
+  }
+
+  
+
+  /* final header */
+  
+  /*inicio botão de busca*/
+  
+  .search-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .searching-content{
+    
+    position:absolute;
+    top:10px;
+    left:0px;
+    right:0px;
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    background-color: white;
+    display: none;
+  
+  }
+  .searching-content-show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .searching-elements{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-searching{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+  }
+  
+  .search-input{
+    height: 40px;
+    padding: 8px;
+  
+  }
+  /*final botão de busca*/
+  
+ .title {
+    padding-top: 5%;
+    padding-right: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+ 
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lancamento-livros{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 16px;
+}
+
+.lancamento-livros li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.book-cover{
+  width: 231px;
+  height: 336px;
+  }
+
+.footer {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin-top: 32px;
+  }
+  
+  .footer div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 22px;
+  }
+  
+  .newsletter input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

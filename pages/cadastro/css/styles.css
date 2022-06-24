@@ -32,7 +32,10 @@ ul li {
 
 .nav-list li + li {
   padding-left: 20px;
-
+}
+.nav-list li a{
+  text-decoration: none;
+  color:black
 }
 
 main {

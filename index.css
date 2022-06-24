@@ -18,7 +18,7 @@
 }
 /*final configurações gerais*/
 
-
+/* começo header */
 ul li {
   display: inline-block;
   text-decoration: none;
@@ -38,6 +38,18 @@ ul li {
    display: flex;
    padding: 100px;
 }
+
+.nav-list li + li {
+  padding-left: 20px;
+
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color:black
+}
+/* final header */
+
 
 /*inicio botão de busca*/
 
@@ -94,10 +106,7 @@ ul li {
 }
 /*final botão de busca*/
 
-.nav-list li + li {
-  padding-left: 20px;
 
-}
 
 .banner {
   margin: 0 auto;
@@ -116,6 +125,7 @@ ul li {
   width: 700px;
   transform: skew(20deg);
 } 
+
 
 main{
   display: flex;
