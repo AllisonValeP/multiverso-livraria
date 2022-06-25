@@ -130,7 +130,7 @@ main{
 .lancamento-livros li {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  
   width: 100%;
   align-items: center;
 }
@@ -139,6 +139,22 @@ main{
   width: 231px;
   height: 336px;
   }
+
+.book-cover:hover {
+    width: 261px;
+    height: 366px;
+    cursor: pointer;
+    }
+ 
+.lancamento-livros li p{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 4%;
+  width: 200px;
+}
 
 .footer {
     display: flex;

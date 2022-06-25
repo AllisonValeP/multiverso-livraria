@@ -1,8 +1,9 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kdam Thmor Pro', sans-serif; 
+}
   
   .grid {
     max-width: 1280px;
