@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .grid {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .header {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 130px;
+    align-items: center;
+  }
+  
+  .header logo{
+     display: flex;
+     padding: 50px,
+  }
+  div.nomeCadastro{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #listaProdutos{ display: none; }
+  #cadastroProduto{ 
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+    body[page=listaP] #listaProdutos{ display: block; }
+    body[page=cadastroP] #cadastroProduto{ display: flex; }
+
+  body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td{
+    font-size: 16px;
+    padding: 15px 30px;
+    border: solid 1px #ccc;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #666565;
+    color: #e2e2e2;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  button.cinza{
+    background-color: #ccc;
+    color: #666565;
+  }
+
+  button:hover{
+    opacity: 0.8;
+  }
+
+  input{
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+
+  }
+
+  .label>div{
+    display: flex;
+  }
+  .label>div>input{
+    flex: 1;
+  }
