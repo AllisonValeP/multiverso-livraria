@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
 .grid {
@@ -33,6 +34,11 @@ ul li {
 .nav-list li + li {
   padding-left: 20px;
 
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color:black
 }
 
 main {
