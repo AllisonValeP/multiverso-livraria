@@ -34,7 +34,7 @@ ul li {
   align-items: center;
 }
 
-.header logo{
+.header logo {
    display: flex;
    padding: 100px;
 }
@@ -44,9 +44,37 @@ ul li {
 
 }
 
-.nav-list li a{
+.nav-list li a {
   text-decoration: none;
   color:black
+}
+
+.categories-dropdown {
+    position: relative;
+}
+
+.categories-options {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #f1eeee;
+    width: 100%;
+    text-align: left;
+    z-index: 1000;
+    margin: 0;
+    padding: 1px;
+    display: none;
+    border-radius: 10%;
+}
+
+.categories-dropdown:hover .categories-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-dropdown li + li {
+    margin: 0;
+    padding: 0;
 }
 /* final header */
 
