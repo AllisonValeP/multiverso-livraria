@@ -1,8 +1,10 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
   
   .grid {
     max-width: 1280px;
@@ -11,7 +13,6 @@
   }
   
   .header {
-  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,17 +21,21 @@
     align-items: center;
   }
   
-  .header logo{
+  .header .logo{
      display: flex;
      padding: 50px,
   }
-  div.nomeCadastro{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
+
+
+ .nomeCadastro{
+  padding-top: -1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+  top: -70px;
+ }
   
   #listaProdutos{ display: none; }
   #cadastroProduto{ 
