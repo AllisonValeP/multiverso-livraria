@@ -19,6 +19,7 @@
     margin: 0 auto;
     height: 130px;
     align-items: center;
+    vertical-align: middle;
   }
   
   .header .logo{
@@ -37,39 +38,32 @@
   top: -70px;
  }
   
-  #listaProdutos{ display: none; }
-  #cadastroProduto{ 
-    display: none;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-    body[page=listaP] #listaProdutos{ display: block; }
-    body[page=cadastroP] #cadastroProduto{ display: flex; }
-
   body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
   }
 
   table{
-    width: 100%;
-    border-collapse: collapse;
+    margin: auto;
+    width: 95%;
+    border-style:double;
+    border-width:solid;
   }
 
   table th,
   table td{
-    font-size: 16px;
-    padding: 15px 30px;
+    padding: auto;
     border: solid 1px #ccc;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+  
   }
-
+  
   button{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #666565;
+    background-color: #aca8a8;
     color: #e2e2e2;
     margin: 5px;
     padding: 10px;
@@ -77,7 +71,7 @@
 
   button.cinza{
     background-color: #ccc;
-    color: #666565;
+    color: #cfcfcf;
   }
 
   button:hover{
@@ -85,15 +79,9 @@
   }
 
   input{
+    padding: 10 px;
     border: solid 1px #ccc;
-    border-radius: 10px;
-    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
 
-  }
-
-  .label>div{
-    display: flex;
-  }
-  .label>div>input{
-    flex: 1;
   }
