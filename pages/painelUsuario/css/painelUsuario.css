@@ -1,0 +1,163 @@
+/*inicio configurações gerais*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+  }
+
+  .grid {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .mt-big {
+    margin-top: 32px;
+  }
+  /*final configurações gerais*/
+  
+  /* começo header */
+  ul li {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .header {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 130px;
+    align-items: center;
+  }
+  
+  .header logo {
+     display: flex;
+     padding: 100px;
+  }
+  
+  .nav-list li + li {
+    padding-left: 20px;
+  
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color:black
+  }
+  
+  .categories-dropdown {
+      position: relative;
+  }
+  
+  .categories-options {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #f1eeee;
+      width: 100%;
+      text-align: left;
+      z-index: 1000;
+      margin: 0;
+      padding: 2px 0px 1px 5px;
+      display: none;
+      border-radius: 10%;
+      width: 110px;
+      cursor: pointer;
+  }
+  
+  .categories-dropdown:hover .categories-options {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .categories-dropdown li + li {
+      margin: 0;
+      padding: 0;
+  }
+  /* final header */
+  
+  
+  /*inicio botão de busca*/
+  
+  .search-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .searching-content{
+    
+    position:absolute;
+    top:10px;
+    left:0px;
+    right:0px;
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    background-color: white;
+    display: none;
+  
+  }
+  .searching-content-show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .searching-elements{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-searching{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+  }
+  
+  .search-input{
+    height: 40px;
+    padding: 8px;
+  
+  }
+  /*final botão de busca*/
+  
+/*main*/
+
+.main-painel-usuario{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 130px;
+    align-items: center;
+}
+.div01{
+    background-color: red;
+    
+}
+
+
+.div02{
+    background-color: blue;
+}
+
+.div03{
+    background-color: purple;
+    
+}
