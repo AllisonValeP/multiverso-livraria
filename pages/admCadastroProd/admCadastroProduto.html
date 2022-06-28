@@ -18,6 +18,9 @@
         <p>
           <h1 style="text-align:center;">Cadastro de Produtos</h1>
        </p>
+       <p>
+
+       </p>
       </div>
     
     </header>
@@ -25,50 +28,51 @@
     <table id="cadastroDeProdutos">
       <tbody>
         <tr class='id'>
-            <td>ID</td>
+            <th>ID</th>
             <td>
                 <input type='number'/>
             </td>  
         </tr>
 
         <tr class='titulo do livro'>
-          <td>Título do Livro</td>
+          <th>Título do Livro</th>
           <td>
             <input type='text' />
           </tr>
 
           <tr class='quantidade'>
-            <td>Quantidade</td>
+            <th>Quantidade</th>
             <td>
               <input type='number' />
             </tr>
 
             <tr class='preço'>
-              <td>Preço</td>
+              <th>Preço</th>
               <td>
                 <input type='text' />
               </tr>
 
               <tr class='autor'>
-                <td>Autor</td>
+                <th>Autor</th>
                 <td>
                   <input type='text' />
                 </tr>
 
                 <tr class='editora'>
-                  <td>Editora</td>
+                  <th>Editora</th>
                   <td>
                     <input type='text' />
                   </tr>
 
-                  <tr>
-                    <button>Salvar</button>
-                    <button>Cancelar</button>
-                  </tr>
-              
               </tbody>
-          
+            
             </table>
+            <form>
+              <button class="btn-cadastro" type="submit">Salvar</button>
+              <a href="http://127.0.0.1:5501/pages/admCadastroProd/admEstoque.html">
+              <input class="btn-cadastro" type="button" value="Cancelar">
+             </a>
+            </form>
 
   </body>
 </html>

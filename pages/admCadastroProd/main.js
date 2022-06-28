@@ -52,3 +52,4 @@ function visualizar(pagina){
 window.addEventListener('load', () => {
     print()
 })
+
