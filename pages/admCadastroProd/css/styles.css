@@ -45,7 +45,7 @@
 
   table{
     margin: auto;
-    width: 80%;
+    width: 90%;
     border-style:double;
     border-width:solid;
   }
@@ -86,6 +86,11 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #aca8a8;
+  background-color: #5e5757;
   color: #e2e2e2;
+  margin: 0 10px
+}
+.icone-editar{
+  width: 10px;
+  height: 10px;
 }
