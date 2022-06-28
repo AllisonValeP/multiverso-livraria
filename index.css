@@ -66,6 +66,7 @@ ul li {
     display: none;
     border-radius: 10%;
     width: 110px;
+    cursor: pointer;
 }
 
 .categories-dropdown:hover .categories-options {
