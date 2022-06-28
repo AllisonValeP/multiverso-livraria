@@ -30,10 +30,11 @@
     
   }
   
-  .header logo{
+  .header .logo{
       display: flex;
      padding: 100px,
   }
+  
   
   .nav-list li + li {
     padding-left: 20px;
@@ -343,12 +344,7 @@
     .logo img {
       position: relative;
       top: 0px;
-      left: 290px;
-      width: 60px;
-      filter: invert(1);
-      -moz-filter: invert(1);
-      -webkit-filter: invert(1);
-      
+     
     }
     
     .button-checkout-row {
@@ -434,7 +430,11 @@
       text-decoration: none;
     }
     
-    a:hover {
+    .button li a{
+      color: black
+    }
+
+    .button li a:hover {
       color: #f1d4d4;
     }
     

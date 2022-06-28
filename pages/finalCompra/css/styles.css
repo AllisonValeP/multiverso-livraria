@@ -15,7 +15,7 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  background-color: #d9d9d9;
+ 
   
 }
 
@@ -38,11 +38,7 @@ ul li {
 .header logo{
     display: flex;
     padding: 100px,
-    
-    
-    
-   
-    
+        
 }
 
 .nav-list li + li {
@@ -341,12 +337,7 @@ a:hover {
   .logo img {
     position: relative;
     top: 0px;
-    left: 290px;
-    width: 60px;
-    filter: invert(1);
-    -moz-filter: invert(1);
-    -webkit-filter: invert(1);
-    
+ 
   }
   
   .checkout {
@@ -430,6 +421,11 @@ a:hover {
     text-decoration: none;
   }
   
+  .button-checkout-row li a{
+    color: black;
+  }
+
+
   a:hover {
     color: #f1d4d4;
   }

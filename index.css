@@ -62,9 +62,10 @@ ul li {
     text-align: left;
     z-index: 1000;
     margin: 0;
-    padding: 1px;
+    padding: 2px 0px 1px 5px;
     display: none;
     border-radius: 10%;
+    width: 110px;
 }
 
 .categories-dropdown:hover .categories-options {
