@@ -137,7 +137,17 @@
   /*final botão de busca*/
   
 /*main*/
+.titleUsuario {
+  padding-top: 5%;
+  padding-right: 3%;
+  padding-bottom: 3%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2,5rem;
+
+}
 .main-painel-usuario{
     position: relative;
     display: flex;
@@ -146,18 +156,86 @@
     margin: 0 auto;
     height: 130px;
     align-items: center;
+  
 }
 .div01{
-    background-color: red;
-    
+  border-radius: 12%;
+  background-color: rgb(217, 215, 215);
+  width: 13%;
+  position: relative;
+  left: 2%;
+ 
+
+}
+.div01 ul li{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 8%;
 }
 
 
-.div02{
-    background-color: blue;
+.div02 p {
+
+  display: flex;
+  
+ 
+  width: 1000px;
 }
 
 .div03{
     background-color: purple;
     
+}
+
+
+
+.footer {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: #d9d9d9;
+  margin-top: 32px;
+}
+
+.footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  font-size: 22px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
 }
