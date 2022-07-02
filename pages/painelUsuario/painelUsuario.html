@@ -12,7 +12,8 @@
     <title>Area do Usuario</title>
 </head>
 <body>
-    <header class="header grid">
+    
+  <header class="header grid">
         <div class="logo"><img src="../../piImagens/logo2.png" width="110" height="80" alt="Logo"></div>
           <ul class="nav-list">
             <li class="categories-dropdown">
@@ -49,35 +50,38 @@
           </div>
   
         </header>
+
         <main>
           <h1 class="titleUsuario">Area do Usuario</h1>
             <div class="main-painel-usuario">
-            <div class="div01">
-             <ul>
-              <li>Favoritos</li>
+
+            <div >
+             <ul class="container-actions">
+              <li ><button id="editarPerfil">Editar perfil</button></li>
+              <li>Forma de pagamento</li>
+              <li>Alterar endereço</li>
               <li>Historico</li>
-              <li>Avaliações</li>
-              <li>Editar Perfil</li>
-              
               </ul>
-             
             </div>
-           
-           
-            <div class="div02"> 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae deleniti ratione corrupti ad iste culpa incidunt, quis veniam dolores libero, corporis tempore eos suscipit, nostrum soluta a quam cum ipsum!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae deleniti ratione corrupti ad iste culpa incidunt, quis veniam dolores libero, corporis tempore eos suscipit, nostrum soluta a quam cum ipsum!
-              </p>
-             
-            </div>
+
+                <div class="userInformation">
+                        <form class="informacoesPerfil" >
+                          <label for="nome">Nome:</label>
+                          <input type="text" id="nome" name="nome">
+                          <label for="sobrenome">Sobrenome:</label>
+                          <input type="text" id="sobrenome" name="sobrenome">
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email">
+                         </form>       
+                </div>
             
 
           </div>
 
             
         </main>
-        <!-- <footer class="footer">
+
+       <footer class="footer">
           <div class="grid">
             <div class="about-us">
               <p>Quem Somos</p>
@@ -96,7 +100,8 @@
               <p>Siga-nos nas redes sociais</p>
             </div>
           </div>
-        </footer> -->
+        </footer>
+
         <script>
             const searchListenner = document.querySelector(".search-button")
             const searchModal = document.querySelector("#search-modal")
@@ -109,6 +114,15 @@
            
             closeSearchModal.addEventListener("click", ()=>{
               searchModal.classList.remove("searching-content-show");
+            })
+
+            
+            const editarPerfil =  document.querySelector("#editarPerfil")
+            const informacoesPerfil = document.querySelector(".informacoesPerfil")
+        
+           
+            editarPerfil.addEventListener("click", ()=>{
+              informacoesPerfil.classList.add("informacoesPerfil-show");
             })
           </script>        
 </body>

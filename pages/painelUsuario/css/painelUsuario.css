@@ -137,6 +137,10 @@
   /*final botão de busca*/
   
 /*main*/
+main{
+  width: 100%;
+  height: 100%;
+}
 .titleUsuario {
   padding-top: 5%;
   padding-right: 3%;
@@ -145,52 +149,101 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2,5rem;
+  font-size: 2.5rem;
 
 }
-.main-painel-usuario{
-    position: relative;
+
+.main-painel-usuario {
+    /*position: relative;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    /*margin: 0 auto;*/
+    /*height: 130px;*/
+    /*align-items: center;*/
+    width: 100%;
+    /*max-width: 960px;*/
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 130px;
+    padding: 16px;
     align-items: center;
-  
+    /* justify-content: center; */
+    margin: 0 auto;
+    height: 500px;
 }
-.div01{
-  border-radius: 12%;
+
+
+
+.container-actions{
   background-color: rgb(217, 215, 215);
-  width: 13%;
-  position: relative;
-  left: 2%;
- 
+  /*width: 18%;*/
+  /*position: relative;*/
+  /*left: 2%;*/
+  /*bottom: -70%;*/
+    display: flex;
+    flex-direction: column;
+    width: 260px;
 
 }
-.div01 ul li{
-   
+
+.container-actions li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 4%;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 8%;
+    /*padding-top: 4%;*/
+    /*padding-left: 15%;*/
+    /*padding-right: 15%;*/
+    /*padding-bottom: 8%;*/
+    border-bottom: groove;
+    text-align: center;
+    height: 40px;
 }
 
+.userInformation {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100%;*/
+    /*padding-left: 32px;*/
+    /*max-width: 700px;*/
+    /*width: 100%;*/
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 32px;
+    width: 100%;
+    padding-left: 400px;
+}
 
-.div02 p {
+.informacoesPerfil {
+  display: none;
+}
 
+.informacoesPerfil-show{
   display: flex;
   
- 
-  width: 1000px;
 }
 
-.div03{
-    background-color: purple;
-    
+#editarPerfil{
+  border: none;
+  background-color:#d9d9d9 ;
+  cursor: pointer;
+  font-size: 1rem;
 }
+
+.informacoesPerfil{
+  padding-bottom: 80px;
+}
+
+label {
+  padding-left: 90px;
+  padding-right: 10px;
+}
+
+
 
 
 
@@ -199,7 +252,7 @@
   height: 200px;
   align-items: center;
   background-color: #d9d9d9;
-  margin-top: 32px;
+  width: 100%;
 }
 
 .footer div {
