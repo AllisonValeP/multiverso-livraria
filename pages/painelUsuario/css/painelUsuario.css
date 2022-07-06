@@ -1,294 +1,337 @@
 /*inicio configurações gerais*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kdam Thmor Pro', sans-serif;
 
-  }
+}
 
-  .grid {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .mt-big {
-    margin-top: 32px;
-  }
-  /*final configurações gerais*/
-  
-  /* começo header */
-  ul li {
-    display: inline-block;
-    text-decoration: none;
-  }
-  
-  .header {
-    position:relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 130px;
-    align-items: center;
-  }
-  
-  .header logo {
-     display: flex;
-     padding: 100px;
-  }
-  
-  .nav-list li + li {
-    padding-left: 20px;
-  
-  }
-  
-  .nav-list li a {
-    text-decoration: none;
-    color:black
-  }
-  
-  .categories-dropdown {
-      position: relative;
-  }
-  
-  .categories-options {
-      position: absolute;
-      top: 30px;
-      left: 0;
-      background-color: #f1eeee;
-      width: 100%;
-      text-align: left;
-      z-index: 1000;
-      margin: 0;
-      padding: 2px 0px 1px 5px;
-      display: none;
-      border-radius: 10%;
-      width: 110px;
-      cursor: pointer;
-  }
-  
-  .categories-dropdown:hover .categories-options {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .categories-dropdown li + li {
-      margin: 0;
-      padding: 0;
-  }
-  /* final header */
-  
-  
-  /*inicio botão de busca*/
-  
-  .search-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .searching-content{
-    
-    position:absolute;
-    top:10px;
-    left:0px;
-    right:0px;
-    width: 80%;
-    height: 80px;
-    margin:0 auto;
-    background-color: white;
-    display: none;
-  
-  }
-  .searching-content-show{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .searching-elements{
+.grid {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mt-big {
+  margin-top: 32px;
+}
+/*final configurações gerais*/
+
+/* começo header */
+ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header {
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 130px;
+  align-items: center;
+}
+
+.header logo {
+   display: flex;
+   padding: 100px;
+}
+
+.nav-list li + li {
+  padding-left: 20px;
+
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color:black
+}
+
+.categories-dropdown {
     position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .close-searching{
-    background-color: transparent;
-    border: none;
+}
+
+.categories-options {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 30px;
+    left: 0;
+    background-color: #f1eeee;
+    width: 100%;
+    text-align: left;
+    z-index: 1000;
+    margin: 0;
+    padding: 2px 0px 1px 5px;
+    display: none;
+    border-radius: 10%;
+    width: 110px;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-  }
+}
+
+.categories-dropdown:hover .categories-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-dropdown li + li {
+    margin: 0;
+    padding: 0;
+}
+/* final header */
+
+
+/*inicio botão de busca*/
+
+.search-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.searching-content{
   
-  .search-input{
-    height: 40px;
-    padding: 8px;
-  
-  }
-  /*final botão de busca*/
-  
-/*main*/
-main{
+  position:absolute;
+  top:10px;
+  left:0px;
+  right:0px;
+  width: 80%;
+  height: 80px;
+  margin:0 auto;
+  background-color: white;
+  display: none;
+
+}
+.searching-content-show{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searching-elements{
+  position: relative;
   width: 100%;
   height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-searching{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.search-input{
+  height: 40px;
+  padding: 8px;
+
+}
+/*final botão de busca*/
+
+/*main*/
+main{
+width: 100%;
+height: 100%;
 }
 .titleUsuario {
-  padding-top: 5%;
-  padding-right: 3%;
-  padding-bottom: 3%;
+padding-top: 5%;
+padding-right: 3%;
+padding-bottom: 3%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.5rem;
 
 }
 
 .main-painel-usuario {
-    /*position: relative;*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
-    /*margin: 0 auto;*/
-    /*height: 130px;*/
-    /*align-items: center;*/
-    width: 100%;
-    /*max-width: 960px;*/
-    display: flex;
-    flex-direction: row;
-    padding: 16px;
-    align-items: center;
-    /* justify-content: center; */
-    margin: 0 auto;
-    height: 500px;
+  /*position: relative;*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: space-between;*/
+  /*margin: 0 auto;*/
+  /*height: 130px;*/
+  /*align-items: center;*/
+  width: 100%;
+  /*max-width: 960px;*/
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 0 auto;
+  height: 500px;
 }
 
 
-
 .container-actions{
-  background-color: rgb(217, 215, 215);
-  /*width: 18%;*/
-  /*position: relative;*/
-  /*left: 2%;*/
-  /*bottom: -70%;*/
-    display: flex;
-    flex-direction: column;
-    width: 260px;
+background-color: rgb(217, 215, 215);
+/*width: 18%;*/
+/*position: relative;*/
+/*left: 2%;*/
+/*bottom: -70%;*/
+  display: flex;
+  flex-direction: column;
+  width: 260px;
 
 }
 
 .container-actions li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /*padding-top: 4%;*/
-    /*padding-left: 15%;*/
-    /*padding-right: 15%;*/
-    /*padding-bottom: 8%;*/
-    border-bottom: groove;
-    text-align: center;
-    height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*padding-top: 4%;*/
+  /*padding-left: 15%;*/
+  /*padding-right: 15%;*/
+  /*padding-bottom: 8%;*/
+  border-bottom: groove;
+  text-align: center;
+  height: 40px;
 }
 
 .userInformation {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*height: 100%;*/
-    /*padding-left: 32px;*/
-    /*max-width: 700px;*/
-    /*width: 100%;*/
-    display: flex;
-    max-width: 700px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding-left: 32px;
-    width: 100%;
-    padding-left: 400px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*height: 100%;*/
+  /*padding-left: 32px;*/
+  /*max-width: 700px;*/
+  /*width: 100%;*/
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 32px;
+  width: 100%;
+  padding-left: 400px;
 }
 
+
+
+/* começo informações perfil */
+#editarPerfil{
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  }
+
 .informacoesPerfil {
-  display: none;
+display: none;
 }
 
 .informacoesPerfil-show{
-  display: flex;
-  
+display: flex;
+flex-direction: row;
 }
-
-#editarPerfil{
-  border: none;
-  background-color:#d9d9d9 ;
-  cursor: pointer;
-  font-size: 1rem;
+.label-informacoesPerfil{
+padding-left:50px;
 }
 
 .informacoesPerfil{
-  padding-bottom: 80px;
+padding-bottom: 80px;
+}
+/* final informações perfil */
+
+
+/* começo editar pagamento */
+#editarPagamento{
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  }
+
+.informacoesPagamento {
+display: none;
 }
 
-label {
-  padding-left: 90px;
-  padding-right: 10px;
+.informacoesPagamento-show{
+display: flex;
+flex-direction: row;
 }
 
+.label-informacoesPagamento{
+padding-left: 50px;
+text-align: center;
+width: 250px;
+}
+.input-informacoesPagamento{
+width: 100px; 
+}
+/* final editar pagamento */
 
 
+/* começo alterar endereço */
+#editarEndereco{
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  }
 
+.informacoesEndereco {
+    display: none;
+}
+
+.informacoesEndereco-show{
+  display: flex;
+  flex-direction: row;
+}
 
 .footer {
-  display: flex;
-  height: 200px;
-  align-items: center;
-  background-color: #d9d9d9;
-  width: 100%;
+display: flex;
+height: 200px;
+align-items: center;
+background-color: #d9d9d9;
+width: 100%;
 }
 
 .footer div {
-  display: flex;
-  justify-content: space-between;
+display: flex;
+justify-content: space-between;
 }
 
 .social{
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
 .about-us {
-  display: flex;
-  flex-direction: column;
-  
+display: flex;
+flex-direction: column;
+
 }
 
 .newsletter {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  font-size: 22px;
+display: flex;
+flex-direction: column;
+width: 300px;
+font-size: 22px;
 }
 
 .newsletter input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin: 8px 0;
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin: 8px 0;
 }
 
 .social {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
