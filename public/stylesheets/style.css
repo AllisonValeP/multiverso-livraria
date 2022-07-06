@@ -1,0 +1,240 @@
+/*inicio configurações gerais*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    
+  }
+  
+  .grid {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .mt-big {
+    margin-top: 32px;
+  }
+  /*final configurações gerais*/
+  
+  
+  ul li {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .header {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 130px;
+    align-items: center;
+  }
+  
+  .header logo{
+     display: flex;
+     padding: 100px;
+  }
+  
+  /*inicio botão de busca*/
+  
+  .search-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .searching-content{
+    
+    position:absolute;
+    top:10px;
+    left:0px;
+    right:0px;
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    background-color: white;
+    display: none;
+  
+  }
+  .searching-content-show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .searching-elements{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-searching{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+  }
+  
+  .search-input{
+    height: 40px;
+    padding: 8px;
+  
+  }
+  /*final botão de busca*/
+  
+  .nav-list li + li {
+    padding-left: 20px;
+  
+  }
+  
+  .banner {
+    margin: 0 auto;
+  }
+  
+  .banner li {
+    margin: 0;
+    padding: 0;
+    transform: skew(-20deg);
+    overflow: hidden;
+    max-width: 316px;
+    max-height: 474px;
+  }
+  
+  .banner-image {
+    width: 700px;
+    transform: skew(20deg);
+  } 
+  
+  main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .home-livros { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 16px;
+   }
+  
+   .home-livros li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+   }
+  
+   .book-image:hover {
+    width: 261px;
+    height: 366px;
+    cursor: pointer;
+    }
+    
+    .book-image{
+      width: 231px;
+      height: 336px;
+      }
+  
+   .home-livros li p {
+     padding-top: 8px;
+     text-align: center;
+     max-width: 110px;
+     font-size: 18px;
+   }
+  
+   .titulos {
+    display: flex;
+   
+   }
+  
+   .home-titulos-livros  {
+    justify-content: space-between;
+    width: 100%;
+   }
+  
+  .footer {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin-top: 32px;
+  }
+  
+  .footer div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 22px;
+  }
+  
+  .newsletter input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-livros li p {
+      height: 100px;
+      width: 100%;
+      text-align: center;
+  }
+  
+  
+  .responsive {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  @media (max-width: 960px) {
+      .responsive {
+          grid-template-columns: 1fr 1fr;
+          /*grid-template-columns: 1fr 1fr 1fr 1fr !important;*/
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .responsive {
+          grid-template-columns: 1fr;
+          /*grid-template-columns: 1fr 1fr 1fr 1fr !important;*/
+      }
+  }
+  
