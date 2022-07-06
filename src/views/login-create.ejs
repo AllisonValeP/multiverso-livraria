@@ -1,0 +1,37 @@
+<%- include('./partials/head')%>
+<%- include('./partials/header')%>
+<main class="main-login">
+    <section id="container-signup">
+        <h2>Cadastro</h2>
+        <form method="GET">
+          <div class="container-input">
+            <label for="name-id">Nome</label>
+            <input type="text" name="name" id="name-id" />
+          </div>
+
+          <div class="container-input">
+            <label for="email-id">E-mail</label>
+            <input type="email" name="email" id="email-id" />
+          </div>
+          <div class="container-input">
+            <label for="password-id">Senha</label>
+            <input type="password" name="password" id="password-id" />
+          </div>
+
+          <div class="container-input">
+            <label for="confirm-password-id">Confirmar senha</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirm-password-id"
+            />
+          </div>
+          
+         </div>
+        
+         <input type="submit" value="Cadastro" />
+         <a href="../Login/login.html">Login</a>
+        </form>
+     </section>
+    </main>
+<%- include('./partials/footer')%>
