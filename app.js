@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const indexRoute = require('./src/routes/IndexRoute')
-const userRoute = require('./src/routes/userRoute')
+const userRoute = require('./src/routes/UserRoute')
 
 
 app.use(express.static(__dirname + '/public'));
