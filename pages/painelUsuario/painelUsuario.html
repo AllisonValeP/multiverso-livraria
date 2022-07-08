@@ -63,45 +63,96 @@
           <li><button id="editarPerfil">Editar perfil</button></li>
           <li><button id="editarPagamento">Forma de pagamento</button></li>
           <li><button id="editarEndereco">Alterar endereço</button></li>
-          <li>Meus pedidos</li>
+          <li><button id="editarHistorico"> Meus pedidos</button></li>
         </ul>
       </div>
 
       <div class="userInformation">
         <form class="informacoesPerfil">
+          <div class="nome-sobrenome">
           <label class="label-informacoesPerfil" for="nome">Nome:</label>
-          <input class="input-informacoesPerfil" type="text" id="nome" name="nome">
+          <input class="input-informacoesPerfil" type="text" id="nome" name="nome"><br>
 
           <label class="label-informacoesPerfil" for="sobrenome">Sobrenome:</label>
-          <input class="input-informacoesPerfil" type="text" id="sobrenome" name="sobrenome">
+          <input class="input-informacoesPerfil" type="text" id="sobrenome" name="sobrenome"><br>
+        </div>
 
+        <div class="email-senha">
           <label class="label-informacoesPerfil" for="email">Email:</label>
-          <input class="input-informacoesPerfil" type="email" id="email" name="email">
+          <input class="input-informacoesPerfil" type="email" id="email" name="email"><br>
 
           <label class="label-informacoesPerfil" for="password">Senha:</label>
-          <input class="input-informacoesPerfil" type="password" id="password" name="password">
+          <input class="input-informacoesPerfil" type="password" id="password" name="password"><br>
+          <button class="button-informacoesPerfil" type="submit" form="informacoesPerfil" value="Submit">Salvar</button>
+        </div>
         </form>
 
         <form class="informacoesPagamento">
+          <div class="cartao-numero-nome">
           <label class="label-informacoesPagamento" for="numeroCartao">Numero do cartão:</label>
-          <input class="input-informacoesPagamento" type="number" id="numeroCartao" name="numeroCartao">
-
+          <input class="input-numero-nome" type="number" id="numeroCartao" name="numeroCartao">         
+          
           <label class="label-informacoesPagamento" for="nomeCartao">Nome do cartão:</label>
-          <input class="input-informacoesPagamento" type="text" id="nomeCartao" name="nomeCartao">
+          <input class="input-numero-nome" type="text" id="nomeCartao" name="nomeCartao">
+          </div>
 
+          <div class="cartao-data-botao">
           <label class="label-informacoesPagamento" for="dataCartao">Validade do cartão:</label>
-          <input class="input-informacoesPagamento" type="date" id="dataCartao" name="dataCartao">
+          <input class="input-data-cartao" type="date" id="dataCartao" name="dataCartao">
+          <button class="button-informacoesPagamento" form="informacoesPagamento" value="Submit">Salvar</button>
+        </div>
         </form>
-        
+
         <form class="informacoesEndereco">
+          <div class="endereco">
           <label class="label-informacoesEndereco" for="endereco">Novo endereço:</label>
           <input class="input-informacoesEndereco" type="text" id="endereco" name="endereco">
-
-          <label class="label-informacoesEndereco" for="numeroEndereco">Novo numero:</label>
-          <input class="input-informacoesEndereco" type="number" id="numeroEndereco" name="numeroEndereco">
+        </div>
           
+        <div class="numero">
+          <label class="label-numero-informacoesEndereco" for="numeroEndereco">Novo numero:</label>
+          <input class="input-informacoesEndereco" type="number" id="numeroEndereco" name="numeroEndereco">
+          <button class="button-informacoesEndereco" form="informacoesEndereco" value="Submit">Salvar</button>
+        </div>
+
         </form>
-        
+        <form class="informacoesHisrotico">
+          
+          <div class="tebela-container">
+          <table id="customers">
+            <tr>
+
+              <th>Item</th>
+              <th>Valor</th>
+              <th>Data de compra</th>
+              <th>Data de entrega</th>
+            </tr>
+            <tr>
+              <td><img class="tabela-image" src="../../public/img/home-livro-01.png">
+                <p class="tabela-nome-livro">Sobre anarquismo</p>
+              </td>
+              <td>R$49,99</td>
+              <td>09/05/2021</td>
+              <td>19/05/2021</td>
+            </tr>
+
+            <tr>
+              <td>
+                <img class="tabela-image" src="../../public/img/home-livro-02.png">
+                <p class="tabela-nome-livro">Manifesto Comunista</p>
+              </td>
+              <td>R$39,99</td>
+              <td>15/09/2021</td>
+              <td>25/09/2021</td>
+            </tr>
+
+          </table>
+        </div>
+
+        <div class="button-tabela-container">
+          <button class="button-informacoesHisrotico" value="Submit">Salvar</button>
+        </div>
+        </form>
       </div>
 
 
@@ -164,13 +215,21 @@
     editarPagamento.addEventListener("click", () => {
       informacoesPagamento.classList.add("informacoesPagamento-show");
     })
-    
+
     // editar endereço
     const editarEndereco = document.querySelector("#editarEndereco");
     const informacoesEndereco = document.querySelector(".informacoesEndereco");
 
-    editarEndereco.addEventListener("click", ()=>{
+    editarEndereco.addEventListener("click", () => {
       informacoesEndereco.classList.add("informacoesEndereco-show");
+    })
+
+    // tabela historico
+    const editarHistorico = document.querySelector("#editarHistorico");
+    const informacoesHisrotico = document.querySelector(".informacoesHisrotico");
+
+    editarHistorico.addEventListener("click", () => {
+      informacoesHisrotico.classList.add("informacoesHisrotico-show");
     })
   </script>
 </body>

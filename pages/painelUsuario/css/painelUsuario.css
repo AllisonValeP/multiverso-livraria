@@ -137,7 +137,7 @@ ul li {
 /*final botão de busca*/
 
 /*main*/
-main{
+.main-painel-usuario{
 width: 100%;
 height: 100%;
 }
@@ -162,14 +162,14 @@ font-size: 2.5rem;
   /*height: 130px;*/
   /*align-items: center;*/
   width: 100%;
-  /*max-width: 960px;*/
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   padding: 16px;
   align-items: center;
   /* justify-content: center; */
   margin: 0 auto;
-  height: 500px;
+  height: 600px;
 }
 
 
@@ -209,12 +209,10 @@ background-color: rgb(217, 215, 215);
   display: flex;
   max-width: 700px;
   width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding-left: 32px;
-  width: 100%;
-  padding-left: 400px;
+  border: 10px solid red;
 }
 
 
@@ -229,18 +227,40 @@ background-color: rgb(217, 215, 215);
 
 .informacoesPerfil {
 display: none;
+/* padding-bottom: 80px; */
+padding: 172px;
 }
 
 .informacoesPerfil-show{
 display: flex;
 flex-direction: row;
-}
-.label-informacoesPerfil{
-padding-left:50px;
+max-width: 600px;
+border: 10px solid;
+justify-content: center;
 }
 
-.informacoesPerfil{
-padding-bottom: 80px;
+.nome-sobrenome{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid green; */
+}
+
+.email-senha{
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+  /* border: 2px solid purple; */
+}
+
+.button-informacoesPerfil{
+  height: 50px;
+  color: white;
+  background-color: #4c72af;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
 }
 /* final informações perfil */
 
@@ -263,12 +283,38 @@ flex-direction: row;
 }
 
 .label-informacoesPagamento{
-padding-left: 50px;
 text-align: center;
 width: 250px;
 }
-.input-informacoesPagamento{
-width: 100px; 
+.input-data-cartao{
+width: 135px; 
+}
+
+.button-informacoesPagamento{
+  height: 50px;
+  color: white;
+  background-color: #4c72af;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+.cartao-numero-nome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid blue; */
+}
+
+.cartao-data-botao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgb(255, 0, 153); */
 }
 /* final editar pagamento */
 
@@ -289,6 +335,110 @@ width: 100px;
   display: flex;
   flex-direction: row;
 }
+
+.endereco{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/* border: 1px solid rgb(16, 147, 199); */
+}
+
+.numero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid rgb(196, 172, 37); */
+}
+.label-numero-informacoesEndereco{
+  padding-top: 50px;
+}
+.button-informacoesEndereco{
+  height: 50px;
+  color: white;
+  background-color: #4c72af;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+/* final alterar endereço */
+
+/* começo tabela historico */
+#editarHistorico{
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  }
+
+  .informacoesHisrotico {
+    display: none;
+}
+
+.informacoesHisrotico-show{
+  display: flex;
+  flex-direction: row;
+}
+
+.tabela-image{
+  height: 200px;
+  width: 150px;
+}
+
+.tabela-nome-livro{
+  font-size: 16px;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4c72af;
+  color: white;
+}
+/* .tebela-container{
+  border: solid 2px rebeccapurple
+} */
+.button-tabela-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  /* border: solid 2px rgb(51, 153, 53); */
+
+}
+.button-informacoesHisrotico{
+  height: 50px;
+  color: white;
+  background-color: #4c72af;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+}
+
+
+/* final tabela historico */
 
 .footer {
 display: flex;
@@ -335,3 +485,5 @@ margin: 8px 0;
 display: flex;
 flex-direction: column;
 }
+
+
