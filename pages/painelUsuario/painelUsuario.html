@@ -136,7 +136,7 @@
               <td>19/05/2021</td>
             </tr>
 
-            <tr>
+            <tr class="tr-02">
               <td>
                 <img class="tabela-image" src="../../public/img/home-livro-02.png">
                 <p class="tabela-nome-livro">Manifesto Comunista</p>
@@ -183,54 +183,66 @@
   </footer>
 
   <script>
+    const allForms = document.querySelectorAll('.userInformation form')
+
+    const actionsForm = document.querySelectorAll('.container-actions li button')
+
+    actionsForm.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        allForms.forEach(item => item.classList.remove('form-show'))
+        allForms[index].classList.add('form-show')
+      })
+    })
     // barra de pesquisa
-    const searchListenner = document.querySelector(".search-button")
-    const searchModal = document.querySelector("#search-modal")
-    const closeSearchModal = document.querySelector("#close-searching")
+    // const searchListenner = document.querySelector(".search-button")
+    // const searchModal = document.querySelector("#search-modal")
+    // const closeSearchModal = document.querySelector("#close-searching"):
+
+    console.warn(actionsForm)
 
 
-    searchListenner.addEventListener("click", () => {
-      searchModal.classList.add("searching-content-show");
-    })
+    // searchListenner.addEventListener("click", () => {
+    //   searchModal.classList.add("searching-content-show");
+    // })
 
-    closeSearchModal.addEventListener("click", () => {
-      searchModal.classList.remove("searching-content-show");
-    })
+    // closeSearchModal.addEventListener("click", () => {
+    //   searchModal.classList.remove("searching-content-show");
+    // })
 
-    // editar perfil 
-    const editarPerfil = document.querySelector("#editarPerfil");
-    const informacoesPerfil = document.querySelector(".informacoesPerfil");
+    // // editar perfil 
+    // const editarPerfil = document.querySelector("#editarPerfil");
+    // const informacoesPerfil = document.querySelector(".informacoesPerfil");
 
 
-    editarPerfil.addEventListener("click", () => {
-      informacoesPerfil.classList.add("informacoesPerfil-show");
-      // informacoesPerfil.classList.remove("informacoesPagamento-show");
+    // editarPerfil.addEventListener("click", () => {
+    //   informacoesPerfil.classList.add("informacoesPerfil-show");
+    //   // informacoesPerfil.classList.remove("informacoesPagamento-show");
 
-    })
+    // })
 
-    // formas de pagamento
-    const editarPagamento = document.querySelector("#editarPagamento");
-    const informacoesPagamento = document.querySelector(".informacoesPagamento");
+    // // formas de pagamento
+    // const editarPagamento = document.querySelector("#editarPagamento");
+    // const informacoesPagamento = document.querySelector(".informacoesPagamento");
 
-    editarPagamento.addEventListener("click", () => {
-      informacoesPagamento.classList.add("informacoesPagamento-show");
-    })
+    // editarPagamento.addEventListener("click", () => {
+    //   informacoesPagamento.classList.add("informacoesPagamento-show");
+    // })
 
-    // editar endereço
-    const editarEndereco = document.querySelector("#editarEndereco");
-    const informacoesEndereco = document.querySelector(".informacoesEndereco");
+    // // editar endereço
+    // const editarEndereco = document.querySelector("#editarEndereco");
+    // const informacoesEndereco = document.querySelector(".informacoesEndereco");
 
-    editarEndereco.addEventListener("click", () => {
-      informacoesEndereco.classList.add("informacoesEndereco-show");
-    })
+    // editarEndereco.addEventListener("click", () => {
+    //   informacoesEndereco.classList.add("informacoesEndereco-show");
+    // })
 
-    // tabela historico
-    const editarHistorico = document.querySelector("#editarHistorico");
-    const informacoesHisrotico = document.querySelector(".informacoesHisrotico");
+    // // tabela historico
+    // const editarHistorico = document.querySelector("#editarHistorico");
+    // const informacoesHisrotico = document.querySelector(".informacoesHisrotico");
 
-    editarHistorico.addEventListener("click", () => {
-      informacoesHisrotico.classList.add("informacoesHisrotico-show");
-    })
+    // editarHistorico.addEventListener("click", () => {
+    //   informacoesHisrotico.classList.add("informacoesHisrotico-show");
+    // })
   </script>
 </body>
 

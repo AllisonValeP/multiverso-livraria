@@ -150,7 +150,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 2.5rem;
-
 }
 
 .main-painel-usuario {
@@ -170,6 +169,8 @@ font-size: 2.5rem;
   /* justify-content: center; */
   margin: 0 auto;
   height: 600px;
+  /* margin-bottom: 155px; */
+
 }
 
 
@@ -212,7 +213,8 @@ background-color: rgb(217, 215, 215);
   height: 100%;
   align-items: center;
   justify-content: center;
-  border: 10px solid red;
+  /* border: 10px solid red; */
+  
 }
 
 
@@ -227,22 +229,22 @@ background-color: rgb(217, 215, 215);
 
 .informacoesPerfil {
 display: none;
-/* padding-bottom: 80px; */
-padding: 172px;
 }
 
 .informacoesPerfil-show{
 display: flex;
 flex-direction: row;
 max-width: 600px;
-border: 10px solid;
+/* border: 10px solid; */
 justify-content: center;
+background-color: #d9d9d9;
 }
 
 .nome-sobrenome{
   display: flex;
   flex-direction: column;
   /* border: 2px solid green; */
+  
 }
 
 .email-senha{
@@ -280,6 +282,7 @@ display: none;
 .informacoesPagamento-show{
 display: flex;
 flex-direction: row;
+background-color: #d9d9d9;
 }
 
 .label-informacoesPagamento{
@@ -434,11 +437,32 @@ width: 135px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 81px;
+  width: 169px;
+  position: relative;
+  top: 280px;
+}
+.tr-02{
+  background-color: white;
+}
+
+/* final tabela historico */
+
+.form-show {
+  display: flex;
+  flex-direction: row;
+  max-width: 620px;
+  width: 100%;
+  height: 100%;
+  max-height: 620px;
+  /* border: 10px solid;
+  border-radius: 05%; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9;
+  text-align: center;
 }
 
 
-/* final tabela historico */
 
 .footer {
 display: flex;
@@ -446,6 +470,7 @@ height: 200px;
 align-items: center;
 background-color: #d9d9d9;
 width: 100%;
+margin-top: 154px;
 }
 
 .footer div {
@@ -485,5 +510,6 @@ margin: 8px 0;
 display: flex;
 flex-direction: column;
 }
+
 
 
