@@ -4,6 +4,7 @@ const port = 3000;
 const indexRoute = require('./src/routes/IndexRoute')
 const userRoute = require('./src/routes/UserRoute')
 const productRoute = require('./src/routes/ProductRoute')
+const userPainelRoute = require('./src/routes/UserPainelRoute')
 
 
 app.use(express.static(__dirname + '/public'));
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use('/',indexRoute)
 app.use('/user',userRoute)
 app.use('/product',productRoute)
+app.use('/userpainel',userPainelRoute)
 
 
 // Roda o express na porta definida
