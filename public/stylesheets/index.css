@@ -1,3 +1,4 @@
+@import url("./header.css");
 /*inicio configurações gerais*/
 * {
   box-sizing: border-box;
@@ -18,66 +19,7 @@
 }
 /*final configurações gerais*/
 
-/* começo header */
-ul li {
-  display: inline-block;
-  text-decoration: none;
-}
 
-.header {
-  position:relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  height: 130px;
-  align-items: center;
-}
-
-.header logo {
-   display: flex;
-   padding: 100px;
-}
-
-.nav-list li + li {
-  padding-left: 20px;
-
-}
-
-.nav-list li a {
-  text-decoration: none;
-  color:black
-}
-
-.categories-dropdown {
-    position: relative;
-}
-
-.categories-options {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background-color: #f1eeee;
-    width: 100%;
-    text-align: left;
-    z-index: 1000;
-    margin: 0;
-    padding: 2px 0px 1px 5px;
-    display: none;
-    border-radius: 10%;
-    width: 110px;
-    cursor: pointer;
-}
-
-.categories-dropdown:hover .categories-options {
-    display: flex;
-    flex-direction: column;
-}
-
-.categories-dropdown li + li {
-    margin: 0;
-    padding: 0;
-}
 /* final header */
 
 
