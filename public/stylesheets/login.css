@@ -42,7 +42,7 @@
   #container-signup {
     width: 450px;
     min-height: 500px;
-    background-color: #747577;
+    background-color: rgba(40,57,101,.9);
     border-radius: 10px;
     padding: 25px;
     display: flex;
@@ -85,6 +85,13 @@
     color: #f1d4d4;
   }
   
+  .btn-acessar-painel{
+    background-color: #477fc0;
+    width: 233px;
+    height: 54px;
+    border: none;
+  }
   
-  
-  
+  .btn-acessar-painel-texto{
+    font-size: 22px;
+  }
