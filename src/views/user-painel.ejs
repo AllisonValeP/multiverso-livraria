@@ -1,167 +1,255 @@
 <%- include('./partials/head')%>
-<%- include('./partials/header')%>
-<main class="user-painel-main">
-    <h1 class="titleUsuario">Area do Usuario</h1>
-    <div class="main-painel-usuario">
+  <%- include('./partials/header')%>
+    <main class="user-painel-main">
+      <div class="login-wrap">
+        <div class="login-html">
 
-      <div>
-        <ul class="container-actions">
-          <li><button id="editarPerfil">Editar perfil</button></li>
-          <li><button id="editarPagamento">Forma de pagamento</button></li>
-          <li><button id="editarEndereco">Alterar endereço</button></li>
-          <li><button id="editarHistorico"> Meus pedidos</button></li>
-        </ul>
-      </div>
+          <div id="radio-container">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Perfil</label>
 
-      <div class="userInformation">
-        <form class="informacoesPerfil">
-          <div class="nome-sobrenome">
-          <label class="label-informacoesPerfil" for="nome">Nome:</label>
-          <input class="input-informacoesPerfil" type="text" id="nome" name="nome"><br>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Endereço</label>
 
-          <label class="label-informacoesPerfil" for="sobrenome">Sobrenome:</label>
-          <input class="input-informacoesPerfil" type="text" id="sobrenome" name="sobrenome"><br>
-        </div>
+            <input id="tab-3" type="radio" name="tab" class="user-edit">
+            <label for="tab-3" class="tab">Cartões</label>
 
-        <div class="email-senha">
-          <label class="label-informacoesPerfil" for="email">Email:</label>
-          <input class="input-informacoesPerfil" type="email" id="email" name="email"><br>
-
-          <label class="label-informacoesPerfil" for="password">Senha:</label>
-          <input class="input-informacoesPerfil" type="password" id="password" name="password"><br>
-          <button class="button-informacoesPerfil" type="submit" form="informacoesPerfil" value="Submit">Salvar</button>
-        </div>
-        </form>
-
-        <form class="informacoesPagamento">
-          <div class="cartao-numero-nome">
-          <label class="label-informacoesPagamento" for="numeroCartao">Numero do cartão:</label>
-          <input class="input-numero-nome" type="number" id="numeroCartao" name="numeroCartao">         
-          
-          <label class="label-informacoesPagamento" for="nomeCartao">Nome do cartão:</label>
-          <input class="input-numero-nome" type="text" id="nomeCartao" name="nomeCartao">
+            <input id="tab-4" type="radio" name="tab" class="address-edit">
+            <label for="tab-4" class="tab">Histórico</label>
           </div>
 
-          <div class="cartao-data-botao">
-          <label class="label-informacoesPagamento" for="dataCartao">Validade do cartão:</label>
-          <input class="input-data-cartao" type="date" id="dataCartao" name="dataCartao">
-          <button class="button-informacoesPagamento" form="informacoesPagamento" value="Submit">Salvar</button>
+          <div class="login-form">
+
+            <div class="sign-in-htm open-form" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Nome</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="user" class="label">Sobrenome</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">E-mail</label>
+                <input id="pass" type="email" class="input" data-type="Email">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Senha</label>
+                <input id="pass" type="password" class="input" data-type="password">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Confirme sua senha</label>
+                <input id="pass" type="password" class="input" data-type="password">
+              </div>
+              <!-- <div class="group">
+              <input id="check" type="checkbox" class="check" checked>
+              <label for="check"><span class="icon"></span> Keep me Signed in</label>
+            </div> -->
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+              <!-- <div class="hr"></div> -->
+              <!-- <div class="foot-lnk">
+              <a href="#forgot">Forgot Password?</a>
+            </div> -->
+            </div>
+
+            <div class="sign-up-htm" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Rua</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Estado</label>
+                <input id="pass" type="text" class="input" data-type="text">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">CEP</label>
+                <input id="pass" type="number" class="input" data-type="number">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Complemento</label>
+                <input id="pass" type="text" class="input">
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+              <!-- <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div> -->
+            </div>
+
+            <div class="user-edit-htm" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Nome como está no cartão</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Numero do Cartão</label>
+                <input id="pass" type="number" class="input" data-type="number">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">CPF do titular do cartão</label>
+                <input id="pass" type="text" class="input" data-type="text">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">data validade do cartão</label>
+                <input id="pass" type="date" class="input">
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+              <!-- <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div> -->
+            </div>
+
+            <div class="address-edit-htm" id="form-item">
+              <!-- <div class="group">
+              <label for="user" class="label">address</label>
+              <input id="user" type="text" class="input">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Password</label>
+              <input id="pass" type="password" class="input" data-type="password">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Repeat Password</label>
+              <input id="pass" type="password" class="input" data-type="password">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Email Address</label>
+              <input id="pass" type="text" class="input">
+            </div>
+            <div class="group">
+              <input type="submit" class="button" value="Sign Up">
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div> -->
+
+              <!-- Tabela -->
+              <div class="tebela-container">
+                <table id="customers">
+                  <tr>
+
+                    <th>Item</th>
+                    <th>Valor</th>
+                    <th>Data de compra</th>
+                    <th>Data de entrega</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Sobre anarquismo</p>
+                    </td>
+                    <td>R$49,99</td>
+                    <td>09/01/21</td>
+                    <td>19/01/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        Manifesto Comunista</p>
+                    </td>
+                    <td>R$39,99</td>
+                    <td>15/02/21</td>
+                    <td>25/02/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Solaris</p>
+                    </td>
+                    <td>R$79,99</td>
+                    <td>10/04/21</td>
+                    <td>19/04/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        Duna</p>
+                    </td>
+                    <td>R$59,99</td>
+                    <td>15/06/21</td>
+                    <td>25/06/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Ring</p>
+                    </td>
+                    <td>R$49,99</td>
+                    <td>01/07/21</td>
+                    <td>09/07/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        A Náusea</p>
+                    </td>
+                    <td>R$29,99</td>
+                    <td>15/07/21</td>
+                    <td>25/07/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Cem anos de solidão</p>
+                    </td>
+                    <td>R$79,99</td>
+                    <td>09/08/21</td>
+                    <td>19/08/21</td>
+                  </tr>
+
+
+
+
+                </table>
+              </div>
+
+            </div>
+
+          </div>
         </div>
-        </form>
-
-        <form class="informacoesEndereco">
-          <div class="endereco">
-          <label class="label-informacoesEndereco" for="endereco">Novo endereço:</label>
-          <input class="input-informacoesEndereco" type="text" id="endereco" name="endereco">
-        </div>
-          
-        <div class="numero">
-          <label class="label-numero-informacoesEndereco" for="numeroEndereco">Novo numero:</label>
-          <input class="input-informacoesEndereco" type="number" id="numeroEndereco" name="numeroEndereco">
-          <button class="button-informacoesEndereco" form="informacoesEndereco" value="Submit">Salvar</button>
-        </div>
-
-        </form>
-        <form class="informacoesHisrotico">
-          
-          <div class="tebela-container">
-          <table id="customers">
-            <tr>
-
-              <th>Item</th>
-              <th>Valor</th>
-              <th>Data de compra</th>
-              <th>Data de entrega</th>
-            </tr>
-            <tr>
-              <td><img class="tabela-image" src="img/home-livro-01.png">
-                <p class="tabela-nome-livro">Sobre anarquismo</p>
-              </td>
-              <td>R$49,99</td>
-              <td>09/05/2021</td>
-              <td>19/05/2021</td>
-            </tr>
-
-            <tr class="tr-02">
-              <td>
-                <img class="tabela-image" src="img/home-livro-01.png">
-                <p class="tabela-nome-livro">Manifesto Comunista</p>
-              </td>
-              <td>R$39,99</td>
-              <td>15/09/2021</td>
-              <td>25/09/2021</td>
-            </tr>
-
-          </table>
-        </div>
-
-        <div class="button-tabela-container">
-          <button class="button-informacoesHisrotico" value="Submit">Salvar</button>
-        </div>
-        </form>
       </div>
 
+    </main>
+    <%- include('./partials/footer')%>
+      <script>
+        const allForms = document.querySelectorAll('.userInformation form')
 
-    </div>
+        const actionsForm = document.querySelectorAll('.container-actions li button')
 
+        actionsForm.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            allForms.forEach(item => item.classList.remove('form-show'))
+            allForms[index].classList.add('form-show')
+          })
+        })
+      </script>
 
-  </main>
-<%- include('./partials/footer')%>
-<script>
-    const allForms = document.querySelectorAll('.userInformation form')
+      <script>
+        const forms = document.querySelectorAll('#form-item')
 
-    const actionsForm = document.querySelectorAll('.container-actions li button')
+        const radios = document.querySelectorAll('.tab')
 
-    actionsForm.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        allForms.forEach(item => item.classList.remove('form-show'))
-        allForms[index].classList.add('form-show')
-      })
-    })
-   
-
-
-
-    // searchListenner.addEventListener("click", () => {
-    //   searchModal.classList.add("searching-content-show");
-    // })
-
-    // closeSearchModal.addEventListener("click", () => {
-    //   searchModal.classList.remove("searching-content-show");
-    // })
-
-    // // editar perfil 
-    // const editarPerfil = document.querySelector("#editarPerfil");
-    // const informacoesPerfil = document.querySelector(".informacoesPerfil");
-
-
-    // editarPerfil.addEventListener("click", () => {
-    //   informacoesPerfil.classList.add("informacoesPerfil-show");
-    //   // informacoesPerfil.classList.remove("informacoesPagamento-show");
-
-    // })
-
-    // // formas de pagamento
-    // const editarPagamento = document.querySelector("#editarPagamento");
-    // const informacoesPagamento = document.querySelector(".informacoesPagamento");
-
-    // editarPagamento.addEventListener("click", () => {
-    //   informacoesPagamento.classList.add("informacoesPagamento-show");
-    // })
-
-    // // editar endereço
-    // const editarEndereco = document.querySelector("#editarEndereco");
-    // const informacoesEndereco = document.querySelector(".informacoesEndereco");
-
-    // editarEndereco.addEventListener("click", () => {
-    //   informacoesEndereco.classList.add("informacoesEndereco-show");
-    // })
-
-    // // tabela historico
-    // const editarHistorico = document.querySelector("#editarHistorico");
-    // const informacoesHisrotico = document.querySelector(".informacoesHisrotico");
-
-    // editarHistorico.addEventListener("click", () => {
-    //   informacoesHisrotico.classList.add("informacoesHisrotico-show");
-    // })
-  </script>
+        radios.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            forms.forEach(item => item.classList.remove('open-form'))
+            forms[index].classList.add('open-form')
+          })
+        })
+      </script>
