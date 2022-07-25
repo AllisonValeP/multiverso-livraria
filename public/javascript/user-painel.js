@@ -1,18 +1,16 @@
 
-const allForms = document.querySelectorAll('.userInformation form')
-const actionsForm = document.querySelectorAll('.container-actions li button')
-actionsForm.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        allForms.forEach(item => item.classList.remove('form-show'))
-        allForms[index].classList.add('form-show')
-    })
-})
-
+// pegando em formato de lista todos os #form-item 
 const forms = document.querySelectorAll('#form-item')
+// pegando em formato de lista todos os tab 
 const radios = document.querySelectorAll('.tab')
+
+//iterando o click para todos
 radios.forEach((item, index) => {
+    // console.log("radio:",item)
     item.addEventListener('click', () => {
+//      
         forms.forEach(item => item.classList.remove('open-form'))
+//    
         forms[index].classList.add('open-form')
     })
 })
