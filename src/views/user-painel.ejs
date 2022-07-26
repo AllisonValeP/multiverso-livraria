@@ -1,0 +1,201 @@
+<%- include('./partials/head')%>
+  <%- include('./partials/header')%>
+    <main class="user-painel-main">
+      <div class="login-wrap">
+        <div class="login-html">
+
+          <div id="radio-container">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Perfil</label>
+
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Endereço</label>
+
+            <input id="tab-3" type="radio" name="tab" class="user-edit">
+            <label for="tab-3" class="tab">Cartões</label>
+
+            <input id="tab-4" type="radio" name="tab" class="address-edit">
+            <label for="tab-4" class="tab">Histórico</label>
+          </div>
+
+          <div class="login-form">
+<!-- as tabs estão aqui -->
+            <div class="sign-in-htm open-form" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Nome</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="user" class="label">Sobrenome</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">E-mail</label>
+                <input id="pass" type="email" class="input" data-type="Email">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Senha</label>
+                <input id="pass" type="password" class="input" data-type="password">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Confirme sua senha</label>
+                <input id="pass" type="password" class="input" data-type="password">
+              </div>
+          
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+             
+            </div>
+
+            <div class="sign-up-htm" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Rua</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Estado</label>
+                <input id="pass" type="text" class="input" data-type="text">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">CEP</label>
+                <input id="pass" type="number" class="input" data-type="number">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Complemento</label>
+                <input id="pass" type="text" class="input">
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+              <!-- <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div> -->
+            </div>
+
+            <div class="user-edit-htm" id="form-item">
+              <div class="group">
+                <label for="user" class="label">Nome como está no cartão</label>
+                <input id="user" type="text" class="input">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Numero do Cartão</label>
+                <input id="pass" type="number" class="input" data-type="number">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">CPF do titular do cartão</label>
+                <input id="pass" type="text" class="input" data-type="text">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">data validade do cartão</label>
+                <input id="pass" type="date" class="input">
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Salvar">
+              </div>
+              <!-- <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div> -->
+            </div>
+
+            <div class="address-edit-htm" id="form-item">
+             
+              <div class="tebela-container">
+                <table id="customers">
+                  <tr>
+
+                    <th>Item</th>
+                    <th>Valor</th>
+                    <th>Data de compra</th>
+                    <th>Data de entrega</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Sobre anarquismo</p>
+                    </td>
+                    <td>R$49,99</td>
+                    <td>09/01/21</td>
+                    <td>19/01/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        Manifesto Comunista</p>
+                    </td>
+                    <td>R$39,99</td>
+                    <td>15/02/21</td>
+                    <td>25/02/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Solaris</p>
+                    </td>
+                    <td>R$79,99</td>
+                    <td>10/04/21</td>
+                    <td>19/04/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        Duna</p>
+                    </td>
+                    <td>R$59,99</td>
+                    <td>15/06/21</td>
+                    <td>25/06/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Ring</p>
+                    </td>
+                    <td>R$49,99</td>
+                    <td>01/07/21</td>
+                    <td>09/07/21</td>
+                  </tr>
+
+                  <tr class="tr-02">
+                    <td>
+
+                      <p class="tabela-nome-livro">
+                        A Náusea</p>
+                    </td>
+                    <td>R$29,99</td>
+                    <td>15/07/21</td>
+                    <td>25/07/21</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p class="tabela-nome-livro">
+                        Cem anos de solidão</p>
+                    </td>
+                    <td>R$79,99</td>
+                    <td>09/08/21</td>
+                    <td>19/08/21</td>
+                  </tr>
+
+
+
+
+                </table>
+              </div>
+ <!-- as tabs terminam aqui -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <%- include('./partials/footer')%>
+      

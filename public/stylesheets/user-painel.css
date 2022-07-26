@@ -1,0 +1,553 @@
+/*main*/
+  .main-painel-usuario{
+  width: 100%;
+  height: 100%;
+  }
+  .titleUsuario {
+  padding-top: 5%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  }
+  
+  .main-painel-usuario {
+    /*position: relative;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    /*margin: 0 auto;*/
+    /*height: 130px;*/
+    /*align-items: center;*/
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 0 auto;
+    height: 600px;
+    /* margin-bottom: 155px; */
+  
+  }
+  
+  
+  .container-actions{
+  background-color: rgb(217, 215, 215);
+  /*width: 18%;*/
+  /*position: relative;*/
+  /*left: 2%;*/
+  /*bottom: -70%;*/
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+  
+  }
+  
+  .container-actions li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*padding-top: 4%;*/
+    /*padding-left: 15%;*/
+    /*padding-right: 15%;*/
+    /*padding-bottom: 8%;*/
+    border-bottom: groove;
+    text-align: center;
+    height: 40px;
+  }
+  
+  .userInformation {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100%;*/
+    /*padding-left: 32px;*/
+    /*max-width: 700px;*/
+    /*width: 100%;*/
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* border: 10px solid red; */
+    
+  }
+  
+  
+  
+  /* começo informações perfil */
+  #editarPerfil{
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+  
+  .informacoesPerfil {
+  display: none;
+  }
+  
+  .informacoesPerfil-show{
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  /* border: 10px solid; */
+  justify-content: center;
+  background-color: #d9d9d9;
+  }
+  .label-informacoesPerfil{
+    color: black
+  }
+  .nome-sobrenome{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    
+  }
+  
+  .email-senha{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    /* border: 2px solid purple; */
+  }
+  
+  .button-informacoesPerfil{
+    height: 50px;
+    color: white;
+    background-color: #4c72af;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+  }
+  /* final informações perfil */
+  
+  
+  /* começo editar pagamento */
+  #editarPagamento{
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+  
+  .informacoesPagamento {
+  display: none;
+  }
+  
+  .informacoesPagamento-show{
+  display: flex;
+  flex-direction: row;
+  background-color: #d9d9d9;
+  }
+  
+  .label-informacoesPagamento{
+  text-align: center;
+  width: 250px;
+  color: black;
+  }
+
+  .input-data-cartao{
+  width: 135px; 
+  }
+  
+  .button-informacoesPagamento{
+    height: 50px;
+    color: white;
+    background-color: #4c72af;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+  }
+  .cartao-numero-nome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid blue; */
+  }
+  
+  .cartao-data-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(255, 0, 153); */
+  }
+  /* final editar pagamento */
+  
+  
+  /* começo alterar endereço */
+  #editarEndereco{
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+  
+  .informacoesEndereco {
+      display: none;
+  }
+  
+  .informacoesEndereco-show{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .endereco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  /* border: 1px solid rgb(16, 147, 199); */
+  }
+  
+  .numero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(196, 172, 37); */
+  }
+  .label-informacoesEndereco{
+    color: black;
+  }
+  .label-numero-informacoesEndereco{
+    padding-top: 50px;
+    color: black
+  }
+  .button-informacoesEndereco{
+    height: 50px;
+    color: white;
+    background-color: #4c72af;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+  }
+  /* final alterar endereço */
+  
+  /* começo tabela historico */
+  #editarHistorico{
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+  
+    .informacoesHisrotico {
+      display: none;
+  }
+  
+  .informacoesHisrotico-show{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tabela-image{
+    height: 200px;
+    width: 150px;
+  }
+  
+  .tabela-nome-livro{
+    font-size: 16px;
+  }
+  
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4c72af;
+    color: white;
+  }
+  /* .tebela-container{
+    border: solid 2px rebeccapurple
+  } */
+  .button-tabela-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    /* border: solid 2px rgb(51, 153, 53); */
+  
+  }
+  .button-informacoesHisrotico{
+    height: 50px;
+    color: white;
+    background-color: #4c72af;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 169px;
+    position: relative;
+    top: 280px;
+  }
+  .tr-02{
+    background-color: white;
+  }
+  
+  /* final tabela historico */
+  
+  .form-show {
+    display: flex;
+    flex-direction: row;
+    max-width: 620px;
+    width: 100%;
+    height: 100%;
+    max-height: 620px;
+    /* border: 10px solid;
+    border-radius: 05%; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+    text-align: center;
+  }
+  
+  
+  
+  .footer {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 100%;
+  margin-top: 154px;
+  }
+  
+  .footer div {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  
+  .about-us {
+  display: flex;
+  flex-direction: column;
+  
+  }
+  
+  .newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  font-size: 22px;
+  }
+  
+  .newsletter input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+  }
+  
+  .social {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  
+/* comeca aqui */
+
+
+.login-wrap {
+	width:100%;
+	margin:auto;
+	max-width:600px;
+	min-height:770px;
+  height: 100%;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.login-html {
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm,
+.login-html .user-edit-htm,
+.login-html .address-edit-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-html .user-edit,
+.login-html .address-edit,
+.login-form .group .check {
+	display:none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+	text-transform:uppercase;
+}
+
+.login-html .tab {
+	font-size:21px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+
+/* label line */
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab,
+.login-html .user-edit:checked + .tab,
+.login-html .address-edit:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+
+.login-form {
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+.login-form .group {
+	margin-bottom:15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+	width:100%;
+	color:#fff;
+	display:block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+.login-form .group input[data-type="password"]{
+	-webkit-text-security:circle;
+}
+
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+
+.login-form .group .button{
+	background:#1161ee;
+}
+
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+
+.login-form .group .check:checked + label {
+	color:#fff;
+}
+
+.login-form .group .check:checked + label .icon{
+	background
+  :#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+
+.open-form{
+	transform: rotate(0) !important;
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+
+.foot-lnk{
+	text-align:center;
+}

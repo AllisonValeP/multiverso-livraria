@@ -6,20 +6,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="product.css"/>
+    
     <title>Multiverso Livraria</title>
   </head>
   <body>
     <header class="header grid">
       <div class="logo">
         <a href="../../index.html"
-          ><img
-            src="../../piImagens/logo2.png"
-            width="110"
-            height="80"
-            alt="Logo"
-        /></a>
+          ><img src="../../piImagens/logo2.png" width="110" height="80" alt="Logo"/></a>
       </div>
       <ul class="nav-list">
         <li>Categorias</li>
@@ -46,25 +41,21 @@
         </li>
       </ul>
     </header>
-    <main >
+    <main class="main-product" >
       <div class="imagem responsive2">
-        <img
-          src="../../piImagens/home-livro-01.png"
-          width="331px"
-          height="436px"
-          alt="capa-livro"
-        />
+        <img id="product-image" src="../../piImagens/home-livro-01.png" width="331px" height="436px" alt="capa-livro"/>
       </div>
+
       <div class="detalhes responsive2">
-        <h1>Sobre anarquismo, sexo e casamento</h1>
-        <h2>Emma Goldman</h2>
+        <h1 class="title-book">Sobre anarquismo, sexo e casamento</h1>
+        <h2 class="author-name">Emma Goldman</h2>
         <h1 id="preço">R$49,00</h1>
-        <p><a href="../finalCompra/final.html"><button type="submit">Adcionar</button></a></p>
+        <p><a href="../finalCompra/final.html"><button class="button-purchase" type="submit">Adcionar</button></a></p>
       </div>
 
       <div class="sinopse responsive2">
-        <h2>Sobre</h2>
-        <p>
+        <h2 id="sinopse-title">Sobre</h2>
+        <p id="sinopse-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
           eveniet eaque consectetur amet. Necessitatibus deleniti alias quas,
           porro nostrum labore, natus laboriosam nemo, esse rem error omnis
@@ -89,25 +80,13 @@
           <div class="social">
             <ul>
               <li>
-                <img
-                  src="../../piImagens/facebook.png"
-                  width="40px"
-                  height="40px"
-                />
+                <img src="../../piImagens/facebook.png" width="40px" height="40px" />
               </li>
               <li>
-                <img
-                  src="../../piImagens/twitter.png"
-                  width="40px"
-                  height="40px"
-                />
+                <img src="../../piImagens/twitter.png" width="40px" height="40px"/>
               </li>
               <li>
-                <img
-                  src="../../piImagens/instagram.png"
-                  width="40px"
-                  height="40px"
-                />
+                <img src="../../piImagens/instagram.png" width="40px" height="40px"/>
               </li>
             </ul>
             <p>Siga-nos nas redes sociais</p>
