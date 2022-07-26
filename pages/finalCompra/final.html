@@ -9,156 +9,175 @@
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Multiverso Livraria</title>
+    <title>Checkout de Pagamento</title>
   </head>
   <body>
-   
-    <header class="header grid">
-      <div class="logo"><a href="../../index.html"><img src="../../piImagens/logo2.png" width="110" height="80" alt="Logo"></a></div>
-        <ul class="nav-list">
-          <li>Categorias</li>
-        <li>Promoções</li>
-        <li><a href="../lancamentos/lancamentos.html">Lançamentos</a></li>
+      <header class="header grid">
+          <div class="logo"><img src="/public/img/logo2.png" width="110" height="80" alt="Logo"></div>
+            <ul class="nav-list">
+              <li>Catálogo</li>
+              <li>Navegaçao</li>
+              <li>Novidades</li>
+              
+            </ul>
+            <ul class="nav-list">
+              <li><img src="/public/img/magnifying-glass.png" width="40px" height="40px"></li>
+              <li><img src="/public/img/shopping-cart.png" width="40px" height="40px"></li>
+              <li><img src="/public/img/user.png" width="40px" height="40px"></li>
+            </ul>
+        </header>
+        <main>
+          <div class="modal clearfix">
+              <div class="modal-product">
+                <div class="product">
           
-        </ul>
-        <ul class="nav-list">
-          <li><img src="../../piImagens/magnifying-glass.png" width="40px" height="40px"></li>
-          <li><img src="../../piImagens/shopping-cart.png" width="40px" height="40px"></li>
-          <li><a href="../Login/login.html"><img src="../../piImagens/user.png" width="40px" height="40px"></a></li>
-        </ul>
-    </header>
-    <main>
-    </body>
-    </html>
-    <div class="container">
-        <p class="help bold" style="color:BLACK">
-          SEU PEDIDO </p>
-        <div class="box card-panel z-depth-3">
-          <div class="merchant">
-            
-            <h5 class="center-align-6">PRODUTOS</h5>
-            
-          </div>
-          <div class="invoice">
-            
-            <table class="highlight">
-              <thead>
-                <tr>
-                  <th class="right-align-4">QNT</th>
-                  <th class="right-align-5">ITEM</th>
-                  <th class="right-align-1">PREÇO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="font-quant-2">1</td>
-                  <td class="font-quant-3">A Ciencia de Interestellar</td>
-                  <td class="right-align-2">R$25,40</td>
-                </tr>
-                <tr>
-                  <td class="font-quant">1</td>
-                  <td class="font-quant-1">Star Wars - A Trilogia</td>
-                  <td class="right-align-3">R$79,90</td>
-                </tr>
-               
-                <tr>
-                  <td></td>
-                  <td class="right-align-7 bold">Total</td>
-                  <td class="right-align-8 bold">R$105,30</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="payment">
-            <h5>Informações de Pagamento</h5>
-            <div class="credit-card-box card-panel z-depth-2 animation-element slide-left">
-              <div class="flip">
-                <div class="front">
-                  <div class="logo">
-                    <img src="../LivrariaMultiverso/piImagens/logo.png" alt="" />
+                  <!-- Slideshow container -->
+                  <div class="product-slideshow">
+          
+                    <!-- Full-width images with number and caption text -->
+                   <!-- <div class="productSlides fade">
+                      <img src="https://github.com/EricGFigueroa/002-DailyUI-Gucci-Checkout/blob/master/img/gucci-bag-1.png?raw=true" style="width:100%">
+                    </div>-->
+          
+                   <!-- <div class="productSlides fade">
+                      <img src="https://github.com/EricGFigueroa/002-DailyUI-Gucci-Checkout/blob/master/img/gucci-bag-2.png?raw=true" style="width:100%">
+                    </div>-->
+          
+                    <div class="productSlides fade">
+                      <img src="/public/img/home-livro-07.png" style="width:50%">
+                    </div>
+          
+                <!--  <div class="productSlides fade">
+                      <img src="https://github.com/EricGFigueroa/002-DailyUI-Gucci-Checkout/blob/master/img/gucci-bag-4.png?raw=true" style="width:100%">
+                    </div>-->
+          
+                   <!-- <div class="productSlides fade">
+                      <img src="https://github.com/EricGFigueroa/002-DailyUI-Gucci-Checkout/blob/master/img/gucci-bag-5.png?raw=true" style="width:100%">
+                    </div>-->
+          
+                    <br>
+          
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                     <!-- <span class="dot" onclick="currentSlide(1)"></span>-->
+                     <!--<span class="dot" onclick="currentSlide(2)"></span>-->
+                     <!-- <span class="dot" onclick="currentSlide(3)"></span>-->
+                      <!--<span class="dot" onclick="currentSlide(4)"></span>-->
+                      <!--<span class="dot" onclick="currentSlide(5)"></span>-->
+                    </div>
+          
                   </div>
-                  <div class="number input-field">
-                    <label for="card-number">Cartão</label>
-                    <input type="text" id="card-number" class="input-card-number" maxlength="4" />
-                    <input type="text" id="card-number-1" class="input-card-number" maxlength="4" />
-                    <input type="text" id="card-number-2" class="input-card-number" maxlength="4" />
-                    <input type="text" id="card-number-3" class="input-card-number" maxlength="4" />
-                  </div>
-                  <div class="cvv input-field">
-                    <label for="card-cvv">CVV</label>
-                    <input type="text" id="card-cvv" class="input-card-cvv" maxlength="3" />
-                  </div>
-                  <div class="card-holder input-field">
-                    <label for="name">Nome no Cartão</label>
-                    <input type="text" name="name" id="name">
-                  </div>
-      
-                  <div class="card-expiration-date input-field">
-                    <select id="month">
-                      <option></option>
-                <option>Jan</option>
-                <option>Fev</option>
-                <option>Mar</option>
-                <option>Abr</option>
-                <option>Mai</option>
-                <option>Jun</option>
-                <option>Jul</option>
-                <option>Ago</option>
-                <option>Set</option>
-                <option>Out</option>
-                <option>Nov</option>
-                <option>Dez</option>
-                    </select>
-                    <select>
-                                <option></option>
-                <option>2016</option>
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option>2020</option>
-                <option>2021</option>
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-                    </select>
-                    <label>Expira</label>
-                  </div>
-      
+          
+                  <h1 class="product-name">
+                     Arte Contemporânea <br>Brasileira
+                  </h1>
+                  <p class="product-code-name">
+                    Autor: Ricardo Basbaum
+                  </p>
+                  <p class="product-price">
+                    R$ 90,00
+                  </p>
+          
                 </div>
-      
+          
+                <div class="round-shape"></div>
               </div>
+              <div class="modal-info">
+                <div class="info">
+                  <h2>Informação de Pagamento</h2>
+                  <form action="#">
+                    <ul class="form-list">
+                      <li class="form-list-row">
+                        <div class="user">
+                          <label for="#">Nome</label><br>
+                          <i class="fas fa-user"></i></i><input type="text" required>
+                        </div>
+                      </li>
+                      <li class="form-list-row">
+                        <div class="number">
+                          <label for="#">Número do cartão</label><br>
+                          <i class="far fa-credit-card"></i><input type="text" required>
+                        </div>
+                      </li>
+                      <li class="form-list-row clearfix">
+                        <div class="date">
+                          <label for="#">Data de validade</label><br>
+                          <input class="month" type="text" required placeholder="MM">
+                          <input class="year" type="text" required placeholder="YY">
+                        </div>
+                        <div class="cvc">
+                          <label for="#">CVC</label><i class="fas fa-question-circle"></i><br>
+                          <input type="text" required placeholder="123">
+                        </div>
+                      </li>
+                      <li class="form-list-row">
+                        <div class="checkbox">
+                          <label for="checkbox">
+                            <!--<input id="checkbox" type="checkbox">
+                            <span>Lembrar minhas informações</span>-->
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                    <button>Comprar</button>
+                  </form>
+                </div>
+              </div>
+            </div>    
+        </main>
+        <footer class="footer">
+          <div class="grid">
+            <div class="about-us">
+              <p>Quem Somos</p>
+              <p>Atendimento</p>
+            </div>
+            <div class="newsletter">
+              <label>Receba nosso Newsletter</label>
+              <input type="email" placeholder="e-mail">
+            </div>
+            <div class="social">
+              <ul>
+                <li><img src="/public/img/facebook.png"  width="40px" height="40px" ></li>
+                <li><img src="/public/img/twitter.png"  width="40px" height="40px" ></li>
+                <li><img src="/public/img/instagram.png"  width="40px" height="40px" ></li>
+              </ul>
+              <p>Siga-nos nas redes sociais</p>
             </div>
           </div>
-      
-          <div class="button-checkout-row">
-            <li><a href="../sucessoCompra/sucesso.html">Finalizar</a></li>
-          </div>
-        </div>
-      
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="grid">
-        <div class="about-us">
-          <p>Quem Somos</p>
-          <p>Atendimento</p>
-        </div>
-        <div class="newsletter">
-          <label>Receba nosso Newsletter</label>
-          <input type="email" placeholder="e-mail">
-        </div>
-        <div class="social">
-          <ul>
-            <li><img src="../../piImagens/facebook.png"  width="40px" height="40px" ></li>
-            <li><img src="../../piImagens/twitter.png"  width="40px" height="40px" ></li>
-            <li><img src="../../piImagens/instagram.png"  width="40px" height="40px" ></li>
-          </ul>
-          <p>Siga-nos nas redes sociais</p>
-        </div>
-      </div>
-    </footer>
+        </footer>
+        
+          <script>
+          var slideIndex = 1;
+      showSlides(slideIndex);
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("productSlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+        </script>
   </body>
-</html>
+  </html>
       
    
