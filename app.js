@@ -5,6 +5,7 @@ const indexRoute = require('./src/routes/IndexRoute')
 const userRoute = require('./src/routes/UserRoute')
 const productRoute = require('./src/routes/ProductRoute')
 const userPainelRoute = require('./src/routes/UserPainelRoute')
+const admRoute = require('./src/routes/AdmRoute')
 
 
 app.use(express.static(__dirname + '/public'));
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use('/',indexRoute)
 app.use('/user',userRoute)
 app.use('/product',productRoute)
+app.use('/adm', admRoute)
 // app.use('/userpainel',userPainelRoute)
 
 
