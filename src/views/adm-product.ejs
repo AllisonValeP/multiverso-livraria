@@ -1,0 +1,44 @@
+<%- include('./partials/head')%>
+  <%- include('./partials/header')%>
+  <main class="adm-product-main">
+    <div class="box-adm-product">
+        <div class="container-adm-product">
+
+            <h2 class="product-h2">Produto</h2>
+            <div class="form-adm-product">
+                
+                    <div class="form-elements-adm-product-image">
+                        <img class="adm-product-image" src="/img/home-livro-01.png" alt="Anarquismo">
+                        <input type="submit" class="button-adm-product-image" value="Alterar Imagem">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="user" class="label-adm-product">Titulo</label>
+                        <input id="user" type="text" class="input-adm-product" placeholder="Sobre Anarquismo">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Autor</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma Goldman">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Quantidade</label>
+                        <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="200">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Promoção</label>
+                        <input id="pass" type="number" class="input-adm-product" data-type="number">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Lançamento</label>
+                        <input id="checkbox-adm" type="checkbox" class="input-adm-product" data-type="checkbox">
+                    </div>
+                    <div class="form-elements-adm-product-buttons">
+                        <input type="submit" class="button-adm-product-save" value="Salvar">
+                        <input type="submit" class="button-adm-product-cancelar" value="Cancelar">
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</main>    
+
+  <%- include('./partials/footer')%>

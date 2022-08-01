@@ -2,9 +2,15 @@ const admController = {
     index: (req, res) => {
         return res.render("adm-painel")
     },
-    show: (req, res) => {},
-    create: (req, res) => {},
-    store: (req, res) => {},
+    productShow: (req, res) => {
+       return res.render("adm-product")
+    },
+    userShow: (req, res) => {
+        return res.render("adm-user")
+    },
+    orderShow: (req, res) => {
+        return res.render("adm-order")
+    },
     edit: (req, res) => {},
     update: (req, res) => {},
     delete: (req, res) => {},

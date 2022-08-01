@@ -1,0 +1,49 @@
+<%- include('./partials/head')%>
+  <%- include('./partials/header')%>
+<main class="adm-pedido-main">
+    <div class="box-adm-pedido">
+        <div class="container-adm-pedido">
+
+            <h2 class="pedido-h2">Detalhes de Pedidio</h2>
+            <div class="form-adm-pedido">
+                
+                    <div class="form-elements-adm-pedido-image">
+                        <img class="adm-pedido-image" src="/img/home-livro-01.png" alt="Anarquismo">
+                       
+                    </div>
+                    <div class="form-elements-adm-pedido">
+                        <label for="titulo" class="label-adm-pedido">Comprado por</label>
+                        <input id="titulo" type="text" class="input-adm-product" placeholder="Allison Vale Pedro">
+                    </div>
+                    <div class="form-elements-adm-pedido">
+                        <label for="pass" class="label-adm-pedido">Data de Entrega</label>
+                        <input id="pass02" type="text" class="input-adm-product" data-type="date" placeholder="27/10/2021">
+                    </div>
+                    <div class="form-elements-adm-pedido ">
+                        <label for="pass" class="label-adm-pedido">Endereço de Entrega</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Rua de Verdade">
+                    </div>
+                    <div class="form-elements-adm-pedido coluna-03 linha-02">
+                        <label for="pass" class="label-adm-pedido">Quantidade</label>
+                        <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="1">
+                    </div>
+                    <div class="form-elements-adm-pedido coluna-03">
+                        <label for="pass" class="label-adm-pedido ">Preço</label>
+                        <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="R$ 59,99" >
+                    </div>
+                    
+                    <div class="form-elements-adm-pedido coluna-03 linha-01">
+                        <label for="pass" class="label-adm-pedido ">Pedido</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="P7B2E5">
+                    </div>
+                    <!-- <div class="form-elements-adm-pedido-buttons">
+                        <input type="submit" class="button-adm-pedido-save" value="Salvar">
+                        <input type="submit" class="button-adm-pedido-cancelar" value="Cancelar">
+                    </div> -->
+                </div>
+
+        </div>
+    </div>
+</main>    
+
+<%- include('./partials/footer')%>
