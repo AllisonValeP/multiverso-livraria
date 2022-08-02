@@ -6,6 +6,7 @@ const userRoute = require('./src/routes/UserRoute')
 const productRoute = require('./src/routes/ProductRoute')
 const userPainelRoute = require('./src/routes/UserPainelRoute')
 const admRoute = require('./src/routes/AdmRoute')
+const purchaseRoute = require('./src/routes/PurchaseRoute')
 
 
 app.use(express.static(__dirname + '/public'));
@@ -18,6 +19,8 @@ app.use('/',indexRoute)
 app.use('/user',userRoute)
 app.use('/product',productRoute)
 app.use('/adm', admRoute)
+app.use('/purchase', purchaseRoute)
+
 // app.use('/userpainel',userPainelRoute)
 
 
