@@ -155,13 +155,13 @@
     transform: translate(0%, -50%);
   }
   
-  h2{
+  .h2-purchse{
     /* font-size: 2.25rem; */
     margin-left: 1rem;
   }
   
   
-  form
+  
   .form-list{
     /* margin-top: 1.5rem; */
     margin-left: 3.5rem;
@@ -171,11 +171,8 @@
     margin: 1rem 0;
   }
   
-  label{
-    font-size: 1rem;
-  }
-  
-  input{
+ 
+  .input-purchase{
     width: 70%;
     font-size: 1rem;
     padding: .4rem 0;
@@ -195,7 +192,7 @@
     font-size: 1rem
   }
   
-  input{
+  .input-purchase{
     position: relative;
     left: -16px;
     padding-left: 30px;
@@ -206,7 +203,7 @@
     font-size: 1rem;
   }
   
-  input{
+  .input-purchase{
     position: relative;
     left: -20px;
     padding-left: 30px;
@@ -216,7 +213,7 @@
     float: left;
   }
   
-  input{
+  .input-purchase{
     width: 60px;
     text-align: center;
   }
@@ -238,7 +235,7 @@
     left: .75rem;
   }
   
-  input{
+  .input-purchase{
     width: 70px;
     text-align: center;
   }
@@ -247,7 +244,7 @@
     margin-top: 2rem;
   }
   
-  input{
+  .input-purchase{
     width: auto;
   }
   

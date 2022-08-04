@@ -1,151 +1,128 @@
+/*main*/
 .adm-user-main {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 
 /* o tamanho do conjunto */
 
 .box-adm-user {
-    width: 100%;
-    margin: auto;
-    max-width: 900px;
-    min-height: 770px;
-    height: 100%;
-    position: relative;
-    /* box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19); */
+  width: 100%;
+  margin: auto;
+  max-width: 900px;
+  min-height: 770px;
+  height: 100%;
+  position: relative;
+
 }
 
-.container-adm-product {
-    width: 100%;
-    /* height: 100%; */
-    position: absolute;
-    padding: 10px 70px 50px 70px;
-    background: rgba(40, 57, 101, .9);
-    
+.container-adm-user {
+  width: 100%;
+
+  position: absolute;
+  padding: 10px 70px 50px 70px;
+  background: rgba(40, 57, 101, .9);
+  
 }
-.form-adm-product{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.form-adm-user{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
 }
 
 
-.container-adm-product .tab,
-.form-adm-product .form-elements-adm-user .label-adm-product,
-.form-adm-product .form-elements-adm-user, .button-adm-product-save {
-    text-transform: uppercase;
-}
-
-.form-adm-product .form-elements-adm-user {
-    margin-bottom: 15px;
-}
-
-.form-adm-product .form-elements-adm-user .label-adm-product,
-.form-adm-product .form-elements-adm-user .input-adm-user,
-.form-adm-product .form-elements-adm-user, .button-adm-product-save,.button-adm-product-cancelar  {
-    width: 100%;
-    color: #fff;
-    display: block;
-}
-
-.form-adm-product .form-elements-adm-user .input-adm-user,
-.form-adm-product .form-elements-adm-user .button-adm-product-save, .button-adm-product-cancelar  {
-    border: none;
-    padding: 15px 20px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, .1);
-}
-
-.form-adm-product .form-elements-adm-user .input-adm-user[data-type="password"] {
-    -webkit-text-security: circle;
-}
-
-.form-adm-product .form-elements-adm-user .label-adm-product {
-    color: rgb(229, 229, 229);
-    font-size: 22px;
-}
-
-.form-adm-product .form-elements-adm-user .button-adm-product-save {
-    background: #1161ee;
-}
-
-.button-adm-product-save{
-  background: #1161ee;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 25px;
-  margin-top: 50px;  
-}
-.button-adm-product-cancelar{
-  margin-top: 10px;
-  display: grid;
-  background: #818385;
-  text-transform: uppercase; 
-}
-
-/* .button-adm-product-image{
-  background: #1161ee;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 25px;
-  color: white;
+.container-adm-user .tab,
+.form-adm-user .form-elements-adm-user .label-adm-user,
+.form-adm-user .form-elements-adm-user, .button-adm-user-save {
   text-transform: uppercase;
-} */
+}
 
-/* .form-elements-adm-user-02{
-  grid-column: 1 / 3;
-} */
-/* .hr {
-    height: 2px;
-    margin: 60px 0 50px 0;
-    background: rgba(255, 255, 255, .2);
-} */
+.form-adm-user .form-elements-adm-user {
+  margin-bottom: 15px;
+}
 
-/* .foot-lnk {
-    text-align: center;
-} */
+.form-adm-user .form-elements-adm-user .label-adm-user,
+.form-adm-user .form-elements-adm-user .input-adm-user,
+.form-adm-user .form-elements-adm-user, .button-adm-user-save,.button-adm-user-cancelar  {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
 
-.adm-product-image{
-  height: 390px;
-  width: 250px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+.form-adm-user .form-elements-adm-user .input-adm-user,
+.form-adm-user .form-elements-adm-user .button-adm-user-save, .button-adm-user-cancelar  {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, .1);
+}
+
+.form-adm-user .form-elements-adm-user .input-adm-user[data-type="password"] {
+  -webkit-text-security: circle;
+}
+
+.form-adm-user .form-elements-adm-user .label-adm-user {
+  color: rgb(229, 229, 229);
+  font-size: 22px;
+}
+
+.form-adm-user .form-elements-adm-user .button-adm-user-save {
+  background: #1161ee;
+}
+
+.button-adm-user-save{
+background: #1161ee;
+border: none;
+padding: 15px 20px;
+border-radius: 25px;
+margin-top: 50px;  
+}
+.button-adm-user-cancelar{
+margin-top: 10px;
+display: grid;
+background: #818385;
+text-transform: uppercase; 
+}
+
+
+.adm-user-image{
+height: 390px;
+width: 250px;
+border-radius: 4px;
+margin-bottom: 20px;
 }
 
 .form-elements-adm-user-buttons{
-  grid-column: 1 / -1;
+grid-column: 1 / -1;
 }
 
 
 
-/* .form-elements-adm-user{
-  grid-column: 2;
-} */
 
 .form-elements-adm-user-image{
-  grid-row: 1 / 4;
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
+grid-row: 1 / 4;
+align-self: center;
+justify-self: center;
+display: flex;
+flex-direction: column;
 }
 
 .user-h2{
-  color: white;
- margin: 40px;
-  font-size:50px ;
-  text-align: center;
-  border-bottom: 5px #aaa solid;
+color: white;
+margin: 40px;
+font-size:50px ;
+text-align: center;
+border-bottom: 5px #aaa solid;
 }
 
 #checkbox-adm{
-  height: 40px;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
+height: 40px;
+display: flex;
+justify-content: left;
+align-items: flex-start;
 }
 
 input::placeholder{
-  color: white
+color: white
 }
