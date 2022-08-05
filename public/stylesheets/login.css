@@ -76,12 +76,12 @@
     font-weight: 700;
     cursor: pointer;
   }
-  a {
+ .login-create-a {
     color: #ffffff;
     text-decoration: none;
   }
   
-  a:hover {
+  .login-create-a:hover {
     color: #f1d4d4;
   }
   
@@ -94,4 +94,9 @@
   
   .btn-acessar-painel-texto{
     font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .btn-acessar-painel-texto:hover{
+    color: #f1d4d4;
   }

@@ -4,8 +4,8 @@ const admController = require('../controllers/AdmController')
 
 router.get('/', admController.index);
 router.get('/product', admController.productShow);
-router.get('/admuser', admController.userShow);
-router.get('/admorder', admController.orderShow);
+router.get('/user', admController.userShow);
+router.get('/order', admController.orderShow);
 
 
 

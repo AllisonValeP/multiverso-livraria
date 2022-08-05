@@ -216,3 +216,38 @@
   }
 
 /* Css tab home */
+
+.adm-painel-home{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.adm-welcome{
+  /* background-color: rgba(92, 119, 210, 0.552); */
+  border-radius: 8px;
+  padding: 20px 15px;
+  margin: 0px 10px;
+  color: white;
+}
+
+.adm-welcome-h3{
+  /* margin-left: 15px; */
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.adm-welcome-p{
+  font-size: 28px;
+
+}
+
+/* .grafico{
+  margin-left: 60px;
+} */
+.adm-grafico{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
