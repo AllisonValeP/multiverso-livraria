@@ -71,8 +71,8 @@
     padding: 0 10px;
     margin: 10px 0;
   }
-  label {
-   
+  .label-login-create {
+    color:  white;
     font-weight: 700;
     cursor: pointer;
   }
