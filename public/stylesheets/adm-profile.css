@@ -1,0 +1,128 @@
+/*main*/
+.adm-profile-main {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  /* o tamanho do conjunto */
+  
+  .box-adm-profile {
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+    min-height: 770px;
+    height: 100%;
+    position: relative;
+  
+  }
+  
+  .container-adm-profile {
+    width: 100%;
+  
+    position: absolute;
+    padding: 10px 70px 50px 70px;
+    background: rgba(40, 57, 101, .9);
+    
+  }
+  .form-adm-profile{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  }
+  
+  
+  .container-adm-profile .tab,
+  .form-adm-profile .form-elements-adm-profile .label-adm-profile,
+  .form-adm-profile .form-elements-adm-profile, .button-adm-profile-save {
+    text-transform: uppercase;
+  }
+  
+  .form-adm-profile .form-elements-adm-profile {
+    margin-bottom: 15px;
+  }
+  
+  .form-adm-profile .form-elements-adm-profile .label-adm-profile,
+  .form-adm-profile .form-elements-adm-profile .input-adm-profile,
+  .form-adm-profile .form-elements-adm-profile, .button-adm-profile-save,.button-adm-profile-cancelar  {
+    width: 100%;
+    color: #fff;
+    display: block;
+  }
+  
+  .form-adm-profile .form-elements-adm-profile .input-adm-profile,
+  .form-adm-profile .form-elements-adm-profile .button-adm-profile-save, .button-adm-profile-cancelar  {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+  }
+  
+  .form-adm-profile .form-elements-adm-profile .input-adm-profile[data-type="password"] {
+    -webkit-text-security: circle;
+  }
+  
+  .form-adm-profile .form-elements-adm-profile .label-adm-profile {
+    color: rgb(229, 229, 229);
+    font-size: 22px;
+  }
+  
+  .form-adm-profile .form-elements-adm-profile .button-adm-profile-save {
+    background: #1161ee;
+  }
+  
+  .button-adm-profile-save{
+  background: #1161ee;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  margin-top: 50px;  
+  }
+  .button-adm-profile-cancelar{
+  margin-top: 10px;
+  display: grid;
+  background: #818385;
+  text-transform: uppercase; 
+  }
+  
+  
+  .adm-profile-image{
+  height: 390px;
+  width: 250px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  }
+  
+  .form-elements-adm-profile-buttons{
+  grid-column: 1 / -1;
+  }
+  
+  
+  
+  
+  .form-elements-adm-profile-image{
+  grid-row: 1 / 4;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .profile-h2{
+  color: white;
+  margin: 40px;
+  font-size:50px ;
+  text-align: center;
+  border-bottom: 5px #aaa solid;
+  }
+  
+  #checkbox-adm{
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  }
+  
+  input::placeholder{
+  color: white
+  }

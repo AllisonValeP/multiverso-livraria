@@ -11,7 +11,9 @@ const admController = {
     orderShow: (req, res) => {
         return res.render("adm-order")
     },
-    edit: (req, res) => {},
+    profileShow: (req, res) => {
+        return res.render("adm-profile")
+    },
     update: (req, res) => {},
     delete: (req, res) => {},
     destroy: (req, res) => {},

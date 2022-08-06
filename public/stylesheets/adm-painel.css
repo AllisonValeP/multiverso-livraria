@@ -234,12 +234,13 @@
   /* margin-left: 15px; */
   margin-bottom: 25px;
   font-size: 40px;
-  color: #fff;
+  color:rgb(255, 255, 255)
+  /* text-align: center; */
 }
 
 .adm-welcome-p{
   font-size: 28px;
-
+  /* text-align: center; */
 }
 
 /* .grafico{
@@ -250,4 +251,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.adm-welcome-a{
+  color: #fff;
+}
+.adm-welcome-a:hover{
+  color:rgb(202, 204, 150)
 }
