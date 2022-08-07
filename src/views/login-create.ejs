@@ -3,34 +3,52 @@
 <main class="main-login">
     <section id="container-signup">
         <h2>Cadastro</h2>
-        <form method="GET">
+        <form action = "/create" method="post">
           <div class="container-input">
-            <label  class="label-login-create" for="name-id">Nome</label>
-            <input type="text" name="name" id="name-id" />
+            <label  class="label-login-create" for="nome-id">Nome</label>
+            <% if(locals.errors && errors.nome) { %>
+              <span class="error-alert"><%= errors.nome.msg%></span>
+            <%}%>
+            <input type="text" name="nome"  id="nome-id" value="<%= locals.old && old.name %>" />
+          </div>
+          <div class="container-input">
+            <label  class="label-login-create" for="sobrenome-id">Sobrenome</label>
+            <% if(locals.errors && errors.sobrenome) { %>
+              <span class="error-alert"><%= errors.sobrenome.msg%></span>
+            <%}%>
+            <input type="text" name="sobrenome"  id="sobrenome-id" value="<%= locals.old && old.sobrenome %>" />
           </div>
 
           <div class="container-input">
             <label  class="label-login-create" for="email-id">E-mail</label>
-            <input type="email" name="email" id="email-id" />
+            <% if(locals.errors && errors.email) { %>
+              <span class="error-alert"><%= errors.email.msg%></span>
+            <%}%>
+            <input type="email" name="email" id="email-id"value="<%= locals.old && old.email %>">
           </div>
           <div class="container-input">
             <label  class="label-login-create" for="password-id">Senha</label>
-            <input type="password" name="password" id="password-id" />
+            <% if(locals.errors && errors.password) { %>
+              <span class="error-alert"><%= errors.password.msg%></span>
+            <%}%>
+            <input type="password" name="password" id="password-id" value="<%= locals.old && old.password %>" />
           </div>
 
           <div class="container-input">
-            <label  class="label-login-create" for="confirm-password-id">Confirmar senha</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirm-password-id"
-            />
+            <label  class="label-login-create" for="password-id">Confirmar senha</label>
+            <% if(locals.errors && errors.confirmPassword) { %>
+              <span class="error-alert"><%= errors.confirmPassword.msg%></span>
+            <%}%>
+            <input type="password" name="confirmPassword" id="password-id" value="<%= locals.old && old.confirmPassword %>"  />
           </div>
           
          </div>
         
          <input type="submit" value="Cadastro" />
-         <a class="login-create-a" href="/user">Login</a>
+        <div class="form-login">
+          Tem uma Conta? 
+          <a class="login-create-a" href="/login">Login</a>
+        </div>
         </form>
      </section>
     </main>
