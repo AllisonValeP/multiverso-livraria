@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const session = require('express-session');
 const sessionConfig = require('./src/config/session');
-const methodOverride = require('methid-override');
+const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 
 const indexRoute = require('./src/routes/IndexRoute');
@@ -24,7 +24,7 @@ app.use(session({ secret: sessionConfig.secret , resave: sessionConfig.resave, s
 
 app.use('/',indexRoute)
 app.use('/user',userRoute)
-app.use('/product',productRoute)
+// app.use('/product',productRoute)
 app.use('/adm', admRoute)
 app.use('/purchase', purchaseRoute)
 
