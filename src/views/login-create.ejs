@@ -9,7 +9,7 @@
             <% if(locals.errors && errors.nome) { %>
               <span class="error-alert"><%= errors.nome.msg%></span>
             <%}%>
-            <input type="text" name="nome"  id="nome-id" value="<%= locals.old && old.name %>" />
+            <input type="text" name="nome"  id="nome-id" value="<%= locals.old && old.nome %>" />
           </div>
           <div class="container-input">
             <label  class="label-login-create" for="sobrenome-id">Sobrenome</label>
@@ -27,19 +27,19 @@
             <input type="email" name="email" id="email-id"value="<%= locals.old && old.email %>">
           </div>
           <div class="container-input">
-            <label  class="label-login-create" for="password-id">Senha</label>
-            <% if(locals.errors && errors.password) { %>
-              <span class="error-alert"><%= errors.password.msg%></span>
+            <label  class="label-login-create" for="senha-id">Senha</label>
+            <% if(locals.errors && errors.senha) { %>
+              <span class="error-alert"><%= errors.senha.msg%></span>
             <%}%>
-            <input type="password" name="password" id="password-id" value="<%= locals.old && old.password %>" />
+            <input type="password"  name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
           </div>
 
           <div class="container-input">
-            <label  class="label-login-create" for="password-id">Confirmar senha</label>
-            <% if(locals.errors && errors.confirmPassword) { %>
-              <span class="error-alert"><%= errors.confirmPassword.msg%></span>
+            <label  class="label-login-create" for="senha-id">Confirmar senha</label>
+            <% if(locals.errors && errors.confirmSenha) { %>
+              <span class="error-alert"><%= errors.confirmSenha.msg%></span>
             <%}%>
-            <input type="password" name="confirmPassword" id="password-id" value="<%= locals.old && old.confirmPassword %>"  />
+            <input type="password" name="confirmSenha" id="senha-id" value="<%= locals.old && old.confirmSenha %>"  />
           </div>
           
          </div>

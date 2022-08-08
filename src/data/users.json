@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nome": "Carlos ",
+        "sobrenome": "Henrique ",
+        "email": "carlos.c.r.w@gmail.com",
+        "senha": "$2b$10$nb3C5TAC.xCxTcqP39sv0ejAplxiPGqAYPgDKzYthxGHmAbHX2YP6",
+        "admin": false,
+        "criadoEm": "2022-07-19T23:46:49.169Z",
+        "modificadoEm": "2022-07-19T23:46:49.169Z"
+    },
+    {
+        "id": 2,
+        "nome": "Livia",
+        "sobrenome": "Souza",
+        "email": "livia@gmail.com",
+        "senha": "$2b$10$FG6mRcT3Wa2GiwKnNXAScuUusRdZOsTbiRfdHfMXxjg2mvxPVFCvK",
+        "admin": false,
+        "criadoEm": "2022-08-07T18:08:44.396Z",
+        "modificadoEm": "2022-08-07T18:08:44.396Z"
+    },
+    {
+        "id": 3,
+        "nome": "Marica",
+        "sobrenome": "Souza",
+        "email": "marciajesussouza@gmail.com",
+        "senha": "$2b$10$DMYBm9RgaWDjmjP7Onv6gukWPlbsCJHoJ8yuzjM/VDDiN2k3dQnve",
+        "admin": false,
+        "criadoEm": "2022-08-08T11:33:07.660Z",
+        "modificadoEm": "2022-08-08T11:33:07.660Z"
+    },
+    {
+        "id": 4,
+        "nome": "Oliver",
+        "sobrenome": "Castro",
+        "email": "castroteste@gmail.com",
+        "senha": "$2b$10$ksHuyhHVBr0ZulCKnxZyOuklYdHQDxjgZpD0zmoXN.rVjCYA7Ulg6",
+        "admin": false,
+        "criadoEm": "2022-08-08T11:35:00.440Z",
+        "modificadoEm": "2022-08-08T11:35:00.440Z"
+    }
+]
