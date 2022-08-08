@@ -1,6 +1,9 @@
 const productController = {
     index: (req, res) => {
-        return res.render("product")
+        return res.render("product",
+        {
+          title: 'Livro | Multiverso Livraria'
+        })
     },
     show: (req, res) => {},
     create: (req, res) => {},

@@ -1,6 +1,9 @@
 const purchaseController = {
     index: (req, res) => {
-        return res.render("purchase")
+        return res.render("purchase",
+        {
+          title: 'Informação de Pagamento | Multiverso Livraria'
+        })
     },
     show: (req, res) => {},
     create: (req, res) => {},

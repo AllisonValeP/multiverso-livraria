@@ -8,10 +8,16 @@ const { validationResult } = require('express-validator');
 const indexController = {
   // centralizar as rotas de login, create, 
   index: (req, res) => {
-    return res.render('index')
+    return res.render('index',
+    {
+      title: 'Multiverso Livraria'
+    }
+    )
   },
   create: (req, res) => {
-    return res.render("login-create")
+    return res.render("login-create",{
+      title: 'Cadastre-se Agora | Multiverso Livraria'
+    })
   },
   store: (req, res) => {
     const errors = validationResult(req);
@@ -48,7 +54,10 @@ const indexController = {
     }
   },
   loginShow: (req, res) => {
-    return res.render("login")
+    return res.render("login",
+    {
+      title: 'Faça Login | Multiverso Livraria'
+    })
   },
 }
 

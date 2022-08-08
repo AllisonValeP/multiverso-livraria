@@ -7,7 +7,10 @@ const userController = {
     delete: (req, res) => {},
     destroy: (req, res) => {},
     showPainel: (req, res) => {
-      return  res.render("user-painel")
+      return  res.render("user-painel",
+      {
+        title: 'Informação de Pagamento | Multiverso Livraria'
+      })
     },
   };
   
