@@ -49,16 +49,8 @@
     animation: bg 5s infinite;
   
   }
-  @keyframes bg {
-    60% {
-      color: #ff0000;
-    }
-    10% {
-      opacity: 10%;
-    }
 
-  }
- 
+  
   #container-signup {
     width: 450px;
     min-height: 500px;

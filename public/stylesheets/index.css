@@ -116,16 +116,23 @@
 }
 
 .about-us {
+ height: 1em;
+ margin-top: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   
 }
+.about-us p{
+padding-top: 10px;
+}
+
 
 .newsletter {
   display: flex;
   flex-direction: column;
   width: 300px;
   font-size: 22px;
+
 }
 
 .newsletter input {
@@ -165,8 +172,14 @@
 }
 
 @media (max-width: 600px) {
+  .newsletter label,input{
+    visibility: collapse
+ 
+  }
     .responsive {
         grid-template-columns: 1fr;
         /*grid-template-columns: 1fr 1fr 1fr 1fr !important;*/
     }
+
+  
 }
