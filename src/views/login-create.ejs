@@ -31,15 +31,26 @@
             <% if(locals.errors && errors.senha) { %>
               <span class="error-alert"><%= errors.senha.msg%></span>
             <%}%>
-            <input type="password"  name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
+            <div class = "container-password">
+              <input type="password"  name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
+              <div>
+                <input type="checkbox" onclick="showPassword()">
+              </div>
+            </div>
           </div>
 
           <div class="container-input">
-            <label  class="label-login-create" for="senha-id">Confirmar senha</label>
+            <label  class="label-login-create" for="senhaConfim-id">Confirmar senha</label>
             <% if(locals.errors && errors.confirmSenha) { %>
               <span class="error-alert"><%= errors.confirmSenha.msg%></span>
             <%}%>
-            <input type="password" name="confirmSenha" id="senha-id" value="<%= locals.old && old.confirmSenha %>"  />
+            <div class = "container-password">
+
+              <input type="password" name="confirmSenha" id="senhaConfim-id" value="<%= locals.old && old.confirmSenha %>"  />
+              <div>
+                <input type="checkbox" onclick="showPasswordConfirm()">
+              </div>
+            </div>
           </div>
           
          </div>
