@@ -38,5 +38,15 @@
         "admin": false,
         "criadoEm": "2022-08-08T11:35:00.440Z",
         "modificadoEm": "2022-08-08T11:35:00.440Z"
+    },
+    {
+        "id": 5,
+        "nome": "Fernando",
+        "sobrenome": "Carlos",
+        "email": "fernandoecr@gmail.com",
+        "senha": "$2b$10$32ZO7Pxkw1zugQsmVOaqxOPPwee6utyfP9qzTmcML/IvHyUhZsRUy",
+        "admin": false,
+        "criadoEm": "2022-08-09T12:29:40.518Z",
+        "modificadoEm": "2022-08-09T12:29:40.518Z"
     }
 ]
