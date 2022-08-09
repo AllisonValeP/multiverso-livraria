@@ -2,130 +2,188 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Kdam Thmor Pro', sans-serif; 
+  font-family: 'Kdam Thmor Pro', sans-serif;
 }
-  
-  .grid {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  ul li {
-    display: inline-block;
-    text-decoration: none;
-  }
-    
-.main-login {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #container-login {
-    width: 450px;
-    height: 500px;
-    background-color: #477fc0;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }container-login h2,
-  #container-signup h2 {
-    font-size: 2rem;
-    color: #ffffff;
-  }
- span.error-alert {
-    
-    font-size: 0.8rem;
-    color: #ff0000;
-    
-  }
-  .error-alert {
-    color:#cc0000 ;
-    animation: bg 5s infinite;
-  
-  }
 
+.grid {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.main-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-login {
+  width: 450px;
+  height: 500px;
+  background-color: #477fc0;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+container-login h2,
+#container-signup h2 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+span.error-alert {
+
+  font-size: 0.8rem;
+  color: #ff0000;
+
+}
+
+.error-alert {
+  color: #cc0000;
+  animation: bg 5s infinite;
+
+}
+
+
+#container-signup {
+  width: 450px;
+  min-height: 500px;
+  background-color: rgba(40, 57, 101, .9);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#container-login form,
+#container-signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.container-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#container-login form input,
+#container-signup form input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.label-login-create {
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-create-a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login-create-a:hover {
+  color: #f1d4d4;
+}
+
+.btn-acessar-painel {
+  background-color: #477fc0;
+  width: 233px;
+  height: 54px;
+  border: none;
+}
+
+.btn-acessar-painel-texto {
+  font-size: 22px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-acessar-painel-texto:hover {
+  color: #f1d4d4;
+}
+
+.form-login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  white-space: pre;
+  padding-right: 0.25rem;
+  color: rgba(0, 0, 0, .26);
+}
+
+.texto-aux {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.40);
+}
+
+.container-password {
   
-  #container-signup {
-    width: 450px;
-    min-height: 500px;
-    background-color: rgba(40,57,101,.9);
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffff;
+  width: 100%;
+  height: 40px;
+  padding: 0 0px;
+  margin: 10px 0;
+}
+
+.container-password input {
+  border: none;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  background: transparent;
+ 
+ 
   
-  #container-login form,
-  #container-signup form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-  }
+
+ 
+}
+
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  outline: none;
+  transition: 0.5s;
   
-  .container-input {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  #container-login form input,
-  #container-signup form input {
-    width: 100%;
-    height: 40px;
-    padding: 0 10px;
-    margin: 10px 0;
-  }
-  .label-login-create {
-    color:  white;
-    font-weight: 700;
-    cursor: pointer;
-  }
- .login-create-a {
-    color: #ffffff;
-    text-decoration: none;
-  }
   
-  .login-create-a:hover {
-    color: #f1d4d4;
-  }
-  
-  .btn-acessar-painel{
-    background-color: #477fc0;
-    width: 233px;
-    height: 54px;
-    border: none;
-  }
-  
-  .btn-acessar-painel-texto{
-    font-size: 22px;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .btn-acessar-painel-texto:hover{
-    color: #f1d4d4;
-  }
-  .form-login{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    white-space: pre;
-    padding-right: 0.25rem;
-    color: rgba(0,0,0,.26);
-  }
-  .texto-aux{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 5px ;   
-    color: rgba(0, 0, 0, 0.40);
-  }
-  
+}
+
+input[type="checkbox"]::before {
+  background: url('/img/eye-of.svg') no-repeat center center / contain;
+  content: "";
+  background-repeat: no-repeat;
+  padding-left: 1.5em;
+  padding-bottom: 1.5em;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+input:checked[type="checkbox"]::before {
+  background: url('/img/eye-on.svg') no-repeat center center / contain;
+}

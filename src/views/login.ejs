@@ -10,7 +10,14 @@
           </div>
           <div class="container-input">
             <label class="label-login-create" for="senha-id">Senha</label>
-            <input type="password" name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
+            <div class = "container-password">
+            
+                <input type="password" name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
+              
+              <div>
+                <input type="checkbox" onclick="showPassword()">
+              </div>
+            </div>
             <% if(locals.error) { %>
               <span class="error-alert"><%= error.message%></span>
             <%}%>
