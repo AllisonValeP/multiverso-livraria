@@ -1,25 +1,29 @@
 <%- include('./partials/head')%>
-<%- include('./partials/header')%>
-<main class="main-login">
-    <section id="container-signup">
+  <%- include('./partials/header')%>
+    <main class="main-login">
+      <section id="container-signup">
         <h2>Login</h2>
-        <form method="GET">
-          
-
+        <form action="/login" method="post">
           <div class="container-input">
             <label class="label-login-create" for="email-id">E-mail</label>
-            <input type="email" name="email" id="email-id" />
+                <input type="email" name="email" id="email-id"  value="<%= locals.old && old.email %>"/>
           </div>
           <div class="container-input">
-            <label class="label-login-create" for="password-id">Senha</label>
-            <input type="password" name="password" id="password-id" />
+            <label class="label-login-create" for="senha-id">Senha</label>
+            <input type="password" name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
+            <% if(locals.error) { %>
+              <span class="error-alert"><%= error.message%></span>
+            <%}%>
           </div>
-        
-          <button class="btn-acessar-painel">
-           <a class="btn-acessar-painel-texto" href="/user/panel">Entrar</a>
-          </button>
-         <a class="login-create-a" href="/create">Se não é cadastrado clique aqui</a>
+          <input class="btn-acessar-painel btn-acessar-painel-texto" type="submit" value="Entrar" />
+          
+    
         </form>
-     </section>
+        <div class="texto-aux" >
+          Se não é cadastrado 
+          <a class="login-create-a" href="/create">&nbspClique aqui</a>
+        </div>
+       
+      </section>
     </main>
-<%- include('./partials/footer')%>
+    <%- include('./partials/footer')%>

@@ -5,9 +5,12 @@ const validate = require('../helpers/express-validator')
  // centralizar as rotas de login, create, 
 
 router.get('/', indexController.index);
+
+router.get('/login', indexController.loginShow);
+router.post('/login', indexController.loginAuth);
+
 router.get('/create', indexController.create);
 router.post('/create', validate.validateRegistration, indexController.store);
-router.get('/login', indexController.loginShow);
 
 module.exports = router;
 

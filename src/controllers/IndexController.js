@@ -10,9 +10,10 @@ const indexController = {
   index: (req, res) => {
     return res.render('index',
     {
-      title: 'Multiverso Livraria'
-    }
-    )
+      title: 'Multiverso Livraria',
+      user: req.cookies.user,
+      admin:req.cookies.admin,
+    });npm
   },
   create: (req, res) => {
     return res.render("login-create",{
@@ -24,6 +25,7 @@ const indexController = {
    
     if (!errors.isEmpty()) {
       res.render('login-create', {
+        title: 'Realize seu Cadastro | Multiverso Livraria',
         errors: errors.mapped(),
         old: req.body,
       });
@@ -56,9 +58,62 @@ const indexController = {
   loginShow: (req, res) => {
     return res.render("login",
     {
-      title: 'Faça Login | Multiverso Livraria'
-    })
+      title: 'Faça Login | Multiverso Livraria',
+      user: req.cookies.user,
+      admin: req.cookies.admin,
+    });
   },
+  loginAuth:(req, res)=>{
+    res.clearCookie("user");
+    res.clearCookie("admin");
+
+    const usersJson = fs.readFileSync(
+      path.join(__dirname, "..", "data", "users.json"),
+      "utf-8"
+    );
+
+    const users = JSON.parse(usersJson);
+
+    const { email, senha } = req.body;
+    const userAuth = users.find((user) => {
+      if (user.email === email) {
+        if (bcrypt.compareSync(senha, user.senha)) {
+          return true;
+        }
+        // O if de cima é a mesma coisa da linha abaixo
+        // return bcrypt.compareHash(senha, user.senha);
+      }
+    });
+
+    if (!userAuth) {
+      return res.render("login", {
+        title: "Faça Login | Multiverso Livraria",
+        user: req.cookies.user,
+        old: req.body,
+        error: {
+          message: "Email ou senha inválido",
+        },
+      });
+    }
+    // Filtra as chaves que o objeto irá ter
+    const user = JSON.parse(
+      JSON.stringify(userAuth, ["id", "nome", "sobrenome", "apelido", "admin"])
+    );
+    req.session.email = userAuth.email;
+    res.cookie("user", user);
+    res.cookie("admin", user.admin);
+
+    res.redirect("/");
+  },
+  // Processamento do deslogar
+  logout: (req, res) => {
+    req.session.destroy();
+    res.clearCookie("user");
+    res.clearCookie("admin");
+    res.redirect("/");
+
+  }
 }
+
 
 module.exports = indexController
