@@ -121,3 +121,11 @@
     padding-right: 0.25rem;
     color: rgba(0,0,0,.26);
   }
+  .texto-aux{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px ;   
+    color: rgba(0, 0, 0, 0.40);
+  }
+  
