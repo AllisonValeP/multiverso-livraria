@@ -34,7 +34,7 @@
             <div class = "container-password">
               <input type="password"  name="senha" id="senha-id" value="<%= locals.old && old.senha %>" />
               <div>
-                <input type="checkbox" onclick="showPassword()">
+                <input class="checkbox-password" type="checkbox" onclick="showPassword()">
               </div>
             </div>
           </div>
@@ -46,9 +46,9 @@
             <%}%>
             <div class = "container-password">
 
-              <input type="password" name="confirmSenha" id="senhaConfim-id" value="<%= locals.old && old.confirmSenha %>"  />
+              <input  type="password" name="confirmSenha" id="senhaConfim-id" value="<%= locals.old && old.confirmSenha %>"  />
               <div>
-                <input type="checkbox" onclick="showPasswordConfirm()">
+                <input  class="checkbox-password" type="checkbox" onclick="showPasswordConfirm()">
               </div>
             </div>
           </div>

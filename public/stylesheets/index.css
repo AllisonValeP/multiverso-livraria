@@ -172,7 +172,7 @@ padding-top: 10px;
 }
 
 @media (max-width: 600px) {
-  .newsletter label,input{
+  .newsletter{
     visibility: collapse
  
   }
