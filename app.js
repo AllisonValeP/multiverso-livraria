@@ -29,7 +29,7 @@ app.use('/produto',productRouter);
 app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
 
-app.user('*', (req,res)=>{
+app.use('*', (req,res)=>{
     res.send('Error 404')
 });
 
