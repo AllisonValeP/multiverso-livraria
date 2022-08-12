@@ -23,11 +23,15 @@ app.use(cookieParser());
 app.use(session({ secret: sessionConfig.secret , resave: sessionConfig.resave, saveUninitialized: sessionConfig.saveUninitialized}));
 
 
-app.use('/',indexRoute)
-app.use('/usuario',userRoute)
-app.use('/produto',productRouter)
-app.use('/adm', admRoute)
-app.use('/compra', purchaseRoute)
+app.use('/',indexRoute);
+app.use('/usuario',userRoute);
+app.use('/produto',productRouter);
+app.use('/adm', admRoute);
+app.use('/compra', purchaseRoute);
+
+app.user('*', (req,res)=>{
+    res.send('Error 404')
+});
 
 
 
