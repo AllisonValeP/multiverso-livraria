@@ -2,7 +2,8 @@ const productController = {
     index: (req, res) => {
         return res.render("product",
         {
-          title: 'Livro | Multiverso Livraria'
+          title: 'Livro | Multiverso Livraria',
+          user: req.cookies.user,
         })
     },
     show: (req, res) => {},

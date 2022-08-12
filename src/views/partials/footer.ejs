@@ -1,23 +1,26 @@
-<footer class="footer">
-  <div class="grid">
-    <div class="about-us">
-      <p>Quem Somos</p>
-      <p>Atendimento</p>
+
+  <%if(locals.user && locals.user.admin){%> 
+    <%}else{%>
+  <footer class="footer">
+    <div class="grid">
+      <div class="about-us">
+        <p>Quem Somos</p>
+        <p>Atendimento</p>
+      </div>
+      <div class="newsletter">
+        <label>Receba nosso Newsletter</label>
+        <input type="email" placeholder="e-mail">
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="https://pt-br.facebook.com/"><img src="/img/facebook.png"  width="40px" height="40px" ></a></li>
+          <li><a href="https://twitter.com/"><img src="/img/twitter.png"  width="40px" height="40px" ></a></li>
+          <li><a href="https://www.instagram.com/"><img src="/img/instagram.png"  width="40px" height="40px" ></a></li>
+        </ul>
+        <p>Siga-nos nas redes sociais</p>
+      </div>
     </div>
-    <div class="newsletter">
-      <label>Receba nosso Newsletter</label>
-      <input type="email" placeholder="e-mail">
-    </div>
-    <div class="social">
-      <ul>
-        <li><a href="https://pt-br.facebook.com/"><img src="/img/facebook.png"  width="40px" height="40px" ></a></li>
-        <li><a href="https://twitter.com/"><img src="/img/twitter.png"  width="40px" height="40px" ></a></li>
-        <li><a href="https://www.instagram.com/"><img src="/img/instagram.png"  width="40px" height="40px" ></a></li>
-      </ul>
-      <p>Siga-nos nas redes sociais</p>
-    </div>
-  </div>
-</footer>
-  
+  </footer>
+  <%}%>
 </body>
 </html>

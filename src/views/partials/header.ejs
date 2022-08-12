@@ -1,29 +1,49 @@
 <header class="header grid">
-  <a class="logo" href="/"><img src="/img/logo2.png" width="110" height="80" alt="Logo"></a>
-  <ul class="nav-list">
-    <li class="categories-dropdown">
-      <p>Categorias</p>
-      <ul class="categories-options">
-        <li>Arte</li>
-        <li>Ficção</li>
-        <li>Filosofia</li>
-        <li>Historia</li>
-        <li>Literatura</li>
-        <li>Psicologia</li>
-        <li>Sociologia</li>
-      </ul>
-    </li>
-    <li>Promoções</li>
-    <li><a href="./pages/lancamentos/lancamentos.html">Lançamentos</a></li>
-  </ul>
-  <ul class="nav-list">
-    <li>
-      <button class="search-button" id="search-button">
-        <img src="/img/magnifying-glass.png" width="40px" height="40px">
-      </button>
-    </li>
-    <li><img src="/img/shopping-cart.png" width="40px" height="40px"></li>
-    <li><a href="/login"><img src="/img/user.png" width="40px" height="40px"></a></li>
+  
+    <a class="logo" href="/"><img src="/img/logo2.png" width="110" height="80" alt="Logo"></a>    
+  
+ 
+    <ul class="nav-list">
+      <%if(locals.user && locals.user.admin){%> 
+        <%}else{%>
+          <li class="categories-dropdown">
+            <p>Categorias</p>
+            <ul class="categories-options">
+              <li>Arte</li>
+              <li>Ficção</li>
+              <li>Filosofia</li>
+              <li>Historia</li>
+              <li>Literatura</li>
+              <li>Psicologia</li>
+              <li>Sociologia</li>
+            </ul>
+          </li>
+          <li>Promoções</li>
+          <li><a href="./pages/lancamentos/lancamentos.html">Lançamentos</a></li>
+        </ul>
+        <ul class="nav-list">
+          <li>
+            <button class="search-button" id="search-button">
+              <img src="/img/magnifying-glass.png" width="40px" height="40px">
+            </button>
+          </li>
+          <li><a href="#"><img src="/img/shopping-cart.png" width="40px" height="40px"></a></li>
+          <%}%>
+      <% if(locals.user){%>
+      <li>
+        <div class="form-user">
+          <div class="bnt-ext">                  
+            <h4>Olá</h4>
+            <form action="/logout" method="post">
+              <button><img src="/img/exit.svg" width="20px" height="20px"></button>
+            </form>
+          </div class="description">
+          <p class="description"><%=user.nome + user.sobrenome%></p>        
+        </div>
+      </li>
+      <%}else{%>
+      <li><a href="/login"><img src="/img/user.png" width="40px" height="40px"></a></li>
+      <%}%>
   </ul>
 
   <div class="topnav-mobile">
@@ -65,7 +85,8 @@
 
   <div class="searching-content" id="search-modal">
     <div class="searching-elements">
-      <button class="start-searching" id="start-searching"><img src="/img/magnifying-glass.png" width="30px" height="30px"></button>
+      <button class="start-searching" id="start-searching"><img src="/img/magnifying-glass.png" width="30px"
+          height="30px"></button>
 
       <button class="close-searching" id="close-searching"><span class="close-searching-button">X</span></button>
 
@@ -74,14 +95,3 @@
   </div>
 
 </header>
-
-<script>
-  function openMenuOptions() {
-    const options = document.getElementById("myLinks");
-    if (options.style.display === "flex") {
-      options.style.display = "none";
-    } else {
-      options.style.display = "flex";
-    }
-  }
-</script>

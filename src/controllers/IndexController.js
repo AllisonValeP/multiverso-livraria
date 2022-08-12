@@ -12,12 +12,15 @@ const indexController = {
     {
       title: 'Multiverso Livraria',
       user: req.cookies.user,
-      admin:req.cookies.admin,
-    });npm
+     
+     
+    });
   },
   create: (req, res) => {
     return res.render("login-create",{
-      title: 'Cadastre-se Agora | Multiverso Livraria'
+      title: 'Cadastre-se Agora | Multiverso Livraria',
+      user: req.cookies.user,
+
     })
   },
   store: (req, res) => {
@@ -60,12 +63,12 @@ const indexController = {
     {
       title: 'Faça Login | Multiverso Livraria',
       user: req.cookies.user,
-      admin: req.cookies.admin,
+    
     });
   },
   loginAuth:(req, res)=>{
     res.clearCookie("user");
-    res.clearCookie("admin");
+    
 
     const usersJson = fs.readFileSync(
       path.join(__dirname, "..", "data", "users.json"),
@@ -100,16 +103,19 @@ const indexController = {
       JSON.stringify(userAuth, ["id", "nome", "sobrenome", "apelido", "admin"])
     );
     req.session.email = userAuth.email;
-    res.cookie("user", user);
-    res.cookie("admin", user.admin);
-
-    res.redirect("/");
+    res.cookie("user", user);    
+      if(user.admin){
+        res.redirect("/adm");
+      }
+      if(!user.admin){
+        res.redirect("/");
+      }
+    
   },
   // Processamento do deslogar
   logout: (req, res) => {
     req.session.destroy();
     res.clearCookie("user");
-    res.clearCookie("admin");
     res.redirect("/");
 
   }

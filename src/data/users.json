@@ -15,7 +15,7 @@
         "sobrenome": "Souza",
         "email": "livia@gmail.com",
         "senha": "$2b$10$FG6mRcT3Wa2GiwKnNXAScuUusRdZOsTbiRfdHfMXxjg2mvxPVFCvK",
-        "admin": false,
+        "admin": true,
         "criadoEm": "2022-08-07T18:08:44.396Z",
         "modificadoEm": "2022-08-07T18:08:44.396Z"
     },
