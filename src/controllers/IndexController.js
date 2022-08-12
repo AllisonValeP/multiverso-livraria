@@ -16,14 +16,14 @@ const indexController = {
      
     });
   },
-  create: (req, res) => {
+  register: (req, res) => {
     return res.render("login-create",{
       title: 'Cadastre-se Agora | Multiverso Livraria',
       user: req.cookies.user,
 
     })
   },
-  store: (req, res) => {
+  create: (req, res) => {
     const errors = validationResult(req);
    
     if (!errors.isEmpty()) {
@@ -58,7 +58,7 @@ const indexController = {
      res.redirect("login");
     }
   },
-  loginShow: (req, res) => {
+  login: (req, res) => {
     return res.render("login",
     {
       title: 'Faça Login | Multiverso Livraria',
@@ -66,7 +66,7 @@ const indexController = {
     
     });
   },
-  loginAuth:(req, res)=>{
+  auth:(req, res)=>{
     res.clearCookie("user");
     
 
