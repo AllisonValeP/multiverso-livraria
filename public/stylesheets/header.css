@@ -8,11 +8,11 @@ ul li {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto;
     height: 130px;
     align-items: center;
-    padding: 0 8px;
+    
 }
 
 .header logo {
@@ -26,10 +26,15 @@ ul li {
     }
 }
 
-.nav-list li+li {
-    padding-left: 20px;
+.nav-list li + li {
+    padding-left: 1px;
 
 }
+.nav-list{
+    white-space: nowrap;
+ width: 25%;
+}
+
 
 .nav-list li a {
     text-decoration: none;
@@ -38,6 +43,7 @@ ul li {
 
 .categories-dropdown {
     position: relative;
+    white-space: nowrap;
 }
 
 .categories-options {
@@ -54,6 +60,7 @@ ul li {
     border-radius: 10%;
     width: 110px;
     cursor: pointer;
+    
 }
 
 .categories-dropdown:hover .categories-options {
@@ -82,6 +89,10 @@ ul li {
     .topnav-mobile {
         display: none;
     }
+  .nav-list{
+    white-space: nowrap;
+  }
+
 }
 
 .topnav-mobile #myLinks {
@@ -204,3 +215,29 @@ ul li {
     cursor: pointer;
     margin-right: 20px;
   }
+  .bnt-ext{
+    width:100%;
+    height: 3vh;
+    padding: 0;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    pointer-events: painted;
+  }
+  .bnt-ext button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+p.description  {
+   font-size:15px;
+    padding-left: 1.6em;
+    color: rgb(8, 7, 7);
+    
+}
+
+.bnt-ext button:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1)
+}

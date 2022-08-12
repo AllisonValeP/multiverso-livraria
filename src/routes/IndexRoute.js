@@ -11,6 +11,7 @@ router.post('/login', indexController.loginAuth);
 
 router.get('/create', indexController.create);
 router.post('/create', validate.validateRegistration, indexController.store);
+router.post("/logout",indexController.logout);
 
 module.exports = router;
 
