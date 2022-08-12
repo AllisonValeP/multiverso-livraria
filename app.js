@@ -24,10 +24,10 @@ app.use(session({ secret: sessionConfig.secret , resave: sessionConfig.resave, s
 
 
 app.use('/',indexRoute)
-app.use('/user',userRoute)
-app.use('/product',productRouter)
+app.use('/usuario',userRoute)
+app.use('/produto',productRouter)
 app.use('/adm', admRoute)
-app.use('/purchase', purchaseRoute)
+app.use('/compra', purchaseRoute)
 
 
 
