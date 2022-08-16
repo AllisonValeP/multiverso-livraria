@@ -38,7 +38,14 @@
               <button><img src="/img/exit.svg" width="20px" height="20px"></button>
             </form>
           </div class="description">
-          <p class="description"><%=user.nome + user.sobrenome%></p>        
+          <%if(locals.user && !locals.user.admin){%>
+            <a href="/usuario/perfil">
+              <p class="description"><%=user.nome + user.sobrenome%></p>        
+            </a>
+            <%}%> 
+            <%if(locals.user && locals.user.admin){%>
+              <p class="description"><%=user.nome + user.sobrenome%></p>        
+            <%}%>
         </div>
       </li>
       <%}else{%>

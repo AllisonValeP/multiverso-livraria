@@ -2,7 +2,8 @@ const purchaseController = {
     index: (req, res) => {
         return res.render("purchase",
         {
-          title: 'Informação de Pagamento | Multiverso Livraria'
+          title: 'Informação de Pagamento | Multiverso Livraria',
+          user: req.cookies.user,
         })
     },
     show: (req, res) => {},

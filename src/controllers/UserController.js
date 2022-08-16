@@ -9,7 +9,8 @@ const userController = {
     showPainel: (req, res) => {
       return  res.render("user-painel",
       {
-        title: 'Informação de Pagamento | Multiverso Livraria'
+        title: 'Informação de Pagamento | Multiverso Livraria',
+        user: req.cookies.user,
       })
     },
   };

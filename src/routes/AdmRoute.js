@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router()
 const admController = require('../controllers/AdmController')
+const isAuthAdm = require('../middlewares/authAdm');
 
-router.get('/', admController.index);
-router.get('/product', admController.productShow);
-router.get('/user', admController.userShow);
-router.get('/order', admController.orderShow);
-router.get('/profile', admController.profileShow);
+router.get('/', isAuthAdm,admController.index);
+router.get('/product',isAuthAdm,admController.productShow);
+router.get('/user', isAuthAdm,admController.userShow);
+router.get('/order', isAuthAdm,admController.orderShow);
+router.get('/profile', isAuthAdm,admController.profileShow);
 
 
 
