@@ -1,7 +1,17 @@
-<%- include('./partials/head')%>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./adm-header.css">
+    <title>Adm Header</title>
+</head>
+<body>
     <header class="adm-header-grid">
-        <div class="adm-header-logo"><a href="../../index.html"><img src="/img/logo2.png" width="110" height="80" alt="Logo"></a></div>
+        <div class="adm-header-logo"><a href="../../index.html"><img src="../../public/img/logo2.png" width="110" height="80" alt="Logo"></a></div>
         <div class="tabset">
             <!-- Tab 1 -->
             <input type="radio" name="tabset" id="tab0" aria-controls="dunkles" checked>
@@ -19,13 +29,10 @@
             <div class="tab-panels">
                 <section id="marzen" class="tab-panel centralizando">
                     <h2 class="adm-table-subtitulo">Olá</h2>
-                    <%if(locals.user && locals.user.admin){%>
-                        <p class="adm-nome-home"><%=user.nome + user.sobrenome%></p>        
-                      <%}%>
                     <div class="adm-painel-main">
                         <div class="adm-content">
                             <div class="adm-welcome">
-                                <h3 class="adm-welcome-h3">Seja bem vindo</h3>
+                                <h3 class="adm-welcome-h3">Bem vindo Adm</h3>
                                 <p class="adm-welcome-p">Aqui no painel de administador você tem acesso a todas 
                                     informações necssarias para gerencial seu negócio.
                                 </p>
@@ -265,8 +272,10 @@
 
       <!-- parte da direita -->
          <div class="logout-adm">
-            <a class="logout-adm-icon" href=""><img src="/img/exit.svg" width="40px" ></a>
+            <a class="logout-adm-icon" href=""><img src="../../public/img/exit.svg" width="40px" ></a>
             <a class="logout-adm-a" href="">Sair</a>
         </div>
       </header>
-        <%- include('./partials/footer')%>
+    
+       
+
