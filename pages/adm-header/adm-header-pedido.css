@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+  }
+  
+.adm-header-grid{
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.adm-header-logo{   
+    padding-left: 55px;
+}
+
+.centralizando{
+    position: absolute;
+    width: 100%;
+    left:-0.1px
+}
+
+.logout-adm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+.logout-adm-a{
+  padding-right: 5px;
+  text-decoration: none;
+}
+/* CODIGO DE Painel ADM */
+ @media screen and (max-width: 768px) {
+    .containerTable-lblTitle:last-child {
+        display: none;
+    }
+
+    .containerTable-lblValue:last-child {
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    *[class *= "lbl"] {
+        font-size: var(--font-xs);
+    }
+}
+
+/* animação da navegação */
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+  
+ 
+ 
+  
+  /*
+   Styling
+  */
+  
+  .tabset > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+  }
+  
+  .tabset > label:hover
+   {
+    color: #06c;
+  }
+  
+  .tabset > label:hover::after,
+ 
+  .tabset > input:checked + label::after {
+    background: #06c;
+  }
+  
+
+
+ .historico-marcado + label{
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    border: 1.5px solid #ccc;
+ }
+
+
+
+
+
