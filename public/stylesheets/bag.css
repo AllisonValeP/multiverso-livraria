@@ -1,0 +1,59 @@
+.bag-title-h1{  
+    display: flex;    
+    justify-content: center;
+    padding: 50px 0 50px 0    
+}
+.bag-table-span {
+    cursor: pointer;
+}
+
+.minus,
+.plus {
+    width: 20px;
+    height: 20px;
+    background: #4c72af;
+    border-radius: 4px;
+    padding: 8px 5px 8px 5px;
+    border: 1px solid #4c72af;
+    color:white
+}
+
+.bag-table-input {
+    height: 34px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.bag-table-button {
+    background: none;
+    border: none;
+}
+
+#bag-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#bag-table td, #bag-table th{
+    border: 1px solid #4c72af;
+    padding: 8px;
+    text-align: center;
+}
+
+#bag-table tr:nth-child(even){background-color: #7a9dd580;}
+
+#bag-table tr:hover {background-color: #7a9dd5c5;}
+
+#bag-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4c72af;
+    color: white;
+  }
