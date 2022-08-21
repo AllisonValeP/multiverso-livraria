@@ -12,6 +12,7 @@ const userRoute = require('./src/routes/UserRoute');
 const admRoute = require('./src/routes/AdmRoute');
 const purchaseRoute = require('./src/routes/PurchaseRoute');
 const productRouter = require('./src/routes/ProductRoute');
+const releasesRoute = require('./src/routes/ReleasesRoute');
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -28,6 +29,7 @@ app.use('/usuario',userRoute);
 app.use('/produto',productRouter);
 app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
+app.use('/lancamentos', releasesRoute)
 
 app.use('*', (req,res)=>{
     res.send('Error 404')

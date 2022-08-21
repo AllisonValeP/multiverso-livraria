@@ -1,0 +1,42 @@
+.releases-main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .lancamento-livros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 16px;
+  }
+  
+  .lancamento-livros li {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    align-items: center;
+  }
+  
+  .book-cover{
+    width: 231px;
+    height: 336px;
+    }
+  
+  .book-cover:hover {
+      width: 261px;
+      height: 366px;
+      cursor: pointer;
+      }
+   
+  .lancamento-livros li p{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    width: 200px;
+  }
+  
