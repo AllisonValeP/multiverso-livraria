@@ -5,7 +5,9 @@
   font-family: 'Kdam Thmor Pro', sans-serif;
 
 }
-
+.adm-header-a{
+  text-decoration: none;
+}
 .adm-header-grid{
   display: grid;
   grid-template-columns: 1fr 50% 1fr;
