@@ -1,42 +1,52 @@
 <%- include('./partials/head')%>
 <%- include('./partials/header')%>
-<main class="bag-main">
-    <h1 class="bag-title-h1">Carrinho</h1>
-<div class="bag-table-container">
-    <table id="bag-table">
-        <tr>
-            <th>Produto</th>
-            <th></th>
-            <th>Quantidade</th>
-            <th>Preço</th>
-            <th></th>
-        </tr>
+<main>
+ <h1 class="bag-title-h1">Carrinho</h1>
+    <div class="bag-main-container">
+        <div class="bag-table-container">
+            <table id="bag-table">
+                <tr>
+                    <th>Produto</th>
+                    <th></th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th></th>
+                </tr>
 
-        <td>
-            <img src="img/home-livro-01.png" width="150px" height="220px"/>
-        </td>
-        
-        <td>
-            <p>Sobre anarquismo,</br> sexo e casamento</p>
-        </td>
-        
-        <td>
-            <div class="number">
-                <span class="minus bag-table-span">-</span>
-                <input class="bag-table-input" type="text" value="1"/>
-                <span class="plus bag-table-span">+</span>
-            </div>
-         </td>
+                <td>
+                    <img src="img/home-livro-01.png" width="150px" height="220px"/>
+                </td>
+                
+                <td>
+                    <p>Sobre anarquismo,</br> sexo e casamento</p>
+                </td>
+                
+                <td>
+                    <div class="number">
+                        <span class="minus bag-table-span">-</span>
+                        <input class="bag-table-input" type="text" value="1"/>
+                        <span class="plus bag-table-span">+</span>
+                    </div>
+                </td>
 
-         <td>
-            <p>R$59,99</p>
-         </td>
+                <td>
+                    <p>R$59,99</p>
+                </td>
 
-         <td>
-            <button class="bag-table-button"><img src="/img/trash.svg" width="30px" height="35px"></button>
-         </td>
-    </table>
-</div>
+                <td>
+                    <button class="bag-table-button"><img src="/img/trash.svg" width="30px" height="35px"></button>
+                </td>
+            </table>
+        </div>
+        <div class="bag-total-value">
+            <h2 class="bag-value-h2">Valor total</h2>
+            <p>Total: R$59,99</p>
+            <button type="submit" class="bag-finishe-button">FINALIZAR COMPRA</button>
+            <p><a href="/">Continuar comprando</p></a>
+
+        </div>
+
+    </div>
 </main>
 <%- include('./partials/footer')%>
 
