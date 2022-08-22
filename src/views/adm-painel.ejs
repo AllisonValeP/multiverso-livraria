@@ -17,11 +17,13 @@
         
             
             <div class="tab-panels">
-                <section id="marzen" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo">Olá</h2>
-                    <%if(locals.user && locals.user.admin){%>
-                        <p class="adm-nome-home"><%=user.nome + " " + user.sobrenome%></p>        
-                      <%}%>
+                <section id="marzen" class="tab-panel centralizando">        
+
+                        <h2 class="adm-table-subtitulo">Olá</h2>
+                        <%if(locals.user && locals.user.admin){%>
+                            <p class="adm-welcome-h3 cor"><%=user.nome + user.sobrenome%></p>        
+                          <%}%>               
+
                     <div class="adm-painel-main">
                         <div class="adm-content">
                             <div class="adm-welcome">
