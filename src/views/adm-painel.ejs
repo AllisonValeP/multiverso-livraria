@@ -18,13 +18,19 @@
             
             <div class="tab-panels">
                 <section id="marzen" class="tab-panel centralizando">
-                    <div>
+
+         
 
                         <h2 class="adm-table-subtitulo">Olá</h2>
                         <%if(locals.user && locals.user.admin){%>
                             <p class="adm-welcome-h3 cor"><%=user.nome + user.sobrenome%></p>        
                           <%}%>
-                    </div>
+
+                    <h2 class="adm-table-subtitulo">Olá</h2>
+                    <%if(locals.user && locals.user.admin){%>
+                        <p class="adm-nome-home"><%=user.nome + " " + user.sobrenome%></p>        
+                      <%}%>
+
                     <div class="adm-painel-main">
                         <div class="adm-content">
                             <div class="adm-welcome">
@@ -50,7 +56,7 @@
                         </div>
                 </section>
                 <section id="rauchbier" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo">Usuarios</h2>
+                    <h2 class="adm-table-subtitulo adm-title-center">Usuarios</h2>
                     <div class="adm-painel-main">
                         <div class="adm-content">
                             <table class="adm-table-users">
@@ -119,7 +125,7 @@
                     </div>
                 </section>
                 <section id="dunkles" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo">Produtos</h2>
+                    <h2 class="adm-table-subtitulo adm-title-center">Produtos</h2>
                         <div class="adm-painel-main">
                             <div class="adm-content">
                                 <table class="adm-table-users">
@@ -188,7 +194,7 @@
                 </section>
                 <!-- aqui -->
                 <section id="marzen01" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo">Pedidos</h2>
+                    <h2 class="adm-table-subtitulo adm-title-center">Pedidos</h2>
                     <div class="adm-painel-main">
                         <div class="adm-content">
                             <table class="adm-table-users">

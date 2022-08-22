@@ -23,7 +23,7 @@
     /* position: absolute; */
     padding: 10px 70px 50px 70px;
     background: rgba(40, 57, 101, .9);
-    
+    margin-top: 100px;
 }
 .form-adm-product{
   display: grid;

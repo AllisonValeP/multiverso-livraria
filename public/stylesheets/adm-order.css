@@ -22,7 +22,7 @@
     position: absolute;
     padding: 10px 40px 50px 40px;
     background: rgba(40, 57, 101, .9);
-    
+    margin-top: 100px;
 }
 .form-adm-pedido{
   display: grid;
