@@ -78,12 +78,35 @@
     height: 336px;
     }
 
- .home-livros li p {
+ .index-book-title {
    padding-top: 8px;
    text-align: center;
-   max-width: 110px;
-   font-size: 18px;
+   max-width: 200px;
+   font-size: 25px;
+   line-height: 95%;
+   height: 50px;
+   width: 100%;
+   margin-bottom: 35px;
  }
+.index-book-price{
+  font-size: 22px;
+  padding: 10px;
+  color: #38537f;
+}
+
+.index-background{
+  background-color: #94b7ee;
+}
+
+.index-bag-button{
+  background: #4c72af;
+  color:white;
+  border:none;
+  padding:15px 20px;
+  border-radius:25px;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
 
  .titulos {
   display: flex;
@@ -152,11 +175,6 @@ padding-top: 10px;
   flex-direction: column;
 }
 
-.home-livros li p {
-    height: 100px;
-    width: 100%;
-    text-align: center;
-}
 
 
 .responsive {

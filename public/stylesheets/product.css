@@ -285,12 +285,7 @@
     flex-direction: column;
   }
   
-  .home-livros li p {
-      height: 100px;
-      width: 100%;
-      text-align: center;
-  }
-  
+ 
   
   .responsive {
       display: grid;
