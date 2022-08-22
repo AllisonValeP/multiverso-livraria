@@ -38,5 +38,5 @@ app.use('*', (req,res)=>{
 
 // Roda o express na porta definida
 app.listen(port, ()=>{
-    console.log(`Servidor rodando na porta: ${port}. Acesse: http://nplocalhost:3000/`);
+    console.log(`Servidor rodando na porta: ${port}. Acesse: http://localhost:3000/`);
 })
