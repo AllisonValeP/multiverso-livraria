@@ -1,6 +1,6 @@
 const authMiddleware = (req, res, next) => {
     const isAuth = req.cookies.user;
-  console.log(req.baseUrl)
+  // console.log(req.baseUrl)
     if (!isAuth || (isAuth && isAuth.admin && req.baseUrl === "/adm" )) {
       next();
     }

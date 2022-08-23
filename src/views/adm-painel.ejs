@@ -267,8 +267,11 @@
 
       <!-- parte da direita -->
          <div class="logout-adm">
-            <a class="logout-adm-icon" href=""><img src="/img/exit.svg" width="40px" ></a>
-            <a class="logout-adm-a" href="">Sair</a>
+           
+            <form action="/logout" method="POST">
+                <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
+                <button class="logout-adm-a" href="">Sair</button>
+                </form>
         </div>
       </header>
         <%- include('./partials/footer')%>
