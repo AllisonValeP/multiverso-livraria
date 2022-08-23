@@ -14,6 +14,7 @@ const purchaseRoute = require('./src/routes/PurchaseRoute');
 const productRouter = require('./src/routes/ProductRoute');
 const releasesRoute = require('./src/routes/ReleasesRoute');
 const bagRoute = require('./src/routes/BagRoute');
+const finalizeOrderRoute = require('./src/routes/FinalizeOrderRoute')
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -32,9 +33,13 @@ app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
 app.use('/lancamentos', releasesRoute)
 app.use('/carrinho', bagRoute)
+app.use('/finalizando', finalizeOrderRoute)
 
 app.use('*', (req,res)=>{
-    res.send('Error 404')
+    res.render('index',{
+      title: 'Multiverso Livraria',
+      user: req.cookies.user,   
+    })
 });
 
 

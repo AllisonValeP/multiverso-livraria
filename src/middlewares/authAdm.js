@@ -1,10 +1,10 @@
 const authMiddleware = (req, res, next) => {
     const isAuth = req.cookies.user;
-  
-    if (isAuth && isAuth.admin ) {
+  console.log(req.baseUrl)
+    if (!isAuth || (isAuth && isAuth.admin && req.baseUrl === "/adm" )) {
       next();
     }
-    
+  
     else {
       req.session.destroy();
       res.clearCookie("user");     
@@ -12,3 +12,4 @@ const authMiddleware = (req, res, next) => {
     }
   };
   module.exports = authMiddleware;
+
