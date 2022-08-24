@@ -4,11 +4,11 @@ const indexController = require('../controllers/IndexController');
 const validate = require('../helpers/express-validator');
 const isAuth = require('../middlewares/auth');
 const isGuest = require("../middlewares/guest");
-const authAdm = require("../middlewares/authAdm");
+const validateAdm = require("../middlewares/validateAdm");
 
  // centralizar as rotas de login, create, 
 
-router.get('/', indexController.index);
+router.get('/',validateAdm, indexController.index);
 
 router.get('/login', isGuest,indexController.login);
 router.post('/login', isGuest,indexController.auth);

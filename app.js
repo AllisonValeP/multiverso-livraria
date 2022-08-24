@@ -36,10 +36,7 @@ app.use('/carrinho', bagRoute)
 app.use('/finalizando', finalizeOrderRoute)
 
 app.use('*', (req,res)=>{
-    res.render('index',{
-      title: 'Multiverso Livraria',
-      user: req.cookies.user,   
-    })
+    res.redirect('/')
 });
 
 
