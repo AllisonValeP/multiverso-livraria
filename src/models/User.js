@@ -27,6 +27,7 @@ const User = (sequelize, DataTypes) => {
         }, 
         {
             tableName: "user",
+            underscored: true,
           
         }
     )
