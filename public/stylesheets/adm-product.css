@@ -33,7 +33,7 @@
 
 .container-adm-product .tab,
 .form-adm-product .form-elements-adm-product .label-adm-product,
-.form-adm-product .form-elements-adm-product, .button-adm-product-save {
+.form-adm-product .form-elements-adm-product, .button-adm-product-save, .label-adm-product-upcoming {
     text-transform: uppercase;
 }
 
@@ -43,7 +43,7 @@
 
 .form-adm-product .form-elements-adm-product .label-adm-product,
 .form-adm-product .form-elements-adm-product .input-adm-product,
-.form-adm-product .form-elements-adm-product, .button-adm-product-save,.button-adm-product-cancelar  {
+.form-adm-product .form-elements-adm-product, .button-adm-product-save,.button-adm-product-cancelar, .label-adm-product-upcoming  {
     width: 100%;
     color: #fff;
     display: block;
@@ -61,7 +61,7 @@
     -webkit-text-security: circle;
 }
 
-.form-adm-product .form-elements-adm-product .label-adm-product {
+.form-adm-product .form-elements-adm-product .label-adm-product{
     color: #aaa;
     font-size: 22px;
 }
@@ -148,4 +148,8 @@
 
 input::placeholder{
   color: white
+}
+
+.label-adm-product-upcoming{
+  grid-column: 2;
 }
