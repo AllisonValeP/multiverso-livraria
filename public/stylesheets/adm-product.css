@@ -28,7 +28,7 @@
 .form-adm-product{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: 20px;
 }
 
 
@@ -77,12 +77,14 @@
   padding: 15px 20px;
   border-radius: 25px;
   margin-top: 50px;  
+  cursor: pointer;
 }
 .button-adm-product-cancelar{
   margin-top: 10px;
   display: grid;
   background: #818385;
   text-transform: uppercase; 
+  cursor: pointer;
 }
 
 .button-adm-product-image{
@@ -92,6 +94,19 @@
   border-radius: 25px;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.button-adm-product-image-cancelar{
+  margin-top: 20px;
+  background: #818385;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .form-elements-adm-product-02{
@@ -169,3 +184,4 @@ input.checkbox-adm{
   align-items: flex-start;
   
 }
+

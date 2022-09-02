@@ -9,7 +9,11 @@
                 
                     <div class="form-elements-adm-product-image">
                         <img class="adm-product-image" src="/img/home-livro-01.png" alt="Anarquismo">
-                        <input type="submit" class="button-adm-product-image" value="Alterar Imagem">
+                        <!-- <input type="file" class="button-adm-product-image" value="Alterar Imagem"> -->
+                        <button class="button-adm-product-image"
+                        onclick="document.getElementById('getFile').click()">ALTERAR IMAGEM</button>
+                        <input type='file' id="getFile" style="display:none">
+                        <input type="submit" class="button-adm-product-image-cancelar" value="Cancelar">
                     </div>
                     <div class="form-elements-adm-product">
                         <label for="user" class="label-adm-product">Titulo</label>
@@ -18,6 +22,10 @@
                     <div class="form-elements-adm-product">
                         <label for="pass" class="label-adm-product">Autor</label>
                         <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma Goldman">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Editora</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Hedra">
                     </div>
                     <div class="form-elements-adm-product">
                         <label for="pass" class="label-adm-product">Quantidade</label>
