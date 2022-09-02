@@ -28,6 +28,7 @@
 .form-adm-product{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 
@@ -152,4 +153,8 @@ input::placeholder{
 
 .label-adm-product-upcoming{
   grid-column: 2;
+}
+
+#textarea-adm-product{
+  color: white
 }
