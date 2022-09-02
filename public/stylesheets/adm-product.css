@@ -140,12 +140,7 @@
   border-bottom: 5px #aaa solid;
 }
 
-#checkbox-adm{
-  height: 40px;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
+
 
 input::placeholder{
   color: white
@@ -157,4 +152,20 @@ input::placeholder{
 
 #textarea-adm-product{
   color: white
+}
+
+input.checkbox-adm{
+  width: 500px;
+  height: 50px;
+  display: inline-block;
+  justify-content: left;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.container-checkbox-adm{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  
 }
