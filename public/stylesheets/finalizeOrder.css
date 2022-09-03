@@ -1,0 +1,34 @@
+.finalizeOrder-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+
+.identification{
+    color: white;
+    background-color:  #4c72af;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.finalaze-label-input{
+    margin-bottom: 30px;
+}
+.total-value{
+    width: 90%;
+    text-align: center;
+    background-color:#ddd;
+    padding: 15px 0 15px 0;
+}
+
+.finalize-button{
+    background: #4c72af;
+    color:white;
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    margin-top: 100px;
+    cursor: pointer;
+}
