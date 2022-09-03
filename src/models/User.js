@@ -27,8 +27,7 @@ const User = (sequelize, DataTypes) => {
         }, 
         {
             tableName: "user",
-            underscored: true,
-          
+            underscored: true,          
         }
     )
     // Usuario.associate = (models => {

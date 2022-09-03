@@ -137,7 +137,7 @@ span.error-alert {
   display: flex;
   justify-content: center;
   padding: 5px;
-  color: rgba(0, 0, 0, 0.40);
+  color: #a7c3e2
 }
 
 .container-password {

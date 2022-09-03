@@ -9,29 +9,50 @@
                 
                     <div class="form-elements-adm-product-image">
                         <img class="adm-product-image" src="/img/home-livro-01.png" alt="Anarquismo">
-                        <input type="submit" class="button-adm-product-image" value="Alterar Imagem">
+                        <!-- <input type="file" class="button-adm-product-image" value="Alterar Imagem"> -->
+                        <button class="button-adm-product-image"
+                        onclick="document.getElementById('getFile').click()">ALTERAR IMAGEM</button>
+                        <input type='file' id="getFile" style="display:none">
+                        <input type="submit" class="button-adm-product-image-cancelar" value="Cancelar">
                     </div>
                     <div class="form-elements-adm-product">
                         <label for="user" class="label-adm-product">Titulo</label>
                         <input id="user" type="text" class="input-adm-product" placeholder="Sobre Anarquismo">
                     </div>
                     <div class="form-elements-adm-product">
-                        <label for="pass" class="label-adm-product">Autor</label>
-                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma Goldman">
+                        <label for="pass" class="label-adm-product">Nome Autor(a)</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma">
                     </div>
-                    <div class="form-elements-adm-product">
+                    <div class="form-elements-adm-product row-2">
+                        <label for="pass" class="label-adm-product">Sobrenome Autor(a)</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Goldman">
+                    </div>
+                    <div class="form-elements-adm-product row-3">
+                        <label for="pass" class="label-adm-product">Editora</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Hedra">
+                    </div>
+                    <div class="form-elements-adm-product column-3 row-1">
                         <label for="pass" class="label-adm-product">Quantidade</label>
                         <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="200">
                     </div>
-                    <div class="form-elements-adm-product">
+                    
+                    <div class="form-elements-adm-product column-3 row-3">
+                        <label for="pass" class="label-adm-product">Genero</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Politica">
+                    <div class="form-elements-adm-product column-3 row-4">
                         <label for="pass" class="label-adm-product">Sobre</label>
-                        <textarea name="" id="" cols="50" rows="5"></textarea> 
+                        <textarea name="" id="textarea-adm-product" cols="50" rows="5"  style="background-color:rgba(255, 255, 255, .1);" ></textarea> 
                     </div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At tempore amet recusandae modi illo corrupti praesentium accusamus doloremque? Dolores ratione accusantium, nobis velit necessitatibus obcaecati nam laboriosam praesentium tenetur ipsam?
-                    <div class="form-elements-adm-roduct">
-                        <label for="pass" class="label-apdm-product">Lançamento</label>
+                    <div class="form-elements-adm-product container-checkbox-adm column-3 row-2">
+                        <label for="pass" class="label-adm-product">Lançamento</label>
+                        <input id="" type="checkbox" class="input-adm-product checkbox-adm" data-type="checkbox">
+                    </div>
+          
+                    <!-- <div class="form-elements-adm-roduct">
+                        <label for="pass" class="label-adm-product-upcoming">Lançamento</label>
                         <input id="checkbox-adm" type="checkbox" class="input-adm-product" data-type="checkbox">
-                    </div>
+                    </div> -->
+                 
                     <div class="form-elements-adm-product-buttons">
                         <input type="submit" class="button-adm-product-save" value="Salvar">
                         <input type="submit" class="button-adm-product-cancelar" value="Cancelar">

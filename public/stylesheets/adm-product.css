@@ -10,7 +10,7 @@
 .box-adm-product {
     width: 100%;
     margin: auto;
-    max-width: 900px;
+    max-width: 1000px;
     min-height: 770px;
     height: 100%;
     position: relative;
@@ -28,12 +28,13 @@
 .form-adm-product{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 
 .container-adm-product .tab,
 .form-adm-product .form-elements-adm-product .label-adm-product,
-.form-adm-product .form-elements-adm-product, .button-adm-product-save {
+.form-adm-product .form-elements-adm-product, .button-adm-product-save, .label-adm-product-upcoming {
     text-transform: uppercase;
 }
 
@@ -43,7 +44,7 @@
 
 .form-adm-product .form-elements-adm-product .label-adm-product,
 .form-adm-product .form-elements-adm-product .input-adm-product,
-.form-adm-product .form-elements-adm-product, .button-adm-product-save,.button-adm-product-cancelar  {
+.form-adm-product .form-elements-adm-product, .button-adm-product-save,.button-adm-product-cancelar, .label-adm-product-upcoming  {
     width: 100%;
     color: #fff;
     display: block;
@@ -55,13 +56,14 @@
     padding: 15px 20px;
     border-radius: 25px;
     background: rgba(255, 255, 255, .1);
+    margin-bottom: 50px;
 }
 
 .form-adm-product .form-elements-adm-product .input-adm-product[data-type="password"] {
     -webkit-text-security: circle;
 }
 
-.form-adm-product .form-elements-adm-product .label-adm-product {
+.form-adm-product .form-elements-adm-product .label-adm-product{
     color: #aaa;
     font-size: 22px;
 }
@@ -76,12 +78,14 @@
   padding: 15px 20px;
   border-radius: 25px;
   margin-top: 50px;  
+  cursor: pointer;
 }
 .button-adm-product-cancelar{
   margin-top: 10px;
   display: grid;
   background: #818385;
   text-transform: uppercase; 
+  cursor: pointer;
 }
 
 .button-adm-product-image{
@@ -91,6 +95,19 @@
   border-radius: 25px;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.button-adm-product-image-cancelar{
+  margin-top: 20px;
+  background: #818385;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .form-elements-adm-product-02{
@@ -113,16 +130,16 @@
   margin-bottom: 20px;
 }
 
-.form-elements-adm-product-buttons{
-  grid-column: 1 / -1;
-}
+
 
 
 
 .form-elements-adm-product{
   grid-column: 2;
 }
-
+/* .column-3{
+  grid-column: 3;
+} */
 .form-elements-adm-product-image{
   grid-row: 1 / 4;
   align-self: center;
@@ -139,13 +156,54 @@
   border-bottom: 5px #aaa solid;
 }
 
-#checkbox-adm{
-  height: 40px;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
+
 
 input::placeholder{
   color: white
+}
+
+.label-adm-product-upcoming{
+  grid-column: 2;
+}
+
+#textarea-adm-product{
+  color: white
+}
+
+input.checkbox-adm{
+  width: 500px;
+  height: 50px;
+  display: inline-block;
+  justify-content: left;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.container-checkbox-adm{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  
+}
+
+/* .row-1{
+  grid-row:1
+}
+.row-2{
+  grid-row:2
+}
+.row-3{
+  grid-row:3
+}
+.row-4{
+  grid-row:4
+}
+
+
+} */
+.form-elements-adm-product-buttons{
+ 
+  grid-column: 1 / -1;
+  grid-row: 1;
+  
 }
