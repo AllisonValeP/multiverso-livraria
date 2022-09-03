@@ -20,8 +20,8 @@
                 <section id="marzen" class="tab-panel centralizando">        
 
                         <h2 class="adm-table-subtitulo">Olá</h2>
-                        <%if(locals.user && locals.user.admin){%>
-                            <p class="adm-welcome-h3 cor"><%=user.nome + user.sobrenome%></p>        
+                        <%if(locals.user && locals.user.is_admin){%>
+                            <p class="adm-welcome-h3 cor"><%=user.name + user.last_name%></p>        
                           <%}%>               
 
                     <div class="adm-painel-main">

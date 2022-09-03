@@ -70,9 +70,10 @@ const indexController = {
           },
         });
       }
-      req.session.email = userAuth.email; 
-      res.cookie("user", userAuth);
-      console.log(userAuth.email)
+      req.session.email = userAuth.email;       
+      res.cookie("user",userAuth);
+      
+    
       if (userAuth.is_admin) {
       res.redirect("/adm");
     }

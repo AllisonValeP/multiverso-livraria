@@ -4,7 +4,7 @@
   
  
     <ul class="nav-list">
-      <%if(locals.user && locals.user.admin){%> 
+      <%if(locals.user && locals.user.is_admin){%> 
         <%}else{%>
           <li class="categories-dropdown">
             <p>Categorias</p>
@@ -38,13 +38,13 @@
               <button><img src="/img/exit.svg" width="20px" height="20px"></button>
             </form>
           </div class="description">
-          <%if(locals.user && !locals.user.admin){%>
+          <%if(locals.user && !locals.user.is_admin){%>
             <a href="/usuario/perfil">
-              <p class="description"><%=user.nome + user.sobrenome%></p>        
+              <p class="description"><%=user.name + user.last_name%></p>        
             </a>
             <%}%> 
-            <%if(locals.user && locals.user.admin){%>
-              <p class="description"><%=user.nome + user.sobrenome%></p>        
+            <%if(locals.user && locals.user.is_admin){%>
+              <p class="description"><%=user.name + user.last_name%></p>        
             <%}%>
         </div>
       </li>
