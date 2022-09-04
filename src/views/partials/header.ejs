@@ -40,7 +40,7 @@
           </div class="description">
           <%if(locals.user && !locals.user.is_admin){%>
             <a href="/usuario/perfil">
-              <p class="description"><%=user.name + user.last_name%></p>        
+              <p class="description"><%=user.name%> <%=user.last_name%></p>        
             </a>
             <%}%> 
             <%if(locals.user && locals.user.is_admin){%>
