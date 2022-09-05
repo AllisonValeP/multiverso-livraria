@@ -4,7 +4,7 @@
 <main class="finalizeOrder-main">
     <div class="payment-info">
         <div class="identification">
-            <h3>Identificação</h3>
+            <h3 class="titles-h3-finalize">Identificação</h3>
             <label for="confirm-name" class="finalaze-label">Nome</label>
             <input id="" type="text" class="finalaze-label-input">
 
@@ -16,10 +16,10 @@
 
             <label for="confirm-CPF" class="finalaze-label">CPF/CNPJ</label>
             <input id="" type="number" class="finalaze-label-input">
-
         </div>
+
         <div class="address">
-            <h3>Endereço</h3>
+            <h3 class="titles-h3-finalize">Endereço</h3>
             <label for="confirm-street" class="finalaze-label">Rua</label>
             <input id="" type="text" class="finalaze-label-input">
 
@@ -37,12 +37,44 @@
 
             <label for="confirm-state" class="finalaze-label">Estado</label>
             <input id="" type="text" class="finalaze-label-input">
+        </div>
 
+        <div class="payment">
+            <h3 class="titles-h3-finalize">Forma de Pagamento</h3>
+            
+          <div  class="payment-options">
+            <button class="button-payment" id="credit-card-button" type="submit" form="" value="submit">Cartão de Crédito</button>
+            <button class="button-payment" id="pix-button" type="submit" form="" value="submit">PIX</button>
+            <button class="button-payment" id="ticket-button" type="submit" form="" value="submit">Boleto</button>
+          </div>
+          
+            <div class="credit-card-info">
+                <h3>Cartão de Crédito</h3>
+                <label for="confirm-name-card" class="finalaze-label">Nome do titular do cartão</label>
+                <input id="" type="text" class="finalaze-label-input">
+
+                <label for="confirm-number-card" class="finalaze-label">Número do cartão</label>
+                <input id="" type="number" class="finalaze-label-input">
+
+                <label for="confirm-date-card" class="finalaze-label">Data de validade</label>
+                <input id="" type="date" class="finalaze-label-input">
+
+                <label for="confirm-secure-number-card" class="finalaze-label">Código de segurança</label>
+                <input id="" type="number" class="finalaze-label-input">
+
+
+            </div>
+
+            <div class="pix-info">
+                <h3>PIX QR-CODE</h3>
+                <img class="qr-code-image"src="/img/qrCode.png" alt="qr-code">
+            </div>
         </div>
     </div>
     <div class="total-value">
         <h2 class="bag-value-h2">Valor total</h2>
         <p>Total: R$59,99</p>
+        <img  class="image-book-finalize" src="img/home-livro-01.png" />
         <button type="submit" class="finalize-button">FINALIZAR COMPRA</button>
         <p><a href="/">Continuar comprando</p></a>
 
