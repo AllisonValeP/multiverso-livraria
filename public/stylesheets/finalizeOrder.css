@@ -5,13 +5,17 @@
 
 
 
-.identification{
+.identification, .address {
     color: white;
     background-color:  #4c72af;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
+
 
 .finalaze-label-input{
     margin-bottom: 30px;
@@ -21,6 +25,8 @@
     text-align: center;
     background-color:#ddd;
     padding: 15px 0 15px 0;
+    border-radius: 10px;
+
 }
 
 .finalize-button{
