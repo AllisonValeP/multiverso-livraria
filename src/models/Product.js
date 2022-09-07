@@ -38,9 +38,21 @@ module.exports = (sequelize, DataTypes) => {
             underscored: true,
         }
     )
-    // Usuario.associate = (models => {
-    //     Usuario.hasMany(models.Endereco, { as: "usuario_endereco", foreignKey: 'usuario_id' })
-    // })
+    Product.associate = (models => {
+        Product.belongsTo(models.Publisher,{
+            foreignKey: "publisher_id",
+            as: "publisher",
+        });
+        Product.belongsTo(models.Author, {
+            foreignKey: "author_id",
+            as: "author",
+        });
+        Product.belongsTo(models.Category, {
+            foreignKey: "category_id",
+            as: "category",
+        });
+
+    })
 
     return Product
 };
