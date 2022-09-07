@@ -17,9 +17,12 @@ module.exports = (sequelize, DataTypes) => {
           
         }
     )
-    // Usuario.associate = (models => {
-    //     Usuario.hasMany(models.Endereco, { as: "usuario_endereco", foreignKey: 'usuario_id' })
-    // })
-
+  
+    Category.associate = (models => {
+        Category.hasMany(models.Product, { 
+            foreignKey: 'category_id',
+            as: "category_products", 
+            })
+        })
     return Category
 };

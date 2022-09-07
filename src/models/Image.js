@@ -24,9 +24,15 @@ module.exports = (sequelize, DataTypes) => {
             underscored: true,
         }
     )
-    // Usuario.associate = (models => {
-    //     Usuario.hasMany(models.Endereco, { as: "usuario_endereco", foreignKey: 'usuario_id' })
-    // })
+        
+        Image.associate = (models  => {
+            Image.belongsToMany(models.Product, {
+                foreignKey: 'product_id',
+                as: 'product_image',
+                through: models.ImageProduct,
+        })
+       
+    });
 
     return Image
 };

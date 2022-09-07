@@ -17,9 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "order_product",      
         }
     )
-    // Usuario.associate = (models => {
-    //     Usuario.hasMany(models.Endereco, { as: "usuario_endereco", foreignKey: 'usuario_id' })
-    // })
+    
 
     return OrderProduct
 };
