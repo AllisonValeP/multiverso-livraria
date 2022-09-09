@@ -34,6 +34,7 @@
                                 <br>
                                 <p class="adm-welcome-p">Para vizualizar ou editar suas informações pessoais 
                                     <a class="adm-welcome-a" href="/adm/profile">clique aqui.</a>
+                                    <a class="adm-home-button-icon" href="/adm/profile"><img src="/img/home.svg" width="34px" ></a>
                                 </p>
                             </div>
                             <div class="adm-painel-main">
@@ -267,11 +268,20 @@
 
       <!-- parte da direita -->
          <div class="logout-adm">
-           
+
+            <div class="adm-home-nav"> 
+                <a class="adm-home-button-icon" href="/adm/profile"><img src="/img/home.svg" width="34px" ></a>
+                <a class="adm-home-button-text" href="/adm/profile">Home</a>
+             </div>
+             
             <form action="/logout" method="POST">
                 <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
                 <button class="logout-adm-a" href="">Sair</button>
                 </form>
-        </div>
+                
+               
+         </div>
+
+        
       </header>
         <%- include('./partials/footer')%>
