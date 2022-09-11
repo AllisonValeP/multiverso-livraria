@@ -29,13 +29,18 @@
 
 .logout-adm{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding-top: 10px;
 }
 
+.adm-home-button-text{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
 
 .logout-adm-a{
 padding-right: 5px;
@@ -48,8 +53,11 @@ flex-direction: column;
 }
 
 
-
-
+.adm-home-nav{
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
 
 
 
