@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true,
         },
-        pach: {
+        original_name: {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         extension: {
+            type: DataTypes.STRING(10),
+            allowNull: false,
+        },
+        filename: {
             type: DataTypes.STRING(10),
             allowNull: false,
         },
