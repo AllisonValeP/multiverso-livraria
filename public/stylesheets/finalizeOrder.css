@@ -41,6 +41,10 @@
     flex-direction: column;
 }
 
+.hide-credit-card-info{
+    display:none
+}
+
 .pix-info{
     align-items: center;
 }
