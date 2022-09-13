@@ -48,7 +48,7 @@
             <button class="button-payment" id="ticket-button" type="submit" form="" value="submit">Boleto</button>
           </div>
           
-            <div class="credit-card-info">
+            <div class="credit-card-info hide-credit-card-info">
                 <h3>Cartão de Crédito</h3>
                 <label for="confirm-name-card" class="finalaze-label">Nome do titular do cartão</label>
                 <input id="" type="text" class="finalaze-label-input">
@@ -80,5 +80,13 @@
 
     </div>
 </main>
+<script>
+    const creditCardInfo = document.querySelector(".credit-card-info")
+    const hideCredeitCard = document.querySelector(".hide-credit-card-info")
+    const creditCardButton = document.querySelector("#credit-card-button")
 
+    creditCardButton.addEventListener("click", ()=>{
+        creditCardInfo.classList.toggle("hideCredeitCard")
+    })
+</script>
 <%- include('./partials/footer')%>
