@@ -1,5 +1,7 @@
 const path = require("path");
 const upload = {
-    path: path.join(__dirname, "..", "..","uploads")
+    path: path.join(__dirname, "..", "..","uploads/"),
+   
 }
-mudule.exports = upload;
+ 
+module.exports = upload;
