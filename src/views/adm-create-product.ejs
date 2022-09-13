@@ -1,0 +1,77 @@
+<%- include('./partials/head')%>
+    <%- include('./partials/adm-header')%>
+        <main class="adm-product-main">
+            <div class="box-adm-product">
+                <div class="container-adm-product">
+
+                    <h2 class="product-h2">Criar Produto</h2>
+                    <div class="form-adm-product-create">
+
+                        <form action="/adm/create-product" method="post" enctype="multipart/form-data">
+                            <div class="form-elements-adm-product">
+                                <label for="user" class="label-adm-product">Titulo</label>
+                                <input id="user" type="text" name="name" class="input-adm-product">
+                            </div>
+                            <div class="form-elements-adm-product">
+                                <label for="pass" class="label-adm-product">Nome Autor(a)</label>
+                                <select name="author_id" class="input-adm-product  ">
+                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                    <option class="label-adm-product" value="1">Isak Martin</option>
+                                </select>
+                            </div>
+
+                            <div class="form-elements-adm-product row-3">
+                                <label for="pass" class="label-adm-product">Editora</label>
+                                <select name="publisher_id" class="input-adm-product  ">
+                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                    <option class="label-adm-product" value="1">Hedra</option>
+                                </select>
+
+                            </div>
+                            <div class="form-elements-adm-product">
+                                <label for="pass" class="label-adm-product">Categoria</label>
+                                <select name="category_id" class="input-adm-product  ">
+                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                    <option class="label-adm-product" value="1">Politica</option>
+                                </select>
+                            </div>
+                            <div class="form-elements-adm-product column-3 row-1">
+                                <label for="pass" class="label-adm-product">Quantidade</label>
+                                <input id="pass" type="number" name="stock" class="input-adm-product"
+                                    data-type="number">
+                            </div>
+                            <div class="form-elements-adm-product column-3 row-1">
+                                <label for="pass" class="label-adm-product">Preço</label>
+                                <input id="pass" type="number" name="price" class="input-adm-product"
+                                    data-type="number">
+                            </div>
+                            <div class="form-elements-adm-product column-3 row-3">
+                                <label for="pass" class="label-adm-product">Capa</label>
+
+                                <div class='input-wrapper input-adm-product'>
+                                    <label for='input-file'>
+                                        Selecionar uma imagem
+                                    </label>
+                                    <input id='input-file' name="file" type='file' value='' />
+                                    <span id='file-name'></span>
+                                </div>
+                                <div class="form-elements-adm-product column-3 row-4">
+                                    <label for="pass" class="label-adm-product">Sobre</label>
+                                    <textarea name="description" id="textarea-adm-product" cols="50" rows="5"
+                                        style="background-color:rgba(255, 255, 255, .1);"></textarea>
+                                </div>
+
+                                <input type="submit" class="button-adm-product-save" value="Salvar">
+                                <div class="form-elements-adm-product-buttons">
+                                    <!-- </div>
+                                <a href="/adm">
+                                    <input type="reset" class="button-adm-product-cancelar" value="Cancelar">
+                                </a>
+                            </div> -->
+                        </form>
+
+                    </div>
+                </div>
+        </main>
+
+        <%- include('./partials/footer')%>
