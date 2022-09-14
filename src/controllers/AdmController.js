@@ -31,10 +31,7 @@ const admController = {
   updateProduct: async (req, res) => {
     const { name, description, price, stock, publisher_id, author_id, category_id } = req.body
     const file = req.file
-        console.log(file)
-    const teste = await sharp(file.path).metadata()
-    console.log(teste);
-    
+       
     try {
     
 
