@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         filename: {
             type: DataTypes.STRING(10),
-            allowNull: false,renderiza imagcom
+            allowNull: false
         },
     },
         {
