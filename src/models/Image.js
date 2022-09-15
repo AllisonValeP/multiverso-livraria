@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         filename: {
             type: DataTypes.STRING(10),
-            allowNull: false,
+            allowNull: false,renderiza imagcom
         },
     },
         {
@@ -30,11 +30,13 @@ module.exports = (sequelize, DataTypes) => {
     )
         
         Image.associate = (models  => {
-            Image.belongsToMany(models.Product, {
-                foreignKey: 'product_id',
-                as: 'product_image',
-                through:"ImageProduct",
-        })
+            Image.belongsToMany(models.Product, { 
+                as: "product", 
+                through: "image_product", 
+                foreignKey: 'image_id', 
+                otherKey: "product_id", 
+                timestamps: false })
+      
        
     });
 
