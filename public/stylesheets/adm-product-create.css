@@ -186,23 +186,14 @@ input[type='file'] {
   cursor: pointer;
   font-size: 12px;
 }
+select{
 
-
-/* .row-1{
-  grid-row:1
-}
-.row-2{
-  grid-row:2
-}
-.row-3{
-  grid-row:3
-}
-.row-4{
-  grid-row:4
+  padding:10px; 
+  margin:-5px -20px -5px -5px; 
+ 
+  overflow-y:auto;
 }
 
-
-} */
 .form-elements-adm-product-buttons{
  
   grid-column: 1 / -1;
