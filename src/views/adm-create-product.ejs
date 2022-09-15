@@ -14,17 +14,22 @@
                             </div>
                             <div class="form-elements-adm-product">
                                 <label for="pass" class="label-adm-product">Nome Autor(a)</label>
-                                <select name="author_id" class="input-adm-product  ">
+                                <select name="author_id" class="input-adm-product  ">                                    
                                     <option class="label-adm-product" value="0" selected>Selecione</option>
-                                    <option class="label-adm-product" value="1">Isak Martin</option>
+                                    <%for(author of authors){%>
+                                    <option class="label-adm-product" value=<%=author.id%>><%=author.name%> <%=author.last_name%></option>
+                                    <%}%>
                                 </select>
                             </div>
+                            
 
                             <div class="form-elements-adm-product row-3">
                                 <label for="pass" class="label-adm-product">Editora</label>
-                                <select name="publisher_id" class="input-adm-product  ">
+                                <select name="publisher_id" class="input-adm-product" >
                                     <option class="label-adm-product" value="0" selected>Selecione</option>
-                                    <option class="label-adm-product" value="1">Hedra</option>
+                                    <%for(publisher of publishers){%>
+                                        <option class="label-adm-product " value=<%=publisher.id%>><%=publisher.name%></option>
+                                        <%}%>
                                 </select>
 
                             </div>
@@ -32,7 +37,9 @@
                                 <label for="pass" class="label-adm-product">Categoria</label>
                                 <select name="category_id" class="input-adm-product  ">
                                     <option class="label-adm-product" value="0" selected>Selecione</option>
-                                    <option class="label-adm-product" value="1">Politica</option>
+                                    <%for(category of categories){%>
+                                        <option class="label-adm-product" value=<%=category.id%>><%=category.name%></option>
+                                        <%}%>
                                 </select>
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
@@ -42,7 +49,7 @@
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
                                 <label for="pass" class="label-adm-product">Preço</label>
-                                <input id="pass" type="number" name="price" class="input-adm-product"
+                                <input id="pass" type="text" name="price" class="input-adm-product"
                                     data-type="number">
                             </div>
                             <div class="form-elements-adm-product column-3 row-3">

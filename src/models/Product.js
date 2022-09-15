@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.TEXT('long'),
             allowNull: false,
         },
         price: {
@@ -52,12 +52,12 @@ module.exports = (sequelize, DataTypes) => {
             as: "category",
         });
         
-        Product.belongsToMany(models.Image, {
-            foreignKey: 'image_id',
-            as: 'image_product',
-            through: "ImageProduct",
-            
-          });
+        Product.belongsToMany(models.Image, { 
+            as: "image", 
+            through: "image_product", 
+            foreignKey: 'product_id', 
+            otherKey: "image_id", 
+            timestamps: false })
 
           Product.belongsToMany(models.Order, {
             foreignKey: 'order_id',

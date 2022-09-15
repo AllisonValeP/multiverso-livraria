@@ -1,8 +1,7 @@
 
 const sharp = require("sharp");
 const path = require("path");
-
-const { Product, Image } = require("../models");
+const { Product,Publisher,Author,Category, Image,ImageProduct } = require("../models");
 
 
 const admController = {
@@ -20,12 +19,23 @@ const admController = {
         user: req.cookies.user,
       })
   },
-  createProduct: (req, res) => {
-    return res.render("adm-create-product",
-      {
-        title: 'Criar Produto | Multiverso Livraria',
+  createProduct: async (req, res) => {
+    try {
+      const publishers = await Publisher.findAll();
+      const authors = await Author.findAll();
+      const categories = await Category.findAll();
+     
+      return res.render("adm-create-product",
+        {
+          title: 'Criar Produto | Multiverso Livraria',
+          publishers: publishers,
+          authors: authors,
+          categories: categories,  
+        })
+    } catch (err) {
+      console.log(err)
 
-      })
+    }
 
   },
   updateProduct: async (req, res) => {
@@ -33,10 +43,29 @@ const admController = {
     const file = req.file
        
     try {
+      const product = await Product.create({
+        name,
+        description,
+        price,
+        stock,
+        publisher_id,
+        author_id,
+        category_id,
+        image:[{
+          original_name: file.filename,
+          size: file.size,
+          extension: file.filename.split(".")[1],
+          filename: file.originalname,
+        }]
+      },{
+        include: "image"
+      })
+    
+      return res.redirect("/");
     
 
     } catch (err) {
-      console.log("Erro  do processar updateProduct");
+      console.log(err);
 
     }
   },
