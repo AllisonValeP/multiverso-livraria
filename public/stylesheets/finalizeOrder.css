@@ -13,7 +13,7 @@
 
 .identification, .address, .payment {
     color: white;
-    background-color:  #4c72af;
+    background-color:  rgba(40, 57, 101, .9);
     /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
@@ -89,4 +89,13 @@
 
 .image-book-finalize{
     width: 50%;
+}
+
+.payment-options-buttons{
+    background: #ddd;
+    border:none;
+    padding:40px 20px;
+    border-radius:25px;
+    margin-top: 100px;
+    cursor: pointer;
 }
