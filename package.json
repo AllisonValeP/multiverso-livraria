@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app"
-    
   },
   "repository": {
     "type": "git",
@@ -34,6 +33,7 @@
     "sharp": "^0.31.0"
   },
   "devDependencies": {
+    "cypress": "^10.8.0",
     "nodemon": "^2.0.16"
   }
 }

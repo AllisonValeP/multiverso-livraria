@@ -52,16 +52,16 @@ const admController = {
         author_id,
         category_id,
         image:[{
-          original_name: file.filename,
+          original_name: file.originalname,
           size: file.size,
           extension: file.filename.split(".")[1],
-          filename: file.originalname,
+          filename: file.filename,
         }]
       },{
         include: "image"
       })
     
-      return res.redirect("/");
+      return res.redirect("/adm/create-product");
     
 
     } catch (err) {
