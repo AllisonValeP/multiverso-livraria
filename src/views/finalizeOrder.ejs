@@ -42,9 +42,9 @@
         <div class="payment">
             <h3 class="titles-h3-finalize">Forma de Pagamento</h3>
             <div  class="payment-options">
-                <button class="button-payment" id="credit-card-button" type="submit" form="" value="submit">Cartão de Crédito</button>
-                <button class="button-payment" id="pix-button" type="submit" form="" value="submit">PIX</button>
-                <button class="button-payment" id="ticket-button" type="submit" form="" value="submit">Boleto</button>
+                <button class="button-payment payment-options-buttons" id="credit-card-button" type="submit" form="" value="submit">Cartão de Crédito</button>
+                <button class="button-payment payment-options-buttons" id="pix-button" type="submit" form="" value="submit">PIX</button>
+                <button class="button-payment payment-options-buttons" id="ticket-button" type="submit" form="" value="submit">Boleto</button>
             </div> 
             <div class="container-payment-options">
                  <div class="credit-card-info hide-payment-info">
@@ -79,25 +79,5 @@
         </div>
     </div>
 </main>
-<script>
-    const paymentOptions = document.querySelectorAll(".container-payment-options div")
-    const creditCardInfo = document.querySelector(".credit-card-info")
-    // const hideCredeitCard = document.querySelector(".hide-credit-card-info")
-    const creditCardButton = document.querySelector("#credit-card-button")
-    const pixButton = document.querySelector("#pix-button")
-    
-    
-  
-    creditCardButton.addEventListener("click", ()=>{
-        paymentOptions.forEach(option => option.classList.add("hide-payment-info"))
-        creditCardInfo.classList.remove("hide-payment-info")
-    })
 
-    pixButton.addEventListener("click", ()=>{
-        paymentOptions.forEach(option => option.classList.add("hide-payment-info"))
-        paymentOptions[1].classList.remove("hide-payment-info")
-        console.log("clicou pixButton",paymentOptions )
-        console.log(paymentOptions[1])
-    })
-</script>
 <%- include('./partials/footer')%>
