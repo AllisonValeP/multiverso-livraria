@@ -7,10 +7,10 @@
             <input type="radio" name="tabset" id="tab0" aria-controls="dunkles" checked>
             <label for="tab0">Home</label>
             <input type="radio" name="tabset" id="tab1" aria-controls="marzen">
-            <label for="tab1">Gerenciar usuarios</label>
+            <label for="tab1"> <a href="/adm/users">Gerenciar Usuarios</a></label>
             <!-- Tab 2 -->
             <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-            <label for="tab2">Gerenciar Produtos</label>
+            <label for="tab2"> <a href="/admProducts">Gerenciar Produtos</a></label>
             <!-- Tab 3 -->
             <input type="radio" name="tabset" id="tab3" aria-controls="marzen01">
             <label for="tab3">Pedidos</label>
@@ -50,85 +50,7 @@
                         </div>
                 </section>
                
-                <section id="dunkles" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo adm-title-center">Produtos</h2>
-                        <div class="adm-painel-main">
-                            <div class="adm-content1">
-
-                                <div class="adm-content">
-                                        <table class="adm-table-users">
-                                         
-                                            <thead class="adm-table-users-thead">
-                                                <tr>
-                                                    <th class="containerTable-lblTitle">Livro</th>
-                                                    <th class="containerTable-lblTitle">Autor</th>
-                                                    <th class="containerTable-lblTitle">Quantidade</th>
-        
-                                                    <th class="containerTable-lblTitle"> </th>
-                                                </tr>
-                                            </thead>
-        
-                                            <tbody class="adm-table-users-tbody">
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption"><a href="/adm/product"
-                                                                class="editar-detalhe-button">Editar</a></button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                    </td>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                    </td>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                </tr>
-        
-        
-                                            </tbody>
-                                        </table>
-                               
-                                        
-                                    </div>
-                                    <div class="adm-crete-container">
-                                        <button class="tableValue-btnOption"><a href="/adm/create-product"
-                                            class="editar-detalhe-button bnt-create">Criar Produto</a></button>
-                                        
-                                    </div>
-                            </div>
-                </section>
+               
                 <!-- aqui -->
                 <section id="marzen01" class="tab-panel centralizando">
                     <h2 class="adm-table-subtitulo adm-title-center">Pedidos</h2>
@@ -210,7 +132,7 @@
         </div>
 
       <!-- parte da direita -->
-         <div class="logout-adm">
+        <div class="logout-adm">
 
             <div class="adm-home-nav"> 
                 <a class="adm-home-button-icon" href="/adm/profile"><img src="/img/home.svg" width="34px" ></a>
@@ -220,10 +142,8 @@
             <form action="/logout" method="POST">
                 <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
                 <button class="logout-adm-a" href="">Sair</button>
-                </form>
-                
-               
-         </div>
+            </form>                               
+        </div>
 
         
       </header>
