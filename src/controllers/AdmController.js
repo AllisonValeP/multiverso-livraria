@@ -1,16 +1,20 @@
 
 const sharp = require("sharp");
 const path = require("path");
-const { Product,Publisher,Author,Category, Image,ImageProduct } = require("../models");
+const { Product,Publisher,Author,Category, Image,ImageProduct,User } = require("../models");
 
 
 const admController = {
-  index: (req, res) => {
-    return res.render("adm-painel",
-      {
-        title: 'Administrador | Multiverso Livraria',
-        user: req.cookies.user,
-      })
+  index: async (req, res) => {
+    
+      return res.render("adm-painel",
+        {
+          title: 'Administrador | Multiverso Livraria',
+          user: req.cookies.user,
+         
+        })
+    
+
   },
   productShow: (req, res) => {
     return res.render("adm-product",
@@ -68,6 +72,27 @@ const admController = {
       console.log(err);
 
     }
+  },
+  usersShow: async (req, res) => {
+    let {page = 1} = req.query;
+    try {
+      let{count: total, rows: users} = await User.findAndCountAll({       
+        limit: 5,
+        offset: (page - 1) * 5
+      });
+      let totalPage = Math.round(total/5)
+      
+      return res.render("adm-users",
+        {
+          title: 'Administrador | Multiverso Livraria',
+          user: req.cookies.user,
+          users: users,
+          totalPage: totalPage,
+        })
+    } catch (error) {
+      res.send("Algo deu errado ou renderizar usuários!")
+    }
+ 
   },
   userShow: (req, res) => {
     return res.render("adm-user",
