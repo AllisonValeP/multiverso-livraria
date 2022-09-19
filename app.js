@@ -17,6 +17,7 @@ const bagRoute = require('./src/routes/BagRoute');
 const finalizeOrderRoute = require('./src/routes/FinalizeOrderRoute');
 const newProductConfirmRoute = require('./src/routes/NewProductConfirmRoute');
 const admProductsRoute = require('./src/routes/AdmProductsRoute');
+const admOrdersRoute = require('./src/routes/AdmOrdersRoute');
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -33,11 +34,12 @@ app.use('/usuario',userRoute);
 app.use('/produto',productRouter);
 app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
-app.use('/lancamentos', releasesRoute)
-app.use('/carrinho', bagRoute)
-app.use('/finalizando', finalizeOrderRoute)
-app.use('/sucesso', newProductConfirmRoute)
-app.use('/admProducts', admProductsRoute)
+app.use('/lancamentos', releasesRoute);
+app.use('/carrinho', bagRoute);
+app.use('/finalizando', finalizeOrderRoute);
+app.use('/sucesso', newProductConfirmRoute);
+app.use('/admProducts', admProductsRoute);
+app.use('/admOrders', admOrdersRoute)
 
 app.use('*', (req,res)=>{
     res.redirect('/')

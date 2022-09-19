@@ -2,7 +2,7 @@ const admProductsController = {
     index: (req,res) => {
         return res.render("adm-products",
         {
-            title: 'Produto Adcionado! | Multiverso Livraria',
+            title: 'Gerenciar Produtos | Multiverso Livraria',
             user: req.cookies.user,
         })
     }
