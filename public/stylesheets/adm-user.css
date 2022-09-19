@@ -401,7 +401,8 @@
     position:absolute;
     padding:90px 70px 50px 70px;
     background:rgba(40,57,101,.9);
-    margin-top:100px
+    margin-top:100px;
+    border-radius: 40px;
 }
 
 .adm-user-abas .animacao-aba-01,
@@ -489,6 +490,12 @@
 
 .adm-user-form .grupo .adm-user-button{
     background:#1161ee;
+}
+
+.adm-user-button{
+  margin-top: 20px;
+  width: 20px;
+  text-align: center;
 }
 
 .adm-user-form .grupo label .icon{
