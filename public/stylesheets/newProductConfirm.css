@@ -1,0 +1,17 @@
+.confirm-product-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-confirm-product {
+    margin-top: 150px;
+    padding: 50px;
+    width: 50%;
+    background: rgba(40, 57, 101, .9);
+    text-align: center;
+}
+
+.h1-confirm-product{
+    color:white;   
+}
