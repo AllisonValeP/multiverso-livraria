@@ -22,32 +22,31 @@
         <div class="adm-user-form">
 <!-- as tabs estão aqui -->
           <div class="animacao-aba-01 abrir-formulario" id="form-item02">
-            
-            <div class="grupo">
-              <label for="user" class="label">Nome</label>
-              <input id="user" type="text" class="adm-user-input">
-            </div>
-            <div class="grupo">
-              <label for="user" class="label">Sobrenome</label>
-              <input id="user" type="text" class="adm-user-input">
-            </div>
-            <div class="grupo">
-              <label for="pass" class="label">E-mail</label>
-              <input id="pass" type="email" class="adm-user-input" data-type="Email">
-            </div>
-            <div class="grupo">
-              <label for="pass" class="label">Resetar Senha</label>
-              <input id="pass" type="password" class="adm-user-input" data-type="password">
-            </div>
-            <div class="grupo">
-              <label for="pass" class="label">Criado em</label>
-              <input id="pass" type="date" class="adm-user-input" data-type="date">
-            </div>
-        
-            <div class="grupo">
-              <a class="adm-user-button" href="/adm/users">Voltar</a>
-              
-            </div>
+
+      
+                <div class="grupo">
+                  <label for="user" class="label">Nome</label>
+                  <input id="user" type="text" class="adm-user-input" value="<%=user.name%>"readonly>
+                </div>
+                <div class="grupo">
+                  <label for="user" class="label">Sobrenome</label>
+                  <input id="user" type="text" class="adm-user-input"value="<%=user.last_name%>"readonly>
+                <div class="grupo">
+                  <label for="pass" class="label">E-mail</label>
+                  <input id="pass" type="email" class="adm-user-input" data-type="Email" value="<%=user.email%>"readonly>
+                </div>            
+                <div class="grupo">
+                  <label for="pass" class="label">Data de Cadastro</label>
+                  <input id="pass" type="text" class="adm-user-input"  value="<%=date%>" readonly>
+                </div>
+          
+
+          
+              <div class="grupo">
+                <a class="adm-user-button" href="/adm/users">Voltar</a>
+                
+              </div>
+    
             
           </div>
 

@@ -29,7 +29,7 @@
                                 <%}%>
                         <td class="containerTable-lblValue btn-opition">
 
-                            <button class="tableValue-btnOption"><a href="/adm/user"
+                            <button class="tableValue-btnOption"><a href="/adm/user/<%=user.id%>"
                                     class="editar-detalhe-button">Visualizar</a></button>
                             <button class="tableValue-btnOption">Deletar</button>
                         </td>
@@ -39,11 +39,14 @@
                 </table>
             </tbody>
         </div>
-        <ul class="page-box">
-           <%for(let nrPage = 1; nrPage <= totalPage;nrPage ++){%>
-              <li  class="page-iten"><a  id="pages"class="page-link" href="?page=<%=nrPage%>"><%=nrPage%></a></li> 
-              <%}%>                       
-        </ul>  
-    </div>
-</section>
+     
+            <ul class="page-box">
+               <%for(let nrPage = 1; nrPage <= totalPage;nrPage ++){%>
+                  <li  class="page-iten"><a  id="pages"class="page-link" href="?page=<%=nrPage%>"><%=nrPage%></a></li> 
+                  <%}%>                       
+            </ul>  
+
+       
+    </section>
+</div>
 <%- include('./partials/footer')%>

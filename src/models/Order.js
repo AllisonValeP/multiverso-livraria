@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DOUBLE,
             allowNull: false,
         },
-        final_picre: {
+        final_price: {
             type: DataTypes.DOUBLE,
             allowNull: false,
         },
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         Order.associate = (models => {
             Order.belongsTo(models.User, {
                 foreignKey: "user_id",
-                as: "order_user",
+                as: "user",
             });
             Order.belongsToMany(models.Product, { 
                 as: "product", 

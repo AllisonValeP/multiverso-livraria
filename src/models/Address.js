@@ -8,27 +8,27 @@ module.exports = (sequelize, DataTypes) => {
         },
         street: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+          
         },
         number: {
             type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
+            
         },
         cep: {
             type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
+           
         },
         complement: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+          
         },
         city: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+           
         },
         state: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+           
         },
         user_id: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     )
         Address.associate = (models => {
-        Address.belongsTo(models.Address,{
+        Address.belongsTo(models.User,{
             foreignKey: "user_id",
-            as: "address_user",
+            as: "user",
         });
     })
 
