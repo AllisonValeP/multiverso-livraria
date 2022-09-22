@@ -103,69 +103,72 @@ const admController = {
         id,{      
         include: [{
           model: Address,
-          as: "addresses",
+          as: "address",
           required: false,
         },
         {
           model: Order,
-          as: "orders",
+          as: "order",
           required: false,
         }]
       }
       ); 
+      console.log(user.address);
       if(!user){       
         throw Error("Usuário não encontrado")
-      }
-      let dateReg = new Date(user.createdAt)
+      };
+      let dateReg = new Date(user.createdAt);
    
-        let year = dateReg.getFullYear()
+        let year = dateReg.getFullYear();
         let month = ()=>{
           let month = dateReg.getMonth() + 1
           if (month <= 9){
             return month = "0" + (dateReg.getMonth() + 1)
           }else{ return month}
-        }
+        };
         let date = ()=>{
           let date = dateReg.getDate()
           if (date <= 9){
             return date = "0" + dateReg.getDate()
           }else{ return date}
-        }
+        };
 
-      dateReg = `${date()}/${month()}/${year}`
+      dateReg = `${date()}/${month()}/${year}`;
         
     
       return res.render("adm-user",{
         title: 'Administrado | Multiverso Livraria',
         user: user,
+        address: user.address,
+        order: user.order,
         date: dateReg,
 
-      } )
+      } );
     
     } catch (error) {
-      console.log(error)
-      res.send({message: error.message})
+     
+      res.send({message: error.message});
 
     }
     return res.render("adm-user",
       {
         title: 'Administrador | Multiverso Livraria',
         user: req.cookies.user,
-      })
+      });
   },
   orderShow: (req, res) => {
     return res.render("adm-order",
       {
         title: 'Administrador| Multiverso Livraria',
         user: req.cookies.user,
-      })
+      });
   },
   profileShow: (req, res) => {
     return res.render("adm-profile",
       {
         title: 'Administrador | Multiverso Livraria',
         user: req.cookies.user,
-      })
+      });
   },
   update: (req, res) => { },
   delete: (req, res) => { },
