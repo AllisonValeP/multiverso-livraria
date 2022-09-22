@@ -7,13 +7,13 @@
             <input type="radio" name="tabset" id="tab0" aria-controls="dunkles" checked>
             <label for="tab0">Home</label>
             <input type="radio" name="tabset" id="tab1" aria-controls="marzen">
-            <label for="tab1">Gerenciar usuarios</label>
+            <label for="tab1"> <a class="adm-header-a"href="/adm/users">Gerenciar Usuarios</a></label>
             <!-- Tab 2 -->
             <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-            <label for="tab2">Gerenciar Produtos</label>
+            <label for="tab2"> <a class="adm-header-a"href="/admProducts">Gerenciar Produtos</a></label>
             <!-- Tab 3 -->
             <input type="radio" name="tabset" id="tab3" aria-controls="marzen01">
-            <label for="tab3">Pedidos</label>
+            <label for="tab3"> <a class="adm-header-a"href="/admOrders">Pedidos</a></label>
         
             
             <div class="tab-panels">
@@ -49,236 +49,16 @@
                                 </div>
                         </div>
                 </section>
-                <section id="rauchbier" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo adm-title-center">Usuarios</h2>
-                    <div class="adm-painel-main">
-                        <div class="adm-content">
-                            <table class="adm-table-users">
-                                <thead class="adm-table-users-thead">
-                                    <tr>
-                                        <th class="containerTable-lblTitle">Nome</th>
-                                        <th class="containerTable-lblTitle">Sobrenome</th>
-                                        <th class="containerTable-lblTitle">E-mail</th>
-                                        <th class="containerTable-lblTitle">adm </th>
-                                        <th class="containerTable-lblTitle"> </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody class="adm-table-users-tbody">
-                                    <tr>
-                                        <td class="containerTable-lblValue">Allison</th>
-                                        <td class="containerTable-lblValue">Vale Pedro</td>
-                                        <td class="containerTable-lblValue">allison.vale@outlook.com</td>
-                                        <td class="containerTable-lblValue">Sim</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption"><a href="/adm/user"
-                                                    class="editar-detalhe-button">Visualizar</a></button>
-                                            <button class="tableValue-btnOption">Deletar</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Allison</th>
-                                        <td class="containerTable-lblValue">Vale Pedro</td>
-                                        <td class="containerTable-lblValue">allison.vale@outlook.com</td>
-                                        <td class="containerTable-lblValue">Sim</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Visualizar</button>
-                                            <button class="tableValue-btnOption">Deletar</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Allison</th>
-                                        <td class="containerTable-lblValue">Vale Pedro</td>
-                                        <td class="containerTable-lblValue">allison.vale@outlook.com</td>
-                                        <td class="containerTable-lblValue">Sim</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Visualizar</button>
-                                            <button class="tableValue-btnOption">Deletar</button>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Allison</th>
-                                        <td class="containerTable-lblValue">Vale Pedro</td>
-                                        <td class="containerTable-lblValue">allison.vale@outlook.com</td>
-                                        <td class="containerTable-lblValue">Sim</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Visualizar</button>
-                                            <button class="tableValue-btnOption">Deletar</button>
-                                    </tr>
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-                <section id="dunkles" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo adm-title-center">Produtos</h2>
-                        <div class="adm-painel-main">
-                            <div class="adm-content1">
-
-                                <div class="adm-content">
-                                        <table class="adm-table-users">
-                                         
-                                            <thead class="adm-table-users-thead">
-                                                <tr>
-                                                    <th class="containerTable-lblTitle">Livro</th>
-                                                    <th class="containerTable-lblTitle">Autor</th>
-                                                    <th class="containerTable-lblTitle">Quantidade</th>
-        
-                                                    <th class="containerTable-lblTitle"> </th>
-                                                </tr>
-                                            </thead>
-        
-                                            <tbody class="adm-table-users-tbody">
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption"><a href="/adm/product"
-                                                                class="editar-detalhe-button">Editar</a></button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                    </td>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                    </td>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                                    <td class="containerTable-lblValue">200</td>
-        
-                                                    <td class="containerTable-lblValue btn-opition">
-            
-                                                        <button class="tableValue-btnOption">Editar</button>
-                                                        <button class="tableValue-btnOption">Deletar</button>
-                                                </tr>
-        
-        
-                                            </tbody>
-                                        </table>
-                               
-                                        
-                                    </div>
-                                    <div class="adm-crete-container">
-                                        <button class="tableValue-btnOption"><a href="/adm/create-product"
-                                            class="editar-detalhe-button bnt-create">Criar Produto</a></button>
-                                        
-                                    </div>
-                            </div>
-                </section>
+               
+               
                 <!-- aqui -->
-                <section id="marzen01" class="tab-panel centralizando">
-                    <h2 class="adm-table-subtitulo adm-title-center">Pedidos</h2>
-                    <div class="adm-painel-main">
-                        <div class="adm-content">
-                            <table class="adm-table-users">
-                                <thead class="adm-table-users-thead">
-                                    <tr>
-                                        <th class="containerTable-lblTitle">Cliente</th>
-                                        <th class="containerTable-lblTitle">Produto</th>
-                                        <th class="containerTable-lblTitle">Valor</th>
-                                        <th class="containerTable-lblTitle">Compra</th>
-                                        <th class="containerTable-lblTitle">Entrega</th>
-                                        <th class="containerTable-lblTitle"></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody class="adm-table-users-tbody">
-                                    <tr>
-                                        <td class="containerTable-lblValue">Vale Pedro</th>
-                                        <td class="containerTable-lblValue">Anarquismo</td>
-                                        <td class="containerTable-lblValue">R$59,99</td>
-                                        <td class="containerTable-lblValue">27/10/2021</td>
-                                        <td class="containerTable-lblValue">05/11/2021</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption"><a href="/adm/order"
-                                                    class="editar-detalhe-button">Detalhes</a></button>
-                                            <!-- <button class="tableValue-btnOption">Deletar</button> -->
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Vale Pedro</th>
-                                        <td class="containerTable-lblValue">Anarquismo</td>
-                                        <td class="containerTable-lblValue">R$59,99</td>
-                                        <td class="containerTable-lblValue">27/10/2021</td>
-                                        <td class="containerTable-lblValue">05/11/2021</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Detalhes</button>
-                                            <!-- <button class="tableValue-btnOption">Deletar</button> -->
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Vale Pedro</th>
-                                        <td class="containerTable-lblValue">Anarquismo</td>
-                                        <td class="containerTable-lblValue">R$59,99</td>
-                                        <td class="containerTable-lblValue">27/10/2021</td>
-                                        <td class="containerTable-lblValue">05/11/2021</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Detalhes</button>
-                                            <!-- <button class="tableValue-btnOption">Deletar</button> -->
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="containerTable-lblValue">Vale Pedro</th>
-                                        <td class="containerTable-lblValue">Anarquismo</td>
-                                        <td class="containerTable-lblValue">R$59,99</td>
-                                        <td class="containerTable-lblValue">27/10/2021</td>
-                                        <td class="containerTable-lblValue">05/11/2021</td>
-                                        <td class="containerTable-lblValue btn-opition">
-
-                                            <button class="tableValue-btnOption">Detalhes</button>
-                                            <!-- <button class="tableValue-btnOption">Deletar</button> -->
-                                        </td>
-                                    </tr>
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                </section>
+               
             </div>
 
         </div>
 
       <!-- parte da direita -->
-         <div class="logout-adm">
+        <div class="logout-adm">
 
             <div class="adm-home-nav"> 
                 <a class="adm-home-button-icon" href="/adm/profile"><img src="/img/home.svg" width="34px" ></a>
@@ -288,10 +68,8 @@
             <form action="/logout" method="POST">
                 <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
                 <button class="logout-adm-a" href="">Sair</button>
-                </form>
-                
-               
-         </div>
+            </form>                               
+        </div>
 
         
       </header>

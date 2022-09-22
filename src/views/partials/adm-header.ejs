@@ -15,23 +15,29 @@
         <div class="adm-header-logo"><a href="../../index.html"><img src="/img/logo2.png" width="110" height="80" alt="Logo"></a></div>
         <div class="tabset  separeted-tables">
             <!-- Tab 1 -->
-            <input type="radio" name="tabset" id="tab0" aria-controls="dunkles" checked>
+            <input type="radio" name="tabset" id="tab0" aria-controls="dunkles" >
             <label for="tab0"><a class="adm-header-a" href="/adm">Home</a></label>
             <input type="radio" name="tabset" id="tab1" aria-controls="marzen">
-            <label for="tab1"><a class="adm-header-a" href="/adm">Gerenciar usuarios</a></label>
+            <label for="tab1"><a class="adm-header-a" href="/adm/users">Gerenciar Usuarios</a></label>
             <!-- Tab 2 -->
             <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-            <label for="tab2"><a class="adm-header-a" href="/adm">Gerenciar Produtos</a></label>
+            <label for="tab2"><a class="adm-header-a" href="/admProducts">Gerenciar Produtos</a></label>
             <!-- Tab 3 -->
             <input type="radio" name="tabset" id="tab3" aria-controls="marzen01">
-            <label for="tab3"><a class="adm-header-a" href="/adm">Pedidos</a></label>
+            <label for="tab3"><a class="adm-header-a"href="/admOrders">Pedidos</a></label>
         </div>
         </div>
         <div class="logout-adm">
-            
+
+            <div class="adm-home-nav"> 
+                <a class="adm-home-button-icon" href="/adm/profile"><img src="/img/home.svg" width="34px" ></a>
+                <a class="adm-home-button-text" href="/adm/profile">Home</a>
+             </div>
+             
             <form action="/logout" method="POST">
-            <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
-            <button class="logout-adm-a" href="">Sair</button>
-            </form>
+                <button class="logout-adm-a"><img src="/img/exit.svg" width="40px" ></button>
+                <button class="logout-adm-a" href="">Sair</button>
+            </form>                               
         </div>
+
     </header>

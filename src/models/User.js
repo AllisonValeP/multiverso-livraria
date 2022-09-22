@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             defaultValue: '0',
         },
+        active: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: '1',
+        },
 
     },
         {
@@ -37,12 +41,12 @@ module.exports = (sequelize, DataTypes) => {
     User.associate = (models => {
         User.hasMany(models.Address, {
             foreignKey: 'user_id',
-            as: "user_address",
+            as: "address",
         });
 
         User.hasMany(models.Order, {
             foreignKey: 'user_id',
-            as: "user_order",
+            as: "order",
         })
     })
 
