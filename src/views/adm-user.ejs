@@ -8,20 +8,20 @@
 
         <div id="container-titulo-abas">
           <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
-          <label for="tab-1" class="aba">Perfil</label>
+          <label for="tab-1" onclick="Mudarestado('form-item')" class="aba">Perfil</label>
 
           <input id="tab-2" type="radio" name="tab" class="sign-up">
-          <label for="tab-2" class="aba">Endereço</label>
+          <label for="tab-2" onclick="Mudarestado('form-item1')" class="aba">Endereço</label>
 
           <input id="tab-3" type="radio" name="tab" class="user-edit">
-          <label for="tab-3" class="aba">Histórico</label>
+          <label for="tab-3" onclick="Mudarestado('form-item2')" class="aba">Histórico</label>
 
          
         </div>
 
         <div class="adm-user-form">
 <!-- as tabs estão aqui -->
-          <div class="animacao-aba-01 abrir-formulario" id="form-item02">
+          <div class="animacao-aba-01 abrir-formulario" id="form-item">
 
       
         
@@ -32,6 +32,7 @@
               <div class="grupo">
                 <label for="user" class="label">Sobrenome</label>
                 <input id="user" type="text" class="adm-user-input"value="<%=user.last_name%>"readonly>
+                </div>
               <div class="grupo">
                 <label for="pass" class="label">E-mail</label>
                 <input id="pass" type="email" class="adm-user-input" data-type="Email" value="<%=user.email%>"readonly>
@@ -50,7 +51,7 @@
             
           </div>
 
-          <div class="animacao-aba-02 " id="form-item02">
+          <div  id="form-item1">
             <div class="grupo">
               <label for="user" class="label">Rua</label>
               <input id="user" type="text" class="adm-user-input">
@@ -76,7 +77,7 @@
           </div> -->
           </div>
 
-          <div class="animacao-aba-03" id="form-item02">
+          <div  id="form-item2">
            
             <div class="adm-user-table-container">
               <table id="adm-user-table">

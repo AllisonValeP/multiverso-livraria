@@ -4,6 +4,8 @@ const path = require("path");
 const { Product, Publisher, Author, Category, Image, Address, User,Order } = require("../models");
 const { NOW } = require("sequelize");
 const { info } = require("console");
+const fs = require("fs");
+const upload = require("../config/upload")
 
 
 const admController = {
@@ -47,7 +49,7 @@ const admController = {
   updateProduct: async (req, res) => {
     const { name, description, price, stock, publisher_id, author_id, category_id } = req.body
     const file = req.file
-
+console.log(file)
     try {
       const product = await Product.create({
         name,
@@ -71,8 +73,13 @@ const admController = {
 
 
     } catch (err) {
+     
+      setTimeout(()=>{
+        fs.unlinkSync(path.join(upload.path, file.filename))
+        console.log("teste")
+      },9000)
       console.log(err);
-
+      res.send("erro")
     }
   },
   users: async (req, res) => {
