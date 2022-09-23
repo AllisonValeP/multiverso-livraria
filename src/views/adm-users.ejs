@@ -20,8 +20,8 @@
                     <%for(user of users){%>
                     <tr>
                         <td class="containerTable-lblValue"><%=user.name%></th>
-                        <td class="containerTable-lblValue">Vale Pedro</td>
-                        <td class="containerTable-lblValue">allison.vale@outlook.com</td>
+                        <td class="containerTable-lblValue"><%=user.last_name%></td>
+                        <td class="containerTable-lblValue"><%=user.email%></td>
                         <%if(user.is_admin){%>
                             <td class="containerTable-lblValue">Sim</td>                                            
                             <%}else{%>

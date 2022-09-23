@@ -73,11 +73,14 @@ console.log(file)
 
 
     } catch (err) {
-     
-      setTimeout(()=>{
-        fs.unlinkSync(path.join(upload.path, file.filename))
-        console.log("teste")
-      },9000)
+
+      const filename = file.filename.split(".")[0]
+   
+setTimeout(() => {
+  
+  fs.unlinkSync(path.join(upload.path, `${filename}.png`))
+},9000);
+      
       console.log(err);
       res.send("erro")
     }
