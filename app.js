@@ -20,6 +20,7 @@ const admProductsRoute = require('./src/routes/AdmProductsRoute');
 const admOrdersRoute = require('./src/routes/AdmOrdersRoute');
 const errorRoute = require('./src/routes/ErrorRoute');
 const changePassowrdRoute = require('./src/routes/ChangePasswordRoute');
+const changePassowrdUserRoute = require('./src/routes/ChangePasswordUserRoute')
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -44,6 +45,7 @@ app.use('/admProducts', admProductsRoute);
 app.use('/admOrders', admOrdersRoute);
 app.use('/erro',errorRoute);
 app.use('/admSenha', changePassowrdRoute);
+app.use('/userSenha', changePassowrdUserRoute)
 
 app.use('*', (req,res)=>{
     res.redirect('/')
