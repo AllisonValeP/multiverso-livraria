@@ -19,6 +19,7 @@ const newProductConfirmRoute = require('./src/routes/NewProductConfirmRoute');
 const admProductsRoute = require('./src/routes/AdmProductsRoute');
 const admOrdersRoute = require('./src/routes/AdmOrdersRoute');
 const errorRoute = require('./src/routes/ErrorRoute');
+const changePassowrdRoute = require('./src/routes/ChangePasswordRoute');
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -41,7 +42,8 @@ app.use('/finalizando', finalizeOrderRoute);
 app.use('/sucesso', newProductConfirmRoute);
 app.use('/admProducts', admProductsRoute);
 app.use('/admOrders', admOrdersRoute);
-app.use('/erro',errorRoute)
+app.use('/erro',errorRoute);
+app.use('/admSenha', changePassowrdRoute);
 
 app.use('*', (req,res)=>{
     res.redirect('/')

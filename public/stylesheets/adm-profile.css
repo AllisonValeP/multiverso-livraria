@@ -23,12 +23,13 @@
     padding: 10px 70px 50px 70px;
     background: rgba(40, 57, 101, .9);
     margin-top: 100px;
+    border-radius: 40px;
   }
-  .form-adm-profile{
+  /* .form-adm-profile{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  }
+  } */
   
   .cor{
     color: black;
@@ -79,12 +80,16 @@
   padding: 15px 20px;
   border-radius: 25px;
   margin-top: 50px;  
+  cursor: pointer;
+  text-align: center;
   }
   .button-adm-profile-cancelar{
   margin-top: 10px;
   display: grid;
   background: #818385;
   text-transform: uppercase; 
+  cursor: pointer;
+  text-align: center;
   }
   
   
@@ -127,4 +132,26 @@
   
   input::placeholder{
   color: white
+  }
+
+  .change-password-button{
+    margin-bottom: 100px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin-top: 50px;  
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    width: 100%;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .change-password-button:hover{
+    background: rgba(255, 255, 255, 0.914);
+    color: black;
   }

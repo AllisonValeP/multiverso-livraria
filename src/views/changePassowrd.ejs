@@ -1,0 +1,32 @@
+<%- include('./partials/head')%>
+  <%- include('./partials/adm-header')%>
+
+  <main class="adm-profile-main">
+    <div class="box-adm-profile">
+        <div class="container-adm-profile">
+
+            <h2 class="profile-h2">Alterar Senha</h2>
+            <div class="form-adm-profile">
+                
+                    <div class="form-elements-adm-profile">
+                        <label for="name" class="label-adm-profile">Senha atual</label>
+                        <input id="profile" type="password" class="input-adm-profile" placeholder="">
+                    </div>
+                    <div class="form-elements-adm-profile">
+                        <label for="lastName" class="label-adm-profile">Nova senha</label>
+                        <input id="pass" type="password" class="input-adm-profile" data-type="text" placeholder="">
+                    </div>
+                    <div class="form-elements-adm-profile">
+                        <label for="email" class="label-adm-profile">Confirme a nova senha</label>
+                        <input id="pass" type="password" class="input-adm-profile" data-type="email" placeholder="">
+                    </div>
+                    <div class="form-elements-adm-profile-buttons">
+                        <a class="button-adm-profile-save" href="/adm/profile"> salvar</a>
+                        <a class="button-adm-profile-cancelar" href="/adm/profile">Cancelar</a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</main>    
+<%- include('./partials/footer')%></div>
