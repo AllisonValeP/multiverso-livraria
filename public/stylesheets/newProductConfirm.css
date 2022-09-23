@@ -10,8 +10,21 @@
     width: 50%;
     background: rgba(40, 57, 101, .9);
     text-align: center;
+    border-radius: 40px;
 }
 
 .h1-confirm-product{
     color:white;   
+}
+
+.correct-button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:#1161ee;
+    width:100%;
+    color:#fff;
+    display:block;
+    text-transform:uppercase;
+    margin-top: 50px;
 }
