@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: false,
         },
+        stats: {
+            type: DataTypes.STRING(10),
+            allowNull: false,
+        },
     },
         {
             tableName: "order",
@@ -30,13 +34,12 @@ module.exports = (sequelize, DataTypes) => {
                 foreignKey: "user_id",
                 as: "user",
             });
-            Order.belongsToMany(models.Product, { 
-                as: "product", 
-                through: "order_product", 
-                foreignKey: 'order_id', 
-                otherKey: "product_id", 
-                timestamps: false });
-        })
+        
+            Order.belongsToMany(models.Product, {
+                foreignKey: 'order_id',
+                as: "orderProduct",
+                through: models.OrderProduct });
+            })
         
         return Order
     };
