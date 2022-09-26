@@ -1,9 +1,9 @@
 
 const sharp = require("sharp");
 const path = require("path");
-const { Product, Publisher, Author, Category, Image, Address, User,Order } = require("../models");
+const { Product, Publisher, Author, Category, Image, Address, User, Order } = require("../models");
 const { NOW } = require("sequelize");
-const { info } = require("console");
+const { info, Console } = require("console");
 const fs = require("fs");
 const upload = require("../config/upload")
 
@@ -49,7 +49,7 @@ const admController = {
   updateProduct: async (req, res) => {
     const { name, description, price, stock, publisher_id, author_id, category_id } = req.body
     const file = req.file
-console.log(file)
+    console.log(file)
     try {
       const product = await Product.create({
         name,
@@ -75,12 +75,12 @@ console.log(file)
     } catch (err) {
 
       const filename = file.filename.split(".")[0]
-   
-setTimeout(() => {
-  
-  fs.unlinkSync(path.join(upload.path, `${filename}.png`))
-},9000);
-      
+
+      setTimeout(() => {
+
+        fs.unlinkSync(path.join(upload.path, `${filename}.png`))
+      }, 9000);
+
       console.log(err);
       res.send("erro")
     }
@@ -110,7 +110,8 @@ setTimeout(() => {
     const { id } = req.params
     try {
       const user = await User.findByPk(
-        id,{      
+        id,
+        {
         include: [{
           model: Address,
           as: "address",
@@ -120,44 +121,82 @@ setTimeout(() => {
           model: Order,
           as: "order",
           required: false,
+         
+          include: {
+            model: Product,
+            as: "orderProduct",
+            required: true,
+          
+
+          }
+
+
         }]
+        
       }
-      ); 
-      console.log(user.address);
-      if(!user){       
+      );
+      let dateOrders = user.order
+
+      let dateOrder = dateOrders.map((dateOrder, i) => {
+        
+        let dateFormat = new Date(dateOrders[i].createdAt)
+        let year = dateFormat.getFullYear();
+        let month = () => {
+          let month = dateFormat.getMonth() + 1
+          if (month <= 9) {
+            return month = "0" + (dateFormat.getMonth() + 1)
+          } else { return month }
+        };
+        let date = () => {
+          let date = dateFormat.getDate()
+          if (date <= 9) {
+            return date = "0" + dateFormat.getDate()
+          } else { return date }
+        };
+        return  dateFormat = `${date()}/${month()}/${year}`;
+   
+      })
+      
+     
+
+
+      if (!user) {
         throw Error("Usuário não encontrado")
       };
       let dateReg = new Date(user.createdAt);
-   
-        let year = dateReg.getFullYear();
-        let month = ()=>{
-          let month = dateReg.getMonth() + 1
-          if (month <= 9){
-            return month = "0" + (dateReg.getMonth() + 1)
-          }else{ return month}
-        };
-        let date = ()=>{
-          let date = dateReg.getDate()
-          if (date <= 9){
-            return date = "0" + dateReg.getDate()
-          }else{ return date}
-        };
+
+      let year = dateReg.getFullYear();
+      let month = () => {
+        let month = dateReg.getMonth() + 1
+        if (month <= 9) {
+          return month = "0" + (dateReg.getMonth() + 1)
+        } else { return month }
+      };
+      let date = () => {
+        let date = dateReg.getDate()
+        if (date <= 9) {
+          return date = "0" + dateReg.getDate()
+        } else { return date }
+      };
 
       dateReg = `${date()}/${month()}/${year}`;
-        
-    
-      return res.render("adm-user",{
+
+
+      return res.render("adm-user", {
         title: 'Administrado | Multiverso Livraria',
         user: user,
         address: user.address,
-        order: user.order,
+        orders: user.order,
         date: dateReg,
+        dateOrders: dateOrder,
+   
 
-      } );
-    
+
+      });
+
     } catch (error) {
-     
-      res.send({message: error.message});
+
+      res.send({ message: error.message });
 
     }
     return res.render("adm-user",

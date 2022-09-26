@@ -314,7 +314,11 @@
   .tr-02{
     background-color: white;
   }
-  
+.item-vazio{ 
+    text-align: center;
+    color: brown;
+    background-color: white;
+  }
   /* final tabela historico */
   
   .form-show {
@@ -405,7 +409,7 @@
     border-radius: 40px;
 }
 
-.adm-user-abas .animacao-aba-01,
+/* .adm-user-abas .animacao-aba-01,
 .adm-user-abas .animacao-aba-02,
 .adm-user-abas .user-edit-htm,
 .adm-user-abas .animacao-aba-03{
@@ -417,7 +421,7 @@
     transform:rotateY(180deg);
     backface-visibility:hidden;
     transition:all .4s linear;
-}
+} */
 
 .adm-user-abas .sign-in,
 .adm-user-abas .sign-up,
@@ -558,4 +562,16 @@
 
 .foot-lnk{
     text-align:center;
+}
+
+.grupo-endereco{
+  display: flex;
+  justify-content: space-between;
+}
+.endereco-box1{
+ width: 20%;
+
+}
+.endereco-box2{
+  width:78%;
 }

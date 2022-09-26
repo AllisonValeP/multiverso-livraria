@@ -2,177 +2,146 @@
 
   <%- include('./partials/adm-header')%>
 
-  <main class="adm-user-painel">
-    <div class="adm-user-wrap">
-      <div class="adm-user-abas">
+    <main class="adm-user-painel">
+      <div class="adm-user-wrap">
+        <div class="adm-user-abas">
 
-        <div id="container-titulo-abas">
-          <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
-          <label for="tab-1" onclick="Mudarestado('form-item')" class="aba">Perfil</label>
+          <div id="container-titulo-abas">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" onclick="Mudarestado('form-item')" class="aba">Perfil</label>
 
-          <input id="tab-2" type="radio" name="tab" class="sign-up">
-          <label for="tab-2" onclick="Mudarestado('form-item1')" class="aba">Endereço</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" onclick="Mudarestado('form-item1')" class="aba">Endereço</label>
 
-          <input id="tab-3" type="radio" name="tab" class="user-edit">
-          <label for="tab-3" onclick="Mudarestado('form-item2')" class="aba">Histórico</label>
+            <input id="tab-3" type="radio" name="tab" class="user-edit">
+            <label for="tab-3" onclick="Mudarestado('form-item2')" class="aba">Histórico</label>
 
-         
-        </div>
 
-        <div class="adm-user-form">
-<!-- as tabs estão aqui -->
-          <div class="animacao-aba-01 abrir-formulario" id="form-item">
+          </div>
 
-      
-        
+          <div class="adm-user-form">
+            <!-- as tabs estão aqui -->
+            <div class="animacao-aba-01 abrir-formulario" id="form-item">
               <div class="grupo">
                 <label for="user" class="label">Nome</label>
-                <input id="user" type="text" class="adm-user-input" value="<%=user.name%>"readonly>
+                <input id="user" type="text" class="adm-user-input" value="<%=user.name%>" readonly>
               </div>
               <div class="grupo">
                 <label for="user" class="label">Sobrenome</label>
-                <input id="user" type="text" class="adm-user-input"value="<%=user.last_name%>"readonly>
-                </div>
+                <input id="user" type="text" class="adm-user-input" value="<%=user.last_name%>" readonly>
+              </div>
               <div class="grupo">
                 <label for="pass" class="label">E-mail</label>
-                <input id="pass" type="email" class="adm-user-input" data-type="Email" value="<%=user.email%>"readonly>
-              </div>            
+                <input id="pass" type="email" class="adm-user-input" data-type="Email" value="<%=user.email%>" readonly>
+              </div>
               <div class="grupo">
                 <label for="pass" class="label">Data de Cadastro</label>
-                <input id="pass" type="text" class="adm-user-input"  value="<%=date%>" readonly>
+                <input id="pass" type="text" class="adm-user-input" value="<%=date%>" readonly>
               </div>
-              
-          
-              <div class="grupo">
-                <a class="adm-user-button" href="/adm/users">Voltar</a>
-                
-              </div>
-    
-            
-          </div>
+            </div>
 
-          <div  id="form-item1">
-            <div class="grupo">
-              <label for="user" class="label">Rua</label>
-              <input id="user" type="text" class="adm-user-input">
+            <div id="form-item1">
+              <%if(address.length> 0){%>
+                <div class="grupo">
+                  <label for="user" class="label">Rua</label>
+                  <input id="user" type="text" class="adm-user-input" value="<%=address[0].street%>">
+                </div>
+                <div class="grupo grupo-endereco">
+                  <div class="endereco-box1">
+                    <label for="pass" class="label">Numero</label>
+                    <input id="pass" type="number" class="adm-user-input" data-type="text"
+                      value="<%=address[0].number%>">
+                  </div>
+                  <div class="endereco-box2">
+                    <label for="pass" class="label">Complemento</label>
+                    <input id="pass" type="text" class="adm-user-input" data-type="number"
+                      value="<%=address[0].complement%>">
+
+                  </div>
+
+                </div>
+                <div class="grupo grupo-endereco">
+                  <div class="endereco-box2">
+                    <label for="pass" class="label">Cidade</label>
+                    <input id="pass" type="text" class="adm-user-input" data-type="number" value="<%=address[0].city%>">
+                  </div>
+                  <div class="endereco-box1">
+                    <label for="pass" class="label">Estado</label>
+                    <input id="pass" type="text" class="adm-user-input" value="<%=address[0].state%>">
+                  </div>
+                </div>
+                <div class="grupo">
+                  <label for="pass" class="label">CEP</label>
+                  <input id="cep" name="cep" type="text" class="adm-user-input" value="<%=address[0].cep%>">
+                </div>
+                <%}else{%>
+                  <span class="error-alert">Usuário não tem endereço cadastrado</span>
+                  <%}%>
             </div>
-            <div class="grupo">
-              <label for="pass" class="label">Estado</label>
-              <input id="pass" type="text" class="adm-user-input" data-type="text">
+            <div id="form-item2">
+              <div class="adm-user-table-container">
+
+                <table id="adm-user-table">
+
+                  <tr>
+                    <th>ID </th>
+                    <th>Valor Total</th>
+                    <th>Data de compra</th>
+                    <th>Status da compra</th>
+                  </tr>
+                  <%if(orders.length> 0){%>
+
+                    <%orders.map((order, i)=> {
+
+                      %>
+                      <tr class="tr-02">
+                        <td>
+                          <%=orders[i].id%>
+                        </td>
+                        <td>R$ <%=orders[i].final_price%>
+                        </td>
+                        <td>
+                          <%=dateOrders[i]%>
+                        </td>
+                        <%if(orders[i].stats === "aprovado" ){%>
+                            <td style="color: green"><%=orders[i].stats%></td>                                            
+                            <%}else if(orders[i].stats === "cancelado" ){%>
+                              <td style="color: red"><%=orders[i].stats%></td> 
+                              <%}else{%>
+                                <td style="color: #e5e619"><%=orders[i].stats%></td> 
+                                <%}%>
+                        
+                        <%})%>
+                  </tr>
+
+                      
+               
+
+
+
+                        <%}else{%>
+
+                          <tr class="tr-02 item-vazio">
+                            <td colspan="4">
+                              <p>
+                                Usuário não realizou nenhum pedido
+
+                              </p>
+                            </td>
+                          </tr>
+
+                          <%}%>
+
+                </table>
+              </div>
             </div>
-            <div class="grupo">
-              <label for="pass" class="label">CEP</label>
-              <input id="pass" type="number" class="adm-user-input" data-type="number">
-            </div>
-            <div class="grupo">
-              <label for="pass" class="label">Complemento</label>
-              <input id="pass" type="text" class="adm-user-input">
-            </div>
-            <div class="grupo">
+
+            <div class="grupo ">
               <a class="adm-user-button" href="/adm/users">Voltar</a>
             </div>
-            <!-- <div class="hr"></div>
-          <div class="foot-lnk">
-            <label for="tab-1">Already Member?</a>
-          </div> -->
           </div>
-
-          <div  id="form-item2">
-           
-            <div class="adm-user-table-container">
-              <table id="adm-user-table">
-                <tr>
-
-                  <th>Item</th>
-                  <th>Valor</th>
-                  <th>Data de compra</th>
-                  <th>Data de entrega</th>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="adm-user-tabela-livro">
-                      Sobre anarquismo</p>
-                  </td>
-                  <td>R$49,99</td>
-                  <td>09/01/21</td>
-                  <td>19/01/21</td>
-                </tr>
-
-                <tr class="tr-02">
-                  <td>
-
-                    <p class="adm-user-tabela-livro">
-                      Manifesto Comunista</p>
-                  </td>
-                  <td>R$39,99</td>
-                  <td>15/02/21</td>
-                  <td>25/02/21</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <p class="adm-user-tabela-livro">
-                      Solaris</p>
-                  </td>
-                  <td>R$79,99</td>
-                  <td>10/04/21</td>
-                  <td>19/04/21</td>
-                </tr>
-
-                <tr class="tr-02">
-                  <td>
-
-                    <p class="adm-user-tabela-livro">
-                      Duna</p>
-                  </td>
-                  <td>R$59,99</td>
-                  <td>15/06/21</td>
-                  <td>25/06/21</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <p class="adm-user-tabela-livro">
-                      Ring</p>
-                  </td>
-                  <td>R$49,99</td>
-                  <td>01/07/21</td>
-                  <td>09/07/21</td>
-                </tr>
-
-                <tr class="tr-02">
-                  <td>
-
-                    <p class="adm-user-tabela-livro">
-                      A Náusea</p>
-                  </td>
-                  <td>R$29,99</td>
-                  <td>15/07/21</td>
-                  <td>25/07/21</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <p class="adm-user-tabela-livro">
-                      Cem anos de solidão</p>
-                  </td>
-                  <td>R$79,99</td>
-                  <td>09/08/21</td>
-                  <td>19/08/21</td>
-                </tr>
-              </table>
-            </div>
-            <div class="grupo">
-              <a class="adm-user-button" href="/adm/users">Voltar</a>
-            </div>
-
-          
-<!-- as tabs terminam aqui -->
-          </div>
-
         </div>
       </div>
-    </div>
 
-  </main>
-<%- include('./partials/footer')%>
+    </main>
+    <%- include('./partials/footer')%>
