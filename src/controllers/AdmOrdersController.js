@@ -5,7 +5,9 @@ const admOrdersController = {
             title: 'Histórico de Pedidos | Multiverso Livraria',
             user: req.cookies.user,
         })
-    }
+    },
+    
+    
 }
 
 module.exports = admOrdersController

@@ -27,7 +27,6 @@
     background: rgba(40, 57, 101, .9);
 }
 
-
 .container-adm-product .tab,
 .form-adm-product-create .form-elements-adm-product .label-adm-product,
 .form-adm-product-create .form-elements-adm-product, .button-adm-product-save, .label-adm-product-upcoming {
@@ -52,7 +51,7 @@
     padding: 10px 15px;
     border-radius: 15px;
     background: rgba(255, 255, 255, .1);
-    margin-bottom: 20px;
+ 
 }
 
 .form-adm-product-create .form-elements-adm-product .input-adm-product[data-type="password"] {
@@ -186,13 +185,21 @@ input[type='file'] {
   cursor: pointer;
   font-size: 12px;
 }
-select{
 
-  padding:10px; 
+select  {
+  padding:50px; 
   margin:-5px -20px -5px -5px; 
  
   overflow-y:auto;
+  
 }
+
+
+option[value=""][disabled] {
+  display: none;
+}
+
+
 
 .form-elements-adm-product-buttons{
  

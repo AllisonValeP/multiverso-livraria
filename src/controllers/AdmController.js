@@ -6,6 +6,7 @@ const { NOW } = require("sequelize");
 const { info, Console } = require("console");
 const fs = require("fs");
 const upload = require("../config/upload")
+const { validationResult } = require('express-validator');
 
 
 const admController = {
@@ -20,6 +21,13 @@ const admController = {
 
 
   },
+  productsShow: (req, res) => {
+    return res.render("adm-products",
+      {
+        title: 'Administrador | Multiverso Livraria',
+        user: req.cookies.user,
+      })
+  },
   productShow: (req, res) => {
     return res.render("adm-product",
       {
@@ -28,6 +36,7 @@ const admController = {
       })
   },
   createProduct: async (req, res) => {
+ 
     try {
       const publishers = await Publisher.findAll();
       const authors = await Author.findAll();
@@ -46,11 +55,26 @@ const admController = {
     }
 
   },
-  updateProduct: async (req, res) => {
+  storeProduct: async (req, res) => {
     const { name, description, price, stock, publisher_id, author_id, category_id } = req.body
-    const file = req.file
-    console.log(file)
+    const file = req.file;
+   const errors = validationResult(req);
+    
     try {
+      const publishers = await Publisher.findAll();
+      const authors = await Author.findAll();
+      const categories = await Category.findAll();
+      if (!errors.isEmpty()) {
+  
+        res.render('adm-create-product', {
+          title: 'Criar Produto | Multiverso Livraria',
+          publishers: publishers,
+          authors: authors,
+          categories: categories,
+          errors: errors.mapped(),
+          old: req.body,
+        });
+      } else {
       const product = await Product.create({
         name,
         description,
@@ -69,10 +93,15 @@ const admController = {
         include: "image"
       })
 
-      return res.redirect("/adm/create-product");
+      return res.render("newProductConfirm",
+        {
+          title: 'Sucesso | Multiverso Livraria',
+          user: req.cookies.user,
+          message: error.message
+        }) 
+    }
 
-
-    } catch (err) {
+    } catch (error) {
 
       const filename = file.filename.split(".")[0]
 
@@ -81,11 +110,16 @@ const admController = {
         fs.unlinkSync(path.join(upload.path, `${filename}.png`))
       }, 9000);
 
-      console.log(err);
-      res.send("erro")
+      console.log(error);
+      return res.render("error",
+        {
+          title: 'Error | Multiverso Livraria',
+          user: req.cookies.user,
+          message: error.message
+        }) 
     }
   },
-  users: async (req, res) => {
+  usersShow: async (req, res) => {
     let { page = 1 } = req.query;
     try {
       let { count: total, rows: users } = await User.findAndCountAll({
@@ -102,7 +136,13 @@ const admController = {
           totalPage: totalPage,
         })
     } catch (error) {
-      res.send("Algo deu errado ou renderizar usuários!")
+    
+      return res.render("error",
+        {
+          title: 'Error | Multiverso Livraria',
+          user: req.cookies.user,
+          message: "Error ao processar lista usuários!"
+        }) 
     }
 
   },
@@ -112,33 +152,36 @@ const admController = {
       const user = await User.findByPk(
         id,
         {
-        include: [{
-          model: Address,
-          as: "address",
-          required: false,
-        },
-        {
-          model: Order,
-          as: "order",
-          required: false,
-         
-          include: {
-            model: Product,
-            as: "orderProduct",
-            required: true,
-          
+          include: [{
+            model: Address,
+            as: "address",
+            required: false,
+          },
+          {
+            model: Order,
+            as: "order",
+            required: false,
 
-          }
+            include: {
+              model: Product,
+              as: "orderProduct",
+              required: true,
 
 
-        }]
-        
-      }
+            }
+
+
+          }]
+
+        }
       );
+      if (!user) {
+        throw Error("Usuário não encontrado")
+      };
       let dateOrders = user.order
 
       let dateOrder = dateOrders.map((dateOrder, i) => {
-        
+
         let dateFormat = new Date(dateOrders[i].createdAt)
         let year = dateFormat.getFullYear();
         let month = () => {
@@ -153,16 +196,9 @@ const admController = {
             return date = "0" + dateFormat.getDate()
           } else { return date }
         };
-        return  dateFormat = `${date()}/${month()}/${year}`;
-   
+        return dateFormat = `${date()}/${month()}/${year}`;
+
       })
-      
-     
-
-
-      if (!user) {
-        throw Error("Usuário não encontrado")
-      };
       let dateReg = new Date(user.createdAt);
 
       let year = dateReg.getFullYear();
@@ -189,21 +225,22 @@ const admController = {
         orders: user.order,
         date: dateReg,
         dateOrders: dateOrder,
-   
+
 
 
       });
 
     } catch (error) {
-
-      res.send({ message: error.message });
+      
+      return res.render("error",
+        {
+          title: 'Error | Multiverso Livraria',
+          user: req.cookies.user,
+          message: error.message
+        }) 
 
     }
-    return res.render("adm-user",
-      {
-        title: 'Administrador | Multiverso Livraria',
-        user: req.cookies.user,
-      });
+   
   },
   orderShow: (req, res) => {
     return res.render("adm-order",

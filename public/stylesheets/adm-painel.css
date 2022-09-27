@@ -60,9 +60,21 @@ flex-direction: column;
   padding-right: 15px;
 }
 
+span.error-alert-adm {
+  padding-left:20px;
+  font-size: 0.7rem;
+  color: #ff0000;
 
+}
+select.select-form{
+  margin: 0 0 0 
+}
+.error-alert-adm {
 
+  color: #cc0000;
+  animation: bg 5s infinite;
 
+}
 
 
 

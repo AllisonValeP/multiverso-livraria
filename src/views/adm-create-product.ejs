@@ -9,48 +9,65 @@
 
                         <form action="/adm/create-product" method="post" enctype="multipart/form-data">
                             <div class="form-elements-adm-product">
-                                <label for="user" class="label-adm-product">Titulo</label>
-                                <input id="user" type="text" name="name" class="input-adm-product">
+                                <label class="label-adm-product">Titulo</label>
+                                <input id="name" type="text" name="name" class="input-adm-product"
+                                    value="<%= locals.old && old.name %>">
+                                <% if(locals.errors && errors.name) { %>
+                                    <span class="error-alert-adm">
+                                        <%= errors.name.msg%>
+                                    </span>
+                                    <%}%>
                             </div>
                             <div class="form-elements-adm-product">
-                                <label for="pass" class="label-adm-product">Nome Autor(a)</label>
-                                <select name="author_id" class="input-adm-product  ">                                    
-                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                <label class="label-adm-product">Nome Autor(a)</label>
+                                <select required name="author_id" id="author_id" class="input-adm-product select-form ">
+
+                                    <option value="" disabled selected>Selecione</option>
+
                                     <%for(author of authors){%>
-                                    <option class="label-adm-product" value=<%=author.id%>><%=author.name%> <%=author.last_name%></option>
-                                    <%}%>
+                                        <option class="label-adm-product" value=<%=author.id%>><%=author.name%>
+                                                <%=author.last_name%>
+                                        </option>
+                                        <%}%>
+                                            
                                 </select>
                             </div>
-                            
 
+                       
                             <div class="form-elements-adm-product row-3">
                                 <label for="pass" class="label-adm-product">Editora</label>
-                                <select name="publisher_id" class="input-adm-product" >
-                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                <select required name="publisher_id" class="input-adm-product select-form ">
+                                    <option value="" disabled selected>Selecione</option>
                                     <%for(publisher of publishers){%>
-                                        <option class="label-adm-product " value=<%=publisher.id%>><%=publisher.name%></option>
+                                        <option class="label-adm-product " value=<%=publisher.id%>><%=publisher.name%>
+                                        </option>
                                         <%}%>
                                 </select>
 
                             </div>
                             <div class="form-elements-adm-product">
                                 <label for="pass" class="label-adm-product">Categoria</label>
-                                <select name="category_id" class="input-adm-product  ">
-                                    <option class="label-adm-product" value="0" selected>Selecione</option>
+                                <select required name="category_id" class="input-adm-product select-form   ">
+                                    <option value="" disabled selected >Selecione</option>
                                     <%for(category of categories){%>
-                                        <option class="label-adm-product" value=<%=category.id%>><%=category.name%></option>
+                                        <option class="label-adm-product" value=<%=category.id%>><%=category.name%>
+                                        </option>
                                         <%}%>
                                 </select>
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
                                 <label for="pass" class="label-adm-product">Quantidade</label>
-                                <input id="pass" type="number" name="stock" class="input-adm-product"
-                                    data-type="number">
+                                <input id="stock" type="number" name="stock" class="input-adm-product"
+                                    data-type="number"  value="<%= locals.old && old.stock %>" >
+                                    <% if(locals.errors && errors.stock) { %>
+                                        <span class="error-alert-adm">
+                                            <%= errors.stock.msg%>
+                                        </span>
+                                        <%}%>
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
                                 <label for="pass" class="label-adm-product">Preço</label>
-                                <input id="pass" type="text" name="price" class="input-adm-product"
-                                    data-type="number">
+                                <input id="pass" type="text" name="price" class="input-adm-product" data-type="number">
                             </div>
                             <div class="form-elements-adm-product column-3 row-3">
                                 <label for="pass" class="label-adm-product">Capa</label>

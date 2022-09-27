@@ -15,10 +15,7 @@ const productRouter = require('./src/routes/ProductRoute');
 const releasesRoute = require('./src/routes/ReleasesRoute');
 const bagRoute = require('./src/routes/BagRoute');
 const finalizeOrderRoute = require('./src/routes/FinalizeOrderRoute');
-const newProductConfirmRoute = require('./src/routes/NewProductConfirmRoute');
-const admProductsRoute = require('./src/routes/AdmProductsRoute');
 const admOrdersRoute = require('./src/routes/AdmOrdersRoute');
-const errorRoute = require('./src/routes/ErrorRoute');
 const changePassowrdRoute = require('./src/routes/ChangePasswordRoute');
 const changePassowrdUserRoute = require('./src/routes/ChangePasswordUserRoute')
 
@@ -34,16 +31,13 @@ app.use(session({ secret: sessionConfig.secret , resave: sessionConfig.resave, s
 
 app.use('/',indexRoute);
 app.use('/usuario',userRoute);
-app.use('/produto',productRouter);
+app.use('/products',productRouter);
 app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
 app.use('/lancamentos', releasesRoute);
 app.use('/carrinho', bagRoute);
 app.use('/finalizando', finalizeOrderRoute);
-app.use('/sucesso', newProductConfirmRoute);
-app.use('/admProducts', admProductsRoute);
 app.use('/admOrders', admOrdersRoute);
-app.use('/erro',errorRoute);
 app.use('/admSenha', changePassowrdRoute);
 app.use('/userSenha', changePassowrdUserRoute)
 
