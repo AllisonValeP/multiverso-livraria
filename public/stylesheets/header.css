@@ -32,7 +32,7 @@ ul li {
 }
 .nav-list{
     white-space: nowrap;
- width: 25%;
+    width: 25%;
 }
 
 
@@ -223,6 +223,8 @@ ul li {
     white-space: nowrap;
     justify-content: space-between;
     pointer-events: painted;
+    flex-direction: row;
+    background-color: #04AA6D;
   }
   .bnt-ext button{
     border: none;
@@ -231,13 +233,40 @@ ul li {
   }
 p.description  {
    font-size:15px;
-    padding-left: 1.6em;
+    /* padding-left: 1.6em; */
     color: rgb(8, 7, 7);
-    
+}
+.description{
+  text-align: center;
 }
 
 .bnt-ext button:hover {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1)
+}
+
+.form-user{
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+.user-welcome{
+  display: flex;
+  flex-direction: row;
+  /* background-color: aqua; */
+  justify-items: center;
+  align-items: center;
+}
+
+.user-home-icon{
+  margin-right: 10px;
+}
+
+.logout-user-button{
+  background: none;
+  border: none;
+  margin-top: 10%;
+  margin-left: 30%;
 }

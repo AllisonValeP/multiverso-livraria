@@ -32,20 +32,26 @@
       <% if(locals.user){%>
       <li>
         <div class="form-user">
-          <div class="bnt-ext">                  
-            <h4>Olá</h4>
+                     
+            
+             <div class="user-welcome">
+                <a href="/usuario/perfil"><img class="user-home-icon" src="/img/home.svg" width="34px"></a>
+                <%if(locals.user && !locals.user.is_admin){%>
+                  <a href="/usuario/perfil">
+                    <h4 class="description">Olá</h4>
+                    <p class="description"><%=user.name%> <%=user.last_name%></p>        
+                  </a>
+                  <%}%>
+             </div>
             <form action="/logout" method="post">
-              <button><img src="/img/exit.svg" width="20px" height="20px"></button>
+              <button class="logout-user-button"><img src="/img/exit.svg" width="34px" height="40px"></button>
             </form>
           </div class="description">
-          <%if(locals.user && !locals.user.is_admin){%>
-            <a href="/usuario/perfil">
-              <p class="description"><%=user.name%> <%=user.last_name%></p>        
-            </a>
-            <%}%> 
+          
             <%if(locals.user && locals.user.is_admin){%>
               <p class="description"><%=user.name%> <%=user.last_name%></p>        
             <%}%>
+        </div>
         </div>
       </li>
       <%}else{%>
