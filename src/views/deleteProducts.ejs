@@ -1,0 +1,42 @@
+<%- include('./partials/head')%>
+  <%- include('./partials/adm-header')%>
+  <main class="adm-product-main">
+    <div class="box-adm-product">
+        <div class="container-adm-product">
+
+            <h2 class="product-h2">Deletar Produto</h2>
+            <div class="form-delete-product">
+                <img class="delete-product-image" src="/img/home-livro-01.png" alt="Anarquismo">
+                  
+                    <div class="form-elements-adm-product">
+                        <label for="user" class="label-adm-product">Titulo</label>
+                        <input id="user" type="text" class="input-adm-product" placeholder="Sobre Anarquismo">
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Nome Autor(a)</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma">
+                    </div>
+                    <div class="form-elements-adm-product row-2">
+                        <label for="pass" class="label-adm-product">Sobrenome Autor(a)</label>
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Goldman">
+                    </div>
+                    <!-- <div class="form-elements-adm-product-image"> -->
+                       
+                        <!-- <input type="file" class="button-adm-product-image" value="Alterar Imagem"> -->
+                        <!-- <button class="button-adm-product-image"
+                        onclick="document.getElementById('getFile').click()">ALTERAR IMAGEM</button>
+                        <input type='file' id="getFile" style="display:none"> -->
+                        <!-- <input type="submit" class="button-adm-product-image-cancelar" value="Cancelar"> -->
+                    <!-- </div> -->
+                    <div class="form-elements-adm-product-buttons">
+                        <h1 class="h1-delete-product">Deletar?</h1>
+                        <input type="submit" class="button-adm-product-save" value="Sim">
+                        <input type="submit" class="button-adm-product-cancelar" value="Não">
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</main>    
+
+  <%- include('./partials/footer')%>

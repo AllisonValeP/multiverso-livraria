@@ -17,7 +17,9 @@ const bagRoute = require('./src/routes/BagRoute');
 const finalizeOrderRoute = require('./src/routes/FinalizeOrderRoute');
 const admOrdersRoute = require('./src/routes/AdmOrdersRoute');
 const changePassowrdRoute = require('./src/routes/ChangePasswordRoute');
-const changePassowrdUserRoute = require('./src/routes/ChangePasswordUserRoute')
+const changePassowrdUserRoute = require('./src/routes/ChangePasswordUserRoute');
+const deleteProductController = require('./src/routes/DeleteProductRoute');
+
 
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + '/public'));
@@ -39,7 +41,8 @@ app.use('/carrinho', bagRoute);
 app.use('/finalizando', finalizeOrderRoute);
 app.use('/admOrders', admOrdersRoute);
 app.use('/admSenha', changePassowrdRoute);
-app.use('/userSenha', changePassowrdUserRoute)
+app.use('/userSenha', changePassowrdUserRoute);
+app.use('/deletar', deleteProductController );
 
 app.use('*', (req,res)=>{
     res.redirect('/')
