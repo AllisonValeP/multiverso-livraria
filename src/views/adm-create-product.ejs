@@ -67,7 +67,12 @@
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
                                 <label for="pass" class="label-adm-product">Preço</label>
-                                <input id="pass" type="text" name="price" class="input-adm-product" data-type="number">
+                                <input id="price" type="number" name="price" class="input-adm-product" data-type="number" value="<%= locals.old && old.price %>">
+                                <% if(locals.errors && errors.price) { %>
+                                    <span class="error-alert-adm">
+                                        <%= errors.price.msg%>
+                                    </span>
+                                    <%}%>
                             </div>
                             <div class="form-elements-adm-product column-3 row-3">
                                 <label for="pass" class="label-adm-product">Capa</label>
@@ -78,11 +83,22 @@
                                     </label>
                                     <input id='input-file' name="file" type='file' value='' />
                                     <span id='file-name'></span>
+                                    <% if(locals.errors && errors.file) { %>
+                                        <span class="error-alert-adm">
+                                            <%= errors.file.msg%>
+                                        </span>
                                 </div>
+                                    <%}%>
+
                                 <div class="form-elements-adm-product column-3 row-4">
                                     <label for="pass" class="label-adm-product">Sobre</label>
-                                    <textarea name="description" id="textarea-adm-product" cols="50" rows="5"
-                                        style="background-color:rgba(255, 255, 255, .1);"></textarea>
+                                    <textarea name="description" id="description" cols="50" rows="5" 
+                                        style="background-color:rgba(255, 255, 255, .1);"  ><%= locals.old && old.description %></textarea>
+                                        <% if(locals.errors && errors.description) { %>
+                                            <span class="error-alert-adm">
+                                                <%= errors.description.msg%>
+                                            </span>
+                                            <%}%>
                                 </div>
 
                                 <input type="submit" class="button-adm-product-save" value="Salvar">
