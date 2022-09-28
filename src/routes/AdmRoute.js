@@ -10,7 +10,7 @@ const {validateProduct} = require('../helpers/validator-poduct-create');
 router.get('/', isAuthAdm,admController.index);
 
 router.get('/products',isAuthAdm,admController.productsShow);
-router.get('/product',isAuthAdm,admController.productShow);
+router.get('/product/:id',isAuthAdm,admController.productShow);
 router.get('/create-product',isAuthAdm,admController.createProduct);
 router.post('/create-product',isAuthAdm,upload.single('file'),imgCompress,validateProduct,admController.storeProduct);
 

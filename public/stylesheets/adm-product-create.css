@@ -186,7 +186,7 @@ input[type='file'] {
   font-size: 12px;
 }
 
-select  {
+select.select {
   padding:50px; 
   margin:-5px -20px -5px -5px; 
  
@@ -206,4 +206,9 @@ option[value=""][disabled] {
   grid-column: 1 / -1;
   grid-row: 1;
   
+}
+.form-elements-adm-product-create{
+  display: flex;
+  justify-content:space-between;
+
 }

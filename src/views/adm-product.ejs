@@ -7,51 +7,141 @@
             <h2 class="product-h2">Produto</h2>
             <div class="form-adm-product">
                 
-                  
+              
+<!-- 
                     <div class="form-elements-adm-product">
                         <label for="user" class="label-adm-product">Titulo</label>
-                        <input id="user" type="text" class="input-adm-product" placeholder="Sobre Anarquismo">
+                        <input id="user" name="name" type="text" class="input-adm-product" value="Sobre Anarquismo">
                     </div>
                     <div class="form-elements-adm-product">
                         <label for="pass" class="label-adm-product">Nome Autor(a)</label>
-                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Emma">
+                        <input id="pass" type="text"  name="author" class="input-adm-product" data-type="text" placeholder="Emma">
                     </div>
              
                     <div class="form-elements-adm-product row-3">
                         <label for="pass" class="label-adm-product">Editora</label>
-                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Hedra">
+                        <label for="pass" class="label-adm-product">Nome Autor(a)</label>
+                        <input id="pass"  name="publisher" type="text" class="input-adm-product" data-type="text" placeholder="Hedra">
                     </div>
                     <div class="form-elements-adm-product column-3 row-3">
                         <label for="pass" class="label-adm-product">Categoria</label>
-                        <input id="pass" type="text" class="input-adm-product" data-type="text" placeholder="Politica">
+                        <input id="pass" type="text" class="input-adm-product" data-type="text" name="category" placeholder="Politica">
                     <div class="form-elements-adm-product column-3 row-4">
                     <div class="form-elements-adm-product column-3 row-1">
                         <label for="pass" class="label-adm-product">Quantidade</label>
-                        <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="200">
+                        <input id="pass" type="number" class="input-adm-product"name="stock" data-type="number" placeholder="200">
                     </div>   
                     <div class="form-elements-adm-product column-3 row-1">
                         <label for="pass" class="label-adm-product">Valor</label>
-                        <input id="pass" type="number" class="input-adm-product" data-type="number" placeholder="200">
+                        <input id="pass" type="number" class="input-adm-product"  name="price" data-type="number" placeholder="200">
                     </div>
                     
                   
                         <label for="pass" class="label-adm-product">Sobre</label>
-                        <textarea name="" id="textarea-adm-product" cols="50" rows="5"  style="background-color:rgba(255, 255, 255, .1);" ></textarea> 
+                        <textarea name="description" id="textarea-adm-product" cols="50" rows="5"  style="background-color:rgba(255, 255, 255, .1);" ></textarea> 
                     </div>
                    
                     <div class="form-elements-adm-product-image">
                         <img class="adm-product-image-single" src="/img/home-livro-01.png" alt="Anarquismo">
-                        <!-- <input type="file" class="button-adm-product-image" value="Alterar Imagem"> -->
-                        <button class="button-adm-product-image"
+                        <input type="file" class="button-adm-product-image" value="Alterar Imagem"> -->
+                        <!-- <button class="button-adm-product-image"
                         onclick="document.getElementById('getFile').click()">ALTERAR IMAGEM</button>
                         <input type='file' id="getFile" style="display:none">
-                        <!-- <input type="submit" class="button-adm-product-image-cancelar" value="Cancelar"> -->
-                    </div>
+                        <input type="submit" class="button-adm-product-image-cancelar" value="Cancelar"> -->
+                    <!-- </div>
                     <div class="form-elements-adm-product-buttons">
                         <input type="submit" class="button-adm-product-save" value="Salvar">
-                        <input type="submit" class="button-adm-product-cancelar" value="Cancelar">
+                       <a href="/adm/products">
+                        <input type="button" class="button-adm-product-cancelar" value="Cancelar">
+                       </a> 
                     </div>
-                </div>
+                </div> -->
+
+                <form action="/adm/create-product" method="post" enctype="multipart/form-data">
+                    <div class="form-elements-adm-product">
+                        <label class="label-adm-product">Titulo</label>
+                        <input id="name" type="text" name="name" class="input-adm-product"
+                            value="<%=product.name%>">
+                      
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label class="label-adm-product">Nome Autor(a)</label>
+                        <select required name="author_id" id="author_id" class="input-adm-product  ">
+
+                            <option value="<%=product.author.id%>"  selected><%=product.author.name%> <%=product.author.last_name%> </option>
+
+                            <%for(author of authors){%>
+                                <option class="label-adm-product " value=<%=author.id%>><%=author.name%> <%=author.last_name%></option>
+                                <%}%>
+                                    
+                        </select>
+                    </div>
+
+               
+                    <div class="form-elements-adm-product row-3">
+                        <label for="pass" class="label-adm-product">Editora</label>
+                        <select required name="publisher_id" class="input-adm-product select-form ">
+                            <option value="<%=product.publisher.id%>"  selected><%=product.publisher.name%> </option>
+                            <%for(publisher of publishers){%>
+                                <option class="label-adm-product " value=<%=publisher.id%>><%=publisher.name%>
+                                </option>
+                                <%}%>
+                        </select>
+
+                    </div>
+                    <div class="form-elements-adm-product">
+                        <label for="pass" class="label-adm-product">Categoria</label>
+                        <select required name="category_id" class="input-adm-product select-form   ">
+                            <option value="<%=product.category.id%>"  selected><%=product.category.name%> </option>
+                            <%for(category of categories){%>
+                                <option class="label-adm-product" value=<%=category.id%>><%=category.name%>
+                                </option>
+                                <%}%>
+                        </select>
+                    </div>
+                    <div class="form-elements-adm-product column-3 row-1">
+                        <label for="pass" class="label-adm-product">Quantidade</label>
+                        <input id="stock" type="number" name="stock" class="input-adm-product"
+                            data-type="number"  value="<%=product.stock%>" >
+                            
+                    </div>
+                    <div class="form-elements-adm-product column-3 row-1">
+                        <label for="pass" class="label-adm-product">Preço</label>
+                        <input id="price" type="text" name="price" class="input-adm-product" data-type="number" value="<%=product.price%>">
+                       
+                    </div>
+                    <div class="form-elements-adm-product column-3 row-3">
+                        <label for="pass" class="label-adm-product">Capa</label>
+
+                        <div class='input-wrapper input-adm-product'>
+                            <label for='input-file'>
+                                Selecionar uma imagem
+                            </label>
+                            <input id='input-file' name="file" type='file' value='' />
+                            <span id='file-name'></span>
+                        </div>
+                        
+                        
+                        <div class="form-elements-adm-product-create ">
+                            <img class="adm-product-image-single-create" src="<%=image%>" alt="Anarquismo">
+                            <div>
+
+                                <label for="pass" class="label-adm-product">Sobre</label>
+                                <textarea name="description" id="description" cols="50" rows="20
+                                " 
+                                style="background-color:rgba(255, 255, 255, .1);"  ><%=product.description%></textarea>
+                            </div>
+                                
+                        </div>
+
+                        <div class="form-elements-adm-product-buttons">
+                            <input type="submit" class="button-adm-product-save" value="Salvar">
+                           <a  href="javascript:window.history.go(-1)">
+                            <input type="button" class="button-adm-product-cancelar" value="Cancelar">
+                           </a> 
+                        </div>
+                 
+                </form>
 
         </div>
     </div>

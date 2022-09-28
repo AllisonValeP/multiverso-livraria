@@ -6,6 +6,7 @@ const { NOW } = require("sequelize");
 const { info, Console } = require("console");
 const fs = require("fs");
 const upload = require("../config/upload")
+const files = require("../helpers/file")
 const { validationResult } = require('express-validator');
 
 
@@ -35,13 +36,13 @@ const admController = {
         offset: (page - 1) * 4
       });
       let totalPage = Math.round(total / 4)
-      console.log(products[0].author);
+      
       return res.render("adm-products",
       {
         title: 'Administrador | Multiverso Livraria',
         user: req.cookies.user,
         products: products,
-          totalPage: totalPage,
+        totalPage: totalPage,
       })
      
     } catch (error) {
@@ -54,25 +55,63 @@ const admController = {
           message: "Error ao processar lista de produtos!"
         }) 
     }
-
-
-
-
-
-
-
-
-
-
-
   
   },
-  productShow: (req, res) => {
-    return res.render("adm-product",
-      {
-        title: 'Administrador | Multiverso Livraria',
-        user: req.cookies.user,
+  productShow: async (req, res) => {
+    const {id} = req.params
+    try {
+      const publishers = await Publisher.findAll();
+      const authors = await Author.findAll();
+      const categories = await Category.findAll();
+      const product = await Product.findByPk(
+        id,{
+          include:[{
+            model: Author,
+              as: "author",
+              required: true,
+          },{
+            model:Publisher,
+              as: "publisher",
+              required: true,
+          },{
+            model:Category,
+              as: "category",
+              required: true,
+          },{
+            model:Image,
+              as: "image",
+              required: true,
+          }
+
+        ],
       })
+      if (!product) {
+        throw Error("Produto não encontrado")
+      };
+      let image =  upload.path + product.image[0].filename.split(".")[0]
+      image = files.base64Encode(`${image}.png`)
+      
+      return res.render("adm-product",
+        {
+          title: 'Administrador | Multiverso Livraria',
+          user: req.cookies.user,
+          product: product,
+          publishers: publishers,
+          authors: authors,
+          categories: categories,
+          image: image,
+        })
+      
+    } catch (error) {
+      console.log(error)
+      
+      return res.render("error",
+        {
+          title: 'Error | Multiverso Livraria',
+          user: req.cookies.user,
+          message: error.message
+        }) 
+    }
   },
   createProduct: async (req, res) => {
  
@@ -132,10 +171,11 @@ const admController = {
         include: "image"
       })
 
-      return res.render("newProductConfirm",
+      return res.render("success",
         {
           title: 'Sucesso | Multiverso Livraria',
           user: req.cookies.user,
+          success: "Produto cadastrado com sucesso!"
           
         }) 
     }
