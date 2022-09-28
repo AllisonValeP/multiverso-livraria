@@ -17,6 +17,20 @@
   justify-content: center;
   text-align: center;
 }
+/* @media (max-width:600px) {
+  .adm-header-grid{
+      display: none;
+  }
+}
+
+@media (min-width: 600px){
+  .abc {
+      display: none;
+  }
+.abc{
+  white-space: nowrap;
+}
+} */
 
 .adm-header-logo{   
   padding-left: 55px;

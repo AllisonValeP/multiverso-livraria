@@ -469,7 +469,7 @@
 
 .adm-user-form .grupo .label,
 .adm-user-form .grupo .adm-user-input,
-.adm-user-form .grupo .adm-user-button {
+.adm-user-form .grupo .adm-user-button{
     width:100%;
     color:#fff;
     display:block;
@@ -500,6 +500,19 @@
   margin-top: 20px;
   width: 20px;
   text-align: center;
+}
+
+.adm-user-button-voltar{
+  background-color: #aaa;
+  margin-top: 20px;
+  width: 20px;
+  text-align: center;
+  border:none;
+  padding:15px 20px;
+  border-radius:25px;
+  width:100%;
+  color:#fff;
+  display:block;
 }
 
 .adm-user-form .grupo label .icon{
@@ -574,4 +587,20 @@
 }
 .endereco-box2{
   width:78%;
+}
+
+.checkbox-user-active{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-user-status{
+  width: 200%;
+  height: 50px;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.checkbox-user-label{
+  padding-top: 40px;
 }
