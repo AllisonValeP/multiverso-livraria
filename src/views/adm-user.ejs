@@ -38,6 +38,13 @@
                 <label for="pass" class="label">Data de Cadastro</label>
                 <input id="pass" type="text" class="adm-user-input" value="<%=date%>" readonly>
               </div>
+              <div class="grupo checkbox-user-active">
+                <label for="pass" class="label checkbox-user-label">Ativar usuário</label>
+                <input type="checkbox" class="checkbox-user-status" name="scales">
+
+                <label for="pass" class="label checkbox-user-label">Desativar usuário</label>
+                <input type="checkbox" class="checkbox-user-status" name="scales">
+              </div>
             </div>
 
             <div id="form-item1">
@@ -137,7 +144,8 @@
             </div>
 
             <div class="grupo ">
-              <a class="adm-user-button" href="/adm/users">Voltar</a>
+              <a class="adm-user-button" href="/adm/users">Salvar</a>
+              <a class="adm-user-button-voltar" href="/adm/users">Voltar</a>
             </div>
           </div>
         </div>
