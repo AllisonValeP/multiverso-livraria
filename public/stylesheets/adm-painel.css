@@ -77,7 +77,15 @@ select.select-form{
 }
 
 
+.pager-create{
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 40%;
 
+  padding-top: 10px;
+}
 
 
 

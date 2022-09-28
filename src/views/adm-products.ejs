@@ -1,14 +1,13 @@
-
 <%- include('./partials/head')%>
-<%- include('./partials/adm-header')%>
-<section id="dunkles" class="tab-panel centralizando">
-    <h2 class="adm-table-subtitulo adm-title-center">Produtos</h2>
-        <div class="adm-painel-main">
-            <div class="adm-content1">
+    <%- include('./partials/adm-header')%>
+        <section id="dunkles" class="tab-panel centralizando">
+            <h2 class="adm-table-subtitulo adm-title-center">Produtos</h2>
+            <div class="adm-painel-main">
+                <div class="adm-content1">
 
-                <div class="adm-content">
+                    <div class="adm-content">
                         <table class="adm-table-users">
-                         
+
                             <thead class="adm-table-users-thead">
                                 <tr>
                                     <th class="containerTable-lblTitle">Livro</th>
@@ -19,65 +18,43 @@
                                 </tr>
                             </thead>
 
+
                             <tbody class="adm-table-users-tbody">
-                                <tr>
-                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                    <td class="containerTable-lblValue">200</td>
+                                <%for(product of products){%>
+                                    <tr>
+                                        <td class="containerTable-lblValue"><%=product.name%></td>
+                                        <td class="containerTable-lblValue"><%=product.author.name%> <%=product.author.last_name%></td>
+                                        <td class="containerTable-lblValue"><%=product.stock%></td>
 
-                                    <td class="containerTable-lblValue btn-opition">
+                                        <td class="containerTable-lblValue btn-opition">
 
-                                        <button class="tableValue-btnOption"><a href="/adm/product"
-                                                class="editar-detalhe-button">Editar</a></button>
-                                        <button class="tableValue-btnOption">Deletar</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                    <td class="containerTable-lblValue">200</td>
-
-                                    <td class="containerTable-lblValue btn-opition">
-
-                                        <button class="tableValue-btnOption">Editar</button>
-                                        <button class="tableValue-btnOption">Deletar</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                    <td class="containerTable-lblValue">200</td>
-
-                                    <td class="containerTable-lblValue btn-opition">
-
-                                        <button class="tableValue-btnOption">Editar</button>
-                                        <button class="tableValue-btnOption">Deletar</button>
-                                </tr>
-
-                                <tr>
-                                    <td class="containerTable-lblValue">Aranquismo</td>
-                                    <td class="containerTable-lblValue">Emma Goldin</td>
-                                    <td class="containerTable-lblValue">200</td>
-
-                                    <td class="containerTable-lblValue btn-opition">
-
-                                        <button class="tableValue-btnOption">Editar</button>
-                                        <button class="tableValue-btnOption">Deletar</button>
-                                </tr>
-
-
+                                            <button class="tableValue-btnOption"><a href="/adm/product"
+                                                    class="editar-detalhe-button">Editar</a></button>
+                                            <button class="tableValue-btnOption">Deletar</button>
+                                        </td>
+                                    </tr>
+                                    <%}%>
                             </tbody>
+                            
+                            
+                            
                         </table>
-               
+                        
                         
                     </div>
-                    <div class="adm-crete-container">
-                        <button class="tableValue-btnOption"><a href="/adm/create-product"
-                            class="editar-detalhe-button bnt-create">Criar Produto</a></button>
-                        
+                    <div class="pager-create">
+
+                        <ul class="page-box">
+                            <%for(let nrPage = 1; nrPage <= totalPage;nrPage ++){%>
+                               <li  class="page-iten"><a  id="pages"class="page-link" href="?page=<%=nrPage%>"><%=nrPage%></a></li> 
+                               <%}%>                       
+                         </ul>  
+                        <div class="adm-crete-container">
+                            <button class="tableValue-btnOption"><a href="/adm/create-product"
+                                    class="editar-detalhe-button bnt-create">Criar Produto</a></button>
                     </div>
-            </div>
-</section>
-<%- include('./partials/footer')%>
+
+                    </div>
+                </div>
+        </section>
+        <%- include('./partials/footer')%>

@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
        Author.associate = (models => {
         Author.hasMany(models.Product, { 
             foreignKey: 'author_id',
-            as: "author_products", 
+            as: "author", 
             })
         })
     return Author

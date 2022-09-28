@@ -21,12 +21,51 @@ const admController = {
 
 
   },
-  productsShow: (req, res) => {
-    return res.render("adm-products",
+  productsShow: async (req, res) => {
+
+    let { page = 1 } = req.query;
+    try {
+      let { count: total, rows: products } = await Product.findAndCountAll({
+        include:[{
+          model: Author,
+            as: "author",
+            required: false,
+        }],
+        limit: 4,
+        offset: (page - 1) * 4
+      });
+      let totalPage = Math.round(total / 4)
+      console.log(products[0].author);
+      return res.render("adm-products",
       {
         title: 'Administrador | Multiverso Livraria',
         user: req.cookies.user,
+        products: products,
+          totalPage: totalPage,
       })
+     
+    } catch (error) {
+    
+      console.log(error);
+      return res.render("error",
+        {
+          title: 'Error | Multiverso Livraria',
+          user: req.cookies.user,
+          message: "Error ao processar lista de produtos!"
+        }) 
+    }
+
+
+
+
+
+
+
+
+
+
+
+  
   },
   productShow: (req, res) => {
     return res.render("adm-product",
@@ -97,7 +136,7 @@ const admController = {
         {
           title: 'Sucesso | Multiverso Livraria',
           user: req.cookies.user,
-          message: error.message
+          
         }) 
     }
 

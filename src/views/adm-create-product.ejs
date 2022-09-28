@@ -67,7 +67,7 @@
                             </div>
                             <div class="form-elements-adm-product column-3 row-1">
                                 <label for="pass" class="label-adm-product">Preço</label>
-                                <input id="price" type="number" name="price" class="input-adm-product" data-type="number" value="<%= locals.old && old.price %>">
+                                <input id="price" type="text" name="price" class="input-adm-product" data-type="number" value="<%= locals.old && old.price %>">
                                 <% if(locals.errors && errors.price) { %>
                                     <span class="error-alert-adm">
                                         <%= errors.price.msg%>
@@ -83,12 +83,8 @@
                                     </label>
                                     <input id='input-file' name="file" type='file' value='' />
                                     <span id='file-name'></span>
-                                    <% if(locals.errors && errors.file) { %>
-                                        <span class="error-alert-adm">
-                                            <%= errors.file.msg%>
-                                        </span>
                                 </div>
-                                    <%}%>
+                                
 
                                 <div class="form-elements-adm-product column-3 row-4">
                                     <label for="pass" class="label-adm-product">Sobre</label>
