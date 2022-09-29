@@ -1,21 +1,44 @@
 const fs = require('fs');
 const path = require("path");
-const { Sequelize, User } = require("../models");
+const {Product, User, Image } = require("../models");
 const bcrypt = require('../helpers/bcrypt');
 const { validationResult } = require('express-validator');
-
-
+const upload = require("../config/upload")
+const file = require("../helpers/file")
 
 const indexController = {
   // centralizar as rotas de login, create, 
-  index: (req, res) => {
-    return res.render('index',
-      {
-        title: 'Multiverso Livraria',
-        user: req.cookies.user,
+  index: async (req, res) => {
+    try {
+      const products = await Product.findAll({
+        include:{
+          model:Image,
+          as:"image",
+          required:true,
+        }
+      }
+        
+      );     
+      const images = products[0].image 
+      const result = images.map((image,i)=> {
+        let result = upload.path+images[i].filename.split(".")[i]
+        image=file.base64Encode(`${image}.png`)
+        return result
+      })
+      console.log(result)
+      return res.render('index',
+    {
+      title: 'Multiverso Livraria',
+      user: req.cookies.user,
+      products: products,
+      image:image
 
-
-      });
+    });
+      
+    } catch (error) {
+      
+    }
+    
   },
   register: (req, res) => {
     return res.render("login-create", {

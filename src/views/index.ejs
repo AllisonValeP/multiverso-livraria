@@ -10,108 +10,17 @@
 </section>
 <main class="main-index">
     <ul class="home-livros grid mt-big responsive ">
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-01.png" class="book-image"  alt="capa-livro">
-        </a>
-        <p class="index-book-title">Sobre Anarquismo</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-02.png" class="book-image" alt="capa-livro">
-        </a>
-          <p class="index-book-title">Manifesto Comunista</p>
-          <span class="index-book-price">R$59,99</span>
-          <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-03.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">Trabalhos e dias</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-04.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">Rashômon</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>          
-    </ul>
-
-    <ul class="home-livros grid responsive">
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-05.png" class="book-image" alt="capa-livro">
+      <%products.map((product,i)=>{%>
+        <li>
+          <a href="/produto">
+            <img src="" class="book-image"  alt="capa-livro">
           </a>
-          <p class="index-book-title">Facismo Eterno</p>
-          <span class="index-book-price">R$59,99</span>
+          <p class="index-book-title"><%=products[i].name%></p>
+          <span class="index-book-price">R$ <%=products[i].price%></span>
           <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-06.png" class="book-image" alt="capa-livro">
-        </a>
-          <p class="index-book-title">Ring</p>
-          <span class="index-book-price">R$59,99</span>
-          <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-07.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">Arte Contemporânea Brasileira</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-08.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">Mulhere, Raça e Classe</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>          
-    </ul>
-
-    <ul class="home-livros grid responsive  ">
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-15.png" class="book-image" alt="capa-livro">
-          </a>
-          <p class="index-book-title">O que é a Filosofia?</p>
-          <span class="index-book-price">R$59,99</span>
-          <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>
-      <li>
-        <a href="/produto">
-          <img src="/img/home-livro-10.png" class="book-image" alt="capa-livro">
-          </a>
-          <p class="index-book-title">A queda do céu</p>
-          <span class="index-book-price">R$59,99</span>
-          <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-11.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">Solaris</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li> 
-      <li>
-        <a href="/produto">
-        <img src="/img/home-livro-13.png" class="book-image" alt="capa-livro">
-        </a>
-        <p class="index-book-title">A Metamorfose</p>
-        <span class="index-book-price">R$59,99</span>
-        <button type="submit" class="index-bag-button">+ CARRINHO</button>
-      </li>          
+        </li>
+        <%})%>
+     
     </ul>
 </main>
   <%- include('./partials/footer')%>
