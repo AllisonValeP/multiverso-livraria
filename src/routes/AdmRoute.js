@@ -11,6 +11,8 @@ router.get('/', isAuthAdm,admController.index);
 
 router.get('/products',isAuthAdm,admController.productsShow);
 router.get('/product/:id',isAuthAdm,admController.productShow);
+router.put('/product/:id',isAuthAdm,admController.updateProduct);
+
 router.get('/create-product',isAuthAdm,admController.createProduct);
 router.post('/create-product',isAuthAdm,upload.single('file'),imgCompress,validateProduct,admController.storeProduct);
 
