@@ -10,13 +10,15 @@
 </section>
 <main class="main-index">
     <ul class="home-livros grid mt-big responsive ">
-      <%products.map((product,i)=>{%>
+      <%products.map((item,i)=>{%>
         <li>
+        
+         
           <a href="/produto">
-            <img src="" class="book-image"  alt="capa-livro">
+            <img src="<%=imgs%>" class="book-image"  alt="capa-livro">
           </a>
-          <p class="index-book-title"><%=products[i].name%></p>
-          <span class="index-book-price">R$ <%=products[i].price%></span>
+          <p class="index-book-title"><%=products[i].product[0].name%></p>
+          <span class="index-book-price">R$<%=products[i].product[0].price%></span>
           <button type="submit" class="index-bag-button">+ CARRINHO</button>
         </li>
         <%})%>

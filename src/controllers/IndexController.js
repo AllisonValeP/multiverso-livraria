@@ -1,44 +1,63 @@
 const fs = require('fs');
 const path = require("path");
-const {Product, User, Image } = require("../models");
+const { Product, User, Image } = require("../models");
 const bcrypt = require('../helpers/bcrypt');
 const { validationResult } = require('express-validator');
 const upload = require("../config/upload")
-const file = require("../helpers/file")
+const files = require("../helpers/file")
 
 const indexController = {
   // centralizar as rotas de login, create, 
   index: async (req, res) => {
     try {
-      const products = await Product.findAll({
-        include:{
-          model:Image,
-          as:"image",
-          required:true,
+      const images = await Image.findAll({
+        include: {
+          model: Product,
+          as: "product",
+          required: true,
         }
-      }
-        
-      );     
-      const images = products[0].image 
-      const result = images.map((image,i)=> {
-        let result = upload.path+images[i].filename.split(".")[i]
-        image=file.base64Encode(`${image}.png`)
-        return result
-      })
-      console.log(result)
-      return res.render('index',
-    {
-      title: 'Multiverso Livraria',
-      user: req.cookies.user,
-      products: products,
-      image:image
+      });
 
-    });
+      // let products = images.map((item,i)=>{
+      //   let result= images[i].product[0]
+      //   return result
+      // })
+
+      let image = images.map((img,i)=>{
+        let result = upload.path + images[0].filename.split(".")[0]
+           
+        return result
+     
+      })
+image.forEach((arry,i)=>{
       
+   image = files.base64Encode(`${arry}.png`)
+     
+     
+    })
+      
+      // upload.path + images[0].filename.split(".")[0]
+      // image = files.base64Encode(`${image}.png`)
+//    
+ 
+
+     
+
+      return res.render('index',
+        {
+          title: 'Multiverso Livraria',
+          user: req.cookies.user,
+          products: images,
+          imgs: image,
+          
+       
+
+        });
+
     } catch (error) {
-      
+
     }
-    
+
   },
   register: (req, res) => {
     return res.render("login-create", {
@@ -82,7 +101,7 @@ const indexController = {
     try {
       const userAuth = await User.findOne({ where: { email: email } });
       // const checkPassword = await bcrypt.compareSync(senha, userAuth.password)
-      
+
       if (!userAuth || !bcrypt.compareSync(senha, userAuth.password)) {
         return res.render("login", {
           title: "Faça Login | Multiverso Livraria",
@@ -93,16 +112,16 @@ const indexController = {
           },
         });
       }
-      req.session.email = userAuth.email;       
-      res.cookie("user",userAuth);
-      
-    
+      req.session.email = userAuth.email;
+      res.cookie("user", userAuth);
+
+
       if (userAuth.is_admin) {
-      res.redirect("/adm");
-    }
-    if (!userAuth.is_admin) {
-      res.redirect("/");
-    }   
+        res.redirect("/adm");
+      }
+      if (!userAuth.is_admin) {
+        res.redirect("/");
+      }
 
     } catch (error) {
       console.log("Qual erro:" + error);

@@ -274,6 +274,7 @@ const admController = {
         throw Error("Usuário não encontrado")
       };
       let dateOrders = user.order
+      console.log(dateOrders)
 
       let dateOrder = dateOrders.map((dateOrder, i) => {
 
