@@ -24,17 +24,12 @@ const indexController = {
       // })
 
       let image = images.map((img,i)=>{
-        let result = upload.path + images[0].filename.split(".")[0]
-           
+        let result = upload.path + images[i].filename.split(".")[0]
+        result = files.base64Encode(`${result}.png`)
         return result
      
       })
-image.forEach((arry,i)=>{
-      
-   image = files.base64Encode(`${arry}.png`)
-     
-     
-    })
+      // console.log(image)
       
       // upload.path + images[0].filename.split(".")[0]
       // image = files.base64Encode(`${image}.png`)

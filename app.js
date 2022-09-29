@@ -33,7 +33,7 @@ app.use(session({ secret: sessionConfig.secret , resave: sessionConfig.resave, s
 
 app.use('/',indexRoute);
 app.use('/usuario',userRoute);
-app.use('/products',productRouter);
+app.use('/product',productRouter);
 app.use('/adm', admRoute);
 app.use('/compra', purchaseRoute);
 app.use('/lancamentos', releasesRoute);
