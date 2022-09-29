@@ -7,6 +7,7 @@ const { info, Console } = require("console");
 const fs = require("fs");
 const upload = require("../config/upload")
 const files = require("../helpers/file")
+
 const { validationResult } = require('express-validator');
 
 
@@ -197,6 +198,21 @@ const admController = {
           message: error.message
         }) 
     }
+  },
+  updateProduct: async (req, res) => {
+    const {id} = req.params
+    const { name, description, price, stock, publisher_id, author_id, category_id } = req.body
+    let filename;
+    if (req.file) {
+      filename = req.file.filename;
+    }
+    try {
+      
+      
+    } catch (error) {
+      console.log(error);
+    }
+
   },
   usersShow: async (req, res) => {
     let { page = 1 } = req.query;
