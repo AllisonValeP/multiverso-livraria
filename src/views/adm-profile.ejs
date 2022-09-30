@@ -10,15 +10,15 @@
                 
                     <div class="form-elements-adm-profile">
                         <label for="name" class="label-adm-profile">Nome</label>
-                        <input id="profile" type="text" class="input-adm-profile" placeholder="Allison">
+                        <input id="profile" type="text" class="input-adm-profile" placeholder="Allison" value="<%=user.name%>">
                     </div>
                     <div class="form-elements-adm-profile">
                         <label for="lastName" class="label-adm-profile">Sobrenome</label>
-                        <input id="pass" type="text" class="input-adm-profile" data-type="text" placeholder="Vale Pedro">
+                        <input id="pass" type="text" class="input-adm-profile" data-type="text" placeholder="Vale Pedro" value="<%=user.last_name%>">
                     </div>
                     <div class="form-elements-adm-profile">
                         <label for="email" class="label-adm-profile">Email</label>
-                        <input id="pass" type="email" class="input-adm-profile" data-type="email" placeholder="allison.vale@outlook.com">
+                        <input id="pass" type="email" class="input-adm-profile" data-type="email"  value="<%=user.email%>"placeholder="allison.vale@outlook.com">
                     </div>
                     <!-- <div class="form-elements-adm-profile">
                         <label for="pass" class="label-adm-profile">Senha</label>
