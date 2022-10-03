@@ -89,8 +89,8 @@ const admController = {
       if (!product) {
         throw Error("Produto não encontrado")
       };
-      let image =  upload.path + product.image[0].filename.split(".")[0]
-      image = files.base64Encode(`${image}.png`)
+      let image =  upload.path + product.image[0].filename.split(".")[0] + ".png"
+      image = files.base64Encode(`${image}`)
       
       return res.render("adm-product",
         {

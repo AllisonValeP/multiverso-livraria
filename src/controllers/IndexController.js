@@ -4,7 +4,8 @@ const { Product, User, Image } = require("../models");
 const bcrypt = require('../helpers/bcrypt');
 const { validationResult } = require('express-validator');
 const upload = require("../config/upload")
-const files = require("../helpers/file")
+const files = require("../helpers/file");
+
 
 const indexController = {
   // centralizar as rotas de login, create, 
@@ -18,34 +19,30 @@ const indexController = {
         }
       });
 
-      // let products = images.map((item,i)=>{
-      //   let result= images[i].product[0]
-      //   return result
-      // })
-
       let image = images.map((img,i)=>{
         let result = upload.path + images[i].filename.split(".")[0]
         result = files.base64Encode(`${result}.png`)
         return result
      
       })
-      // console.log(image)
-      
-      // upload.path + images[0].filename.split(".")[0]
-      // image = files.base64Encode(`${image}.png`)
-//    
- 
 
      
+
+ 
+
+    
+    
+// console.log(image)
+
 
       return res.render('index',
         {
           title: 'Multiverso Livraria',
           user: req.cookies.user,
           products: images,
-          imgs: image,
-          
-       
+          imgs:image,
+
+
 
         });
 
